@@ -1,4 +1,4 @@
-DDOS-WORLD 🌐
+C2/API/BOTNET/FUNNEL/PROXY/ETC 🌐
 DDOS-WORLD is an educational project designed to explore Distributed Denial of Service (DDoS) attacks and potential countermeasures. This project provides tools, scripts, and examples to understand the mechanisms behind DDoS attacks while studying solutions to defend against them effectively. This project is for educational purposes only and aims to improve network security in a controlled environment.
 
 Overview 🧠
