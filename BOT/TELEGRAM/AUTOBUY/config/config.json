@@ -1,0 +1,21 @@
+{
+  "Token": "",
+  "SellixKey": "",
+  "URL": "",
+  "Admins": [
+    "YOURID"
+  ],
+  "Currency": "EUR",
+  "Blacklist": [
+    "gov"
+  ],
+  "Methods": [
+    {
+      "Name": "TCP",
+      "Description": "TCP Flood",
+      "Plans": ["Basic", "Premium", "Enterprise"],
+      "APIs": [
+      ]
+    }
+  ]
+}

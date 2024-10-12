@@ -1,0 +1,131 @@
+Array
+(
+    [GLOBALS] => Array
+ *RECURSION*
+    [_POST] => Array
+        (
+        )
+
+    [_GET] => Array
+        (
+        )
+
+    [_COOKIE] => Array
+        (
+            [__cfduid] => d6faaf2f75e7291c1a632c4549c0802fa1422570644
+            [PHPSESSID] => 3kg1gaugka220f3j3jrggt3av7
+        )
+
+    [_FILES] => Array
+        (
+        )
+
+    [_SERVER] => Array
+        (
+            [HTTP_HOST] => linux-solution.net
+            [HTTP_CONNECTION] => Keep-Alive
+            [HTTP_ACCEPT_ENCODING] => gzip
+            [HTTP_CF_IPCOUNTRY] => CA
+            [HTTP_X_FORWARDED_FOR] => 50.101.152.79
+            [HTTP_CF_RAY] => 1b0a1f45951110cf-ORD
+            [HTTP_X_FORWARDED_PROTO] => http
+            [HTTP_CF_VISITOR] => {"scheme":"http"}
+            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0
+            [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+            [HTTP_ACCEPT_LANGUAGE] => en-ca,en-us;q=0.8,en;q=0.5,uk;q=0.3
+            [HTTP_COOKIE] => __cfduid=d6faaf2f75e7291c1a632c4549c0802fa1422570644; PHPSESSID=3kg1gaugka220f3j3jrggt3av7
+            [HTTP_CF_CONNECTING_IP] => 50.101.152.79
+            [HTTP_TRUE_CLIENT_IP] => 0
+            [PATH] => /sbin:/usr/sbin:/bin:/usr/bin
+            [SERVER_SIGNATURE] => <address>Apache/2.2.15 (CentOS) Server at linux-solution.net Port 80</address>
+
+            [SERVER_SOFTWARE] => Apache/2.2.15 (CentOS)
+            [SERVER_NAME] => linux-solution.net
+            [SERVER_ADDR] => 167.114.57.170
+            [SERVER_PORT] => 80
+            [REMOTE_ADDR] => 50.101.152.79
+            [DOCUMENT_ROOT] => /home/linux-solution.net
+            [SERVER_ADMIN] => toronto@unixchosting.com
+            [SCRIPT_FILENAME] => /home/linux-solution.net/gateway/bitcoin_ipn.php
+            [REMOTE_PORT] => 33771
+            [GATEWAY_INTERFACE] => CGI/1.1
+            [SERVER_PROTOCOL] => HTTP/1.1
+            [REQUEST_METHOD] => GET
+            [QUERY_STRING] => 
+            [REQUEST_URI] => /gateway/bitcoin_ipn.php
+            [SCRIPT_NAME] => /gateway/bitcoin_ipn.php
+            [PHP_SELF] => /gateway/bitcoin_ipn.php
+            [REQUEST_TIME] => 1422583720
+        )
+
+    [_REQUEST] => Array
+        (
+        )
+
+    [_ENV] => Array
+        (
+        )
+
+    [odb] => PDO Object
+        (
+        )
+
+    [_SESSION] => Array
+        (
+            [username] => AppleJuice
+            [ID] => 75
+        )
+
+    [user] => user Object
+        (
+        )
+
+    [stats] => stats Object
+        (
+        )
+
+    [url] => http://linux-solution.net
+    [bootername] => Linux Solutions | 
+    [maxBootSlots] => 25
+    [maxBootCooldown] => 10
+    [recaptcha] => Array
+        (
+            [siteKey] => 6LdI9AATAAAAAPylZx00EVXjGsx8A06UNvKXgUE-
+            [secret] => 6LdI9AATAAAAAMF8zpL094OcY0z1XHLy5cD91tbb
+        )
+
+    [coinbase] => Array
+        (
+            [api] => qjKidmHkCMhTrzAP
+            [secret] => sV9wzBV9B5NCmYFyBRbDdSHPnNrVhop8
+        )
+
+    [stripe] => Array
+        (
+            [mode] => live
+            [test] => Array
+                (
+                    [secret] => sk_test_goovPhiBPw87g3In4kpf28Dq
+                    [public] => pk_test_AxP4uYTR4VKJHqNiW6adNaGj
+                )
+
+            [live] => Array
+                (
+                    [secret] => sk_live_KOcssEV7iKzPXBT0tJErOB7F
+                    [public] => pk_live_l3Ps7SSonUd0lK8lvx0DtrPy
+                )
+
+        )
+
+    [secret] => bd1ff4a216ALAU65MXpNRM1wG3aaa34ce#SWAG0b
+    [useRotations] => 1
+    [booterTypes] => Array
+        (
+            [0] => layer4
+        )
+
+    [failure] => 1
+    [fh] => Resource id #4
+)
+
+[!!] KEY DOESN'T MATCH [!!]

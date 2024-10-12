@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Normal Color*/
+/*Border radius*/
+/*Preloader*/
+.preloader {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: fixed;
+  z-index: 99999;
+  background: #fff;
+}
+.preloader .cssload-speeding-wheel {
+  position: absolute;
+  top: calc(50% - 3.5px);
+  left: calc(50% - 3.5px);
+}
+/*Just change your choise color here its theme Colors*/
+/*Sidebar*/
+.sidebar {
+  background: #fff;
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+}
+#side-menu li a {
+  color: #a6acbc;
+}
+#side-menu li a {
+  color: #a6acbc;
+  border-left: 0px solid #fff;
+}
+#side-menu > li > a:hover,
+#side-menu > li > a:focus {
+  background: rgba(0, 0, 0, 0.03);
+}
+#side-menu > li > a.active {
+  border-left: 0px solid #ff6849;
+  color: #ffffff;
+  background: #ff6849;
+}
+#side-menu ul > li > a:hover {
+  color: #ff6849;
+  background: none;
+}
+#side-menu ul > li > a.active {
+  color: #ff6849;
+}
+/*themecolor*/
+.bg-theme {
+  background-color: #ff6849 !important;
+}
+.bg-theme-dark {
+  background-color: #4F5467 !important;
+}
+/*Chat widget*/
+.chat-list .odd .chat-text {
+  background: #ff6849;
+}
+/*Button*/
+.btn-custom {
+  background: #ff6849;
+  border: 1px solid #ff6849;
+  color: #ffffff;
+}
+.btn-custom:hover {
+  background: #ff6849;
+  opacity: 0.8;
+  color: #ffffff;
+  border: 1px solid #ff6849;
+}

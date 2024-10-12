@@ -1,0 +1,147 @@
+.panel {
+	.border-radius;
+	.box-shadow;
+	border: 1px solid @mainD5;
+	margin-bottom: 30px;
+		
+	.panel-heading {
+		line-height: 40px;
+		padding: 0 15px;
+		min-height: 40px;
+		.border-radius;
+		border-color: @mainD5;
+		
+		.panel-title {
+			line-height: 40px;
+		}
+		
+		h2 {
+			float:left;
+			padding: 10px 0px;
+			margin: 0px 0px 0px 10px;
+			color: @mainText;
+
+			i {
+				color: @mainD5;
+				padding: 12px 0px;
+				height: 40px;
+				width: 40px;
+				display: inline-block;
+				text-align: center;
+				margin: -10px 0px -10px -20px;
+				font-size: 16px;
+			}
+
+		}
+		
+		.panel-actions {
+			float:right;
+			margin-right: -15px;
+
+			i {
+				display: inline-block;
+				color: @mainD5;
+				text-align: center;
+				height: 40px;
+				width: 40px;
+				padding: 12px 0px;
+				.transition(all 0.1s ease-in-out);
+				text-decoration: none;
+
+				&:hover {
+				}
+			}
+
+			a {
+				margin-left: -3px !important;
+			}
+		}
+	}
+	
+	.panel-body {
+		
+		&.no-padding {
+			padding: 0;
+		}
+		
+		&.padding-horizontal {
+			padding: 0 15px;
+		}
+		
+		&.no-padding-bottom {
+			padding-bottom: 0;
+		}
+		
+	}
+	
+	.panel-footer {
+		background: white;
+		.border-radius;
+		border-color: @mainD5;
+	}
+	
+	&.panel-default {
+		border: 1px solid @mainD5;
+		
+		.panel-heading {
+			border-color: @mainD5;
+			background: lighten(@main,3%);
+		}
+		
+		.panel-footer{
+			border-color: @mainD5;
+			background: @main;
+		}
+	}
+	
+	&.panel-primary {
+		border-color: @primary;
+		
+		.panel-heading {
+			background: lighten(@primary,15%);
+			border-color: @primary;
+		}
+		
+		.panel-footer{
+			border-color: @primary;
+			background: lighten(@primary,15%);
+			color: white;
+		}
+	}
+	&.panel-success {
+		border-color: @success;
+		
+		.panel-heading, .panel-footer {
+			background: lighten(@success,15%);
+			border-color: @success;
+			color: darken(@success,35%);
+		}
+	}
+	&.panel-info {
+		border-color: @info;
+		
+		.panel-heading, .panel-footer {
+			background: lighten(@info,15%);
+			border-color: @info;
+			color: darken(@info,35%);
+		}
+	}
+	&.panel-warning {
+		border-color: @warning;
+		
+		.panel-heading, .panel-footer {
+			background: lighten(@warning,15%);
+			border-color: @warning;
+			color: darken(@warning,35%);
+		}
+	}
+	&.panel-danger {
+		border-color: @danger;
+		
+		.panel-heading, .panel-footer {
+			background: lighten(@danger,15%);
+			border-color: @danger;
+			color: darken(@danger,35%);
+		}
+	}					
+}

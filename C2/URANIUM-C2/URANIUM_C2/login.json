@@ -1,0 +1,50 @@
+{
+  "USERNAME": {
+    "admin": "admin",
+    "root": "root"
+  },
+  "CONFIG": {
+    "root": {
+      "TIME": "0",
+      "THREAD": "0",
+      "METHODS": "ALL",
+      "BADGES": "1 1 1 1 1 1 0"
+    },
+    "admin": {
+      "TIME": "0",
+      "THREAD": "0",
+      "METHODS": "ALL",
+      "BADGES": "0 0 0 0 0 0 0"
+    }
+  },
+  "BADGES": {
+    "1": {
+      "NAME": "new user ?",
+      "DESCRIPTION": "welcome to uranium c2"
+    },
+    "2": {
+      "NAME": "holy shit",
+      "DESCRIPTION": "Why you trying to put like that !"
+    },
+    "3": {
+      "NAME": "Dammn",
+      "DESCRIPTION": "You trying to buffer ?"
+    },
+    "4": {
+      "NAME": "That good",
+      "DESCRIPTION": "Ping test for check target down or not"
+    },
+    "5": {
+      "NAME": "Sudpang!",
+      "DESCRIPTION": "anyway it from /watch?v=bHbnedbt6G4"
+    },
+    "6": {
+      "NAME": "Ayo",
+      "DESCRIPTION": "Wow why use exit command"
+    },
+    "7": {
+      "NAME": "HELP COMMAND",
+      "DESCRIPTION": "you found new version for execute"
+    }
+  }
+}

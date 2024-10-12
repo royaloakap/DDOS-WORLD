@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+          rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/pages/authentication.css">
+
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+    <!-- END: Page CSS-->
+
+    <!--PopUps-->
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+
+</head>
+
+<body class="vertical-layout vertical-menu-modern blank-page navbar-floating footer-static  " data-open="click"
+      data-menu="vertical-menu-modern" data-col="blank-page">
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <div class="auth-wrapper auth-basic px-2">
+                <div class="auth-inner my-2">
+                    <!-- Login basic -->
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <a href="/" class="brand-logo">
+                                <h2 class="brand-text text-primary">{{.Name}}</h2>
+                            </a>
+                            <a>
+                                <h4 class="text-center">Signup</h4>
+                            </a>
+
+                            <form class="auth-login-form mt-2" method="post" action="/signup">
+                                <div class="mb-1">
+                                    <label for="signup-username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="signup-username" name="signup-username"
+                                           placeholder="Administrator" aria-describedby="signup-username" tabindex="1"
+                                           autofocus/>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="signup-password" class="form-label">Password</label>
+                                    <div class="input-group input-group-merge form-password-toggle">
+                                        <input type="password" class="form-control form-control-merge"
+                                               id="signup-password" name="signup-password" tabindex="2"
+                                               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                               aria-describedby="signup-password"/>
+                                        <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                                    <div class="input-group input-group-merge form-password-toggle">
+                                        <input type="password" class="form-control form-control-merge"
+                                               id="signup-confirm-password" name="signup-confirm-password" tabindex="3"
+                                               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                               aria-describedby="signup-confirm-password"/>
+                                        <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <label for="signup-email" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="signup-email" name="signup-email"
+                                           placeholder="Administrator" aria-describedby="signup-email" tabindex="4"
+                                           autofocus/>
+                                </div>
+                                <!-- ADD 4 ARRAYS WITH 4 CAPTCHAS LIKE 12+3 AND CHECK IF CAPTCHA IS THE SAME ITS HOW I DID IT IN PHP -->
+                                <div class="mb-1">
+                                    <label for="signup-captcha" class="form-label">Captcha</label>
+                                    <input type="text" class="form-control" id="signup-captcha" name="signup-captcha"
+                                           placeholder="1+1" aria-describedby="signup-captcha" tabindex="5"
+                                           autofocus/>
+                                </div>
+                                <div class="mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="tos" type="checkbox" id="tos" tabindex="6"/>
+                                        <label class="form-check-label" for="tos"> ToS </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-100" tabindex="7">Sign up</button>
+                                <div class="divider">
+                                    <div class="divider-text">or</div>
+                                </div>
+                                <p class="text-center">
+                                    <span>Already have an account?</span>
+                                    <a href="/login">
+                                      <span>Sign in instead</span>
+                                    </a>
+                                  </p>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- /Login basic -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END: Content-->
+
+
+<!-- BEGIN: Vendor JS-->
+<script src="/_assets/vendors/js/vendors.min.js"></script>
+<!-- BEGIN Vendor JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/_assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- END: Page Vendor JS-->
+
+<!-- BEGIN: Theme JS-->
+<script src="/_assets/js/core/app-menu.js"></script>
+<script src="/_assets/js/core/app.js"></script>
+<!-- END: Theme JS-->
+
+<!-- BEGIN: Page JS-->
+<script src="/_assets/js/scripts/extensions/ext-component-toastr.js"></script>
+<!-- END: Page JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/_assets/vendors/js/extensions/toastr.min.js"></script>
+<!-- END: Page Vendor JS-->
+
+
+
+
+{{.Script}}
+
+<script>
+    $(window).on('load', function () {
+        if (feather) {
+            feather.replace({
+                width: 14,
+                height: 14
+            });
+        }
+    })
+</script>
+
+<script> 
+    const ToS = document.querySelector('#tos');
+
+
+    // HTML ALERT
+    ToS.onclick = function() {
+      Swal.fire({
+        title: '<strong>TOS</strong>',
+        type: 'info',
+        icon: 'question',
+        iconColor: '#fff', 
+        background: '#2f3349',
+        color: '#fff',
+        html:
+          "TOS STUFF",
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: '<i class="ti ti-thumb-up"></i> Accept!',
+        confirmButtonAriaLabel: 'Thumbs up, Accept!',
+        cancelButtonText: '<i class="ti ti-thumb-down"></i>Decline!',
+        cancelButtonAriaLabel: 'Thumbs down, Decline',
+        customClass: {
+          confirmButton: 'btn btn-primary me-1',
+          cancelButton: 'btn btn-label-secondary'
+        },
+        buttonsStyling: false
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Code to execute if user accepts
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          // Code to execute if user declines
+          document.getElementById("tos").checked = false; // Uncheck the bot checkbox
+        }
+      });
+    }
+    </script>
+</body>
+<!-- END: Head-->
+<!-- END: Body-->
+
+</html>

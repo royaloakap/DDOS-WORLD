@@ -1,0 +1,55 @@
+fix anubis - adjust command parsing system
+--------------------
+[x] expiry dates
+-------------------
+[x] .reset-popularity
+-------------------
+[x] popularity percentages - put only to 2 characters (rounding) for example 54%, 82%, 69%
+-------------------
+[x] blacklist, REMOVE USER INPUT 
+-------------------
+[x] copy ip lookup func
+-------------------
+[x] make a plan function (allows admins to create plans with custom
+concs and time, as well as cool down)
+-------------------
+[x] im not sure if you have done this, but a quick way of parsing
+the preset attack commands to my spoof servers using ssh? maybe a file
+which requires the ssh port and pass, as well as the server IP obvs
+-------------------
+[x] individual user lock down or even a message broadcast?
+except not on the title writer, on the actual c2. so basically
+they cant use the c2 while the msg is displayed
+
+[x] so then i could do the command : ".pm niggermissional 'STOP FUCKING SPAMMING' 120"
+the arguments : .pm <myra-user> <display msg> <lockdown duration for user>
+-------------------
+maybe an email warning if some user who has unlimited is spamming 5+ concurrents.
+-------------------
+[x] myra c2 anti spam?? just like discord, where it mutes you? not necessary
+but would be pretty cool, i could turn it on via command if the net is busy
+and then also turn it off if necessary 
+-------------------
+[x] ADD THIS TO LOCKDOWN : basically any new connections to myra while lockdown
+is initiated, myra will display the msg "Myra lockdown is currently initiated."
+-------------------
+.status - command which displays the cpu usage percentage of the c2,
+that would be pretty cool
+-------------------
+[x] user usage popularity?? maybe see who is sending attacks the most as well as who
+has connected to the net the most, maybe put the values of how many times they 
+have connected to myra as well as how many attacks they have sent 
+
+--------------------
+maybe a reflector map for each reflection based method.
+you click on the method where you wanna see all their reflectors mapped.
+
+-------------------
+[x] Myra attack blacklist using a command like `.blacklist-attack <ip>` 
+
+-------------------
+[x] .change-pass <password> : users can change their own pass if needed
+
+[x] admins can reset other passes using :
+.reset-pass <username / uid> <password>
+-------------------

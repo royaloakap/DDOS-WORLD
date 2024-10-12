@@ -1,0 +1,211 @@
+Array
+(
+    [GLOBALS] => Array
+ *RECURSION*
+    [HTTP_RAW_POST_DATA] => {"order":{"id":"QGG9W36E","created_at":"2015-02-09T22:11:08-08:00","status":"completed","event":{"type":"completed"},"total_btc":{"cents":1821834.0,"currency_iso":"BTC"},"total_native":{"cents":399.0,"currency_iso":"USD"},"total_payout":{"cents":0.0,"currency_iso":"USD"},"custom":"{\"description\":\"sldlfd\",\"cancel_url\":\"http:\\/\\/example.org\\/cancel\",\"success_url\":\"http:\\/\\/example.org\\/success\",\"callback_url\":\"http:\\/\\/linux-solution.net\\/gateway\\/bitcoin_ipn.php\",\"key\":\"bd1ff4a216ALAU65MXpNRM1wG3aaa34ce#SWAG0b\",\"u_id\":\"39\",\"item_id\":\"10\"}","receive_address":"17h1N86Q4jLX6cDNAuH4amaogeGBVHoJVt","button":{"type":"buy_now","subscription":false,"repeat":null,"name":"Starter Package","description":null,"id":"f3be51c030a02155eca8861a628e818e"},"refund_address":"1sJy1hXee8y5SLfoemoH7znEBadCvUFBj","transaction":{"id":"54d9a108d12484b7eb000407","hash":null,"confirmations":0}}}
+    [_POST] => Array
+        (
+        )
+
+    [_GET] => Array
+        (
+        )
+
+    [_COOKIE] => Array
+        (
+        )
+
+    [_FILES] => Array
+        (
+        )
+
+    [_SERVER] => Array
+        (
+            [HTTP_HOST] => linux-solution.net
+            [HTTP_CONNECTION] => Keep-Alive
+            [HTTP_ACCEPT_ENCODING] => gzip
+            [HTTP_CF_IPCOUNTRY] => US
+            [HTTP_X_FORWARDED_FOR] => 54.243.226.26
+            [HTTP_CF_RAY] => 1b66261e73570856-IAD
+            [CONTENT_LENGTH] => 917
+            [HTTP_X_FORWARDED_PROTO] => http
+            [HTTP_CF_VISITOR] => {"scheme":"http"}
+            [HTTP_USER_AGENT] => Faraday v0.9.1
+            [HTTP_X_SIGNATURE] => i1fYyxUVD9rQY2eNHfgt7nW5q/ml4xKDbwaomWPyHw5NSP6hyOeVOlXrGtsHQURlJEOUf1zk7e8tq1IJTCHz/DKiGUDyQ/Oqt/K4MvN2iR845XeQwzWtCUiG5ozyt8bwg+3ziNrOKO8YjsOgXvZ94ZNXf/b6jW9K9RfatkZcNVgaT15NsV36UBC92jsqIKs8okn03vS8tcyfshPc/d8+T2qTunX7hU31j82R8LhM+DZalaZui+WGX9PyD1l08hDxNAdGKzLEqdjBhRggapIVpqDkDn4DJNjpg4a1GR2u1B+2PRpBLZCVMVFQO+ab8cYID3ZcEpFHZ8iZfzCGlCojclEMgsLKqI+zdNFeJG6wshx2x+/MYKD6+juSxw+Opd+53CiV6ZNinzab6UERjcf7ShDECz1Qi1JVOKH1z1LW25l9G9sm18IoOB45aN21sMVYoQ8pvz73da454XLIVsj8E5vb/0wdP5lu7ByBwb5pXG0QObsE/WQDKX/esENp8gz0qVLtFnUAL0H84IuLe0ScYpnJXzO1mlzdUc3Z4QAGwgyxW90MDC2ZFZbS3//Sc626Ak0UDyy9Oqax8ecjKZBywDL1CvP2CutjPXCM/qveOcCZfAC6lKYSDQN/uuVifU7QxsJfMEzVKsF0TDRYC5numZP3LeAs7/I3DL9tjgbnriY=
+            [CONTENT_TYPE] => application/json
+            [HTTP_ACCEPT] => */*
+            [HTTP_X_NEWRELIC_ID] => UwQPWF9AAAUDV1hb
+            [HTTP_X_NEWRELIC_TRANSACTION] => PxQEU1VTCQNSAlRTVFdSXgVXFB8EBw8RVU4aUQoLBAMDB19UAAJVB1xXUUNKQQEKUgJSVAMHFTs=
+            [HTTP_CF_CONNECTING_IP] => 54.243.226.26
+            [HTTP_TRUE_CLIENT_IP] => 0
+            [PATH] => /sbin:/usr/sbin:/bin:/usr/bin
+            [SERVER_SIGNATURE] => <address>Apache/2.2.15 (CentOS) Server at linux-solution.net Port 80</address>
+
+            [SERVER_SOFTWARE] => Apache/2.2.15 (CentOS)
+            [SERVER_NAME] => linux-solution.net
+            [SERVER_ADDR] => 167.114.57.170
+            [SERVER_PORT] => 80
+            [REMOTE_ADDR] => 54.243.226.26
+            [DOCUMENT_ROOT] => /home/linux-solution.net
+            [SERVER_ADMIN] => toronto@unixchosting.com
+            [SCRIPT_FILENAME] => /home/linux-solution.net/gateway/bitcoin_ipn.php
+            [REMOTE_PORT] => 53352
+            [GATEWAY_INTERFACE] => CGI/1.1
+            [SERVER_PROTOCOL] => HTTP/1.1
+            [REQUEST_METHOD] => POST
+            [QUERY_STRING] => 
+            [REQUEST_URI] => /gateway/bitcoin_ipn.php
+            [SCRIPT_NAME] => /gateway/bitcoin_ipn.php
+            [PHP_SELF] => /gateway/bitcoin_ipn.php
+            [REQUEST_TIME] => 1423548682
+        )
+
+    [_REQUEST] => Array
+        (
+        )
+
+    [_ENV] => Array
+        (
+        )
+
+    [odb] => PDO Object
+        (
+        )
+
+    [_SESSION] => Array
+        (
+        )
+
+    [user] => user Object
+        (
+        )
+
+    [stats] => stats Object
+        (
+        )
+
+    [url] => http://linux-solution.net
+    [bootername] => Linux Solutions | 
+    [maxBootSlots] => 25
+    [maxBootCooldown] => 10
+    [recaptcha] => Array
+        (
+            [siteKey] => 6LdI9AATAAAAAPylZx00EVXjGsx8A06UNvKXgUE-
+            [secret] => 6LdI9AATAAAAAMF8zpL094OcY0z1XHLy5cD91tbb
+        )
+
+    [coinbase] => Array
+        (
+            [api] => qjKidmHkCMhTrzAP
+            [secret] => sV9wzBV9B5NCmYFyBRbDdSHPnNrVhop8
+        )
+
+    [stripe] => Array
+        (
+            [mode] => live
+            [test] => Array
+                (
+                    [secret] => sk_test_goovPhiBPw87g3In4kpf28Dq
+                    [public] => pk_test_AxP4uYTR4VKJHqNiW6adNaGj
+                )
+
+            [live] => Array
+                (
+                    [secret] => sk_live_KOcssEV7iKzPXBT0tJErOB7F
+                    [public] => pk_live_l3Ps7SSonUd0lK8lvx0DtrPy
+                )
+
+        )
+
+    [secret] => bd1ff4a216ALAU65MXpNRM1wG3aaa34ce#SWAG0b
+    [useRotations] => 1
+    [booterTypes] => Array
+        (
+            [0] => layer4
+        )
+
+    [failure] => 1
+    [fh] => Resource id #5
+)
+
+Array
+(
+    [order] => Array
+        (
+            [id] => QGG9W36E
+            [created_at] => 2015-02-09T22:11:08-08:00
+            [status] => completed
+            [event] => Array
+                (
+                    [type] => completed
+                )
+
+            [total_btc] => Array
+                (
+                    [cents] => 1821834
+                    [currency_iso] => BTC
+                )
+
+            [total_native] => Array
+                (
+                    [cents] => 399
+                    [currency_iso] => USD
+                )
+
+            [total_payout] => Array
+                (
+                    [cents] => 0
+                    [currency_iso] => USD
+                )
+
+            [custom] => {"description":"sldlfd","cancel_url":"http:\/\/example.org\/cancel","success_url":"http:\/\/example.org\/success","callback_url":"http:\/\/linux-solution.net\/gateway\/bitcoin_ipn.php","key":"bd1ff4a216ALAU65MXpNRM1wG3aaa34ce#SWAG0b","u_id":"39","item_id":"10"}
+            [receive_address] => 17h1N86Q4jLX6cDNAuH4amaogeGBVHoJVt
+            [button] => Array
+                (
+                    [type] => buy_now
+                    [subscription] => 
+                    [repeat] => 
+                    [name] => Starter Package
+                    [description] => 
+                    [id] => f3be51c030a02155eca8861a628e818e
+                )
+
+            [refund_address] => 1sJy1hXee8y5SLfoemoH7znEBadCvUFBj
+            [transaction] => Array
+                (
+                    [id] => 54d9a108d12484b7eb000407
+                    [hash] => 
+                    [confirmations] => 0
+                )
+
+        )
+
+)
+Array
+(
+    [description] => sldlfd
+    [cancel_url] => http://example.org/cancel
+    [success_url] => http://example.org/success
+    [callback_url] => http://linux-solution.net/gateway/bitcoin_ipn.php
+    [key] => bd1ff4a216ALAU65MXpNRM1wG3aaa34ce#SWAG0b
+    [u_id] => 39
+    [item_id] => 10
+)
+[!!] Using plan #10
+[!!] Plan info: Array
+(
+    [ID] => 10
+    [name] => Starter Package
+    [description] => sldlfd
+    [mbt] => 300
+    [max_boots] => 1
+    [unit] => Months
+    [length] => 1
+    [price] => 3.99
+    [allowed_methods] => SUDP,NTP,CHARGEN,SSDP,SSYN,ESSYN,TCP,VSE,ARME,RUDY,GET,HEAD,POST,JOOMLA
+)
+
+[!!] Creating transaction row
+[!!] Transaction should have been stored as ID:258
+[!!] Attempting to update user ID: 39
+[*] Account should have been updated!

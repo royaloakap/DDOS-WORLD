@@ -1,0 +1,24 @@
+name=info
+description=displays ur info
+admin=false
+system=false
+==================
+<<clear>>===================================
+           Account Info
+Getting info for:   <<username>>
+MBT:                <<maxtime>>
+Cons                <<conns>>
+Balance:            <<balance>>
+Name:               <<sitename>>
+Slots:              <<slots>>
+Vers:               <<vers>>
+Running:            <<running>>
+
+===================================
+                Roles
+Admin:              <<role.admin>>
+API:                <<role.cnc>>
+CNC:                <<role.api>>
+VIP:                <<role.vip>>
+
+

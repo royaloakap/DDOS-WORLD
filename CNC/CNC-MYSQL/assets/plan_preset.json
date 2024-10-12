@@ -1,0 +1,25 @@
+{
+    "Presets" : [
+
+
+        {
+            "name" : "basic",
+            "description" : "basic plan",
+            "price" : "£20/m",
+
+            "maxTime" : 30,
+            "cooldown" : 30,
+            "Concurrents" : 3,
+
+            "PowerSavingExempt" : false, 
+            "BypassBlacklist" : false,
+            "Admin" : false, 
+            "Reseller" : false,
+            "VIP" : false, 
+            "Banned" : false, 
+
+            "MaxSessions" : 3, 
+            "DefaultDays" : 30
+        }
+    ]
+}

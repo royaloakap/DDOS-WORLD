@@ -1,0 +1,179 @@
+/* Calendar Widget
+=================================================================== */
+.calendar {
+	background: white;
+	padding: 0px;
+	
+	.calendar-small {
+		margin: -21px;
+	}
+	
+	
+	.fc td,
+	.fc th {
+
+	}
+	
+	.fc {
+		padding: 20px;
+		.box-sizing(content-box);
+	}
+	
+	.fc-header {
+		color: @mainText;
+
+	}
+	
+	.fc-header-title h2 {
+		margin: 15px;
+	}
+	
+	.fc-widget-header {
+		padding: 15px;
+		background: @main;
+	}
+	
+	.fc-widget-header,    
+	.fc-widget-content {
+		border-color: @mainD5;
+	}
+	
+	.fc-state-default {
+		background: white;
+		border: none;
+		text-shadow: none;
+		.box-shadow;
+		margin: 10px;
+		color: @mainText;
+	}
+
+	
+	.fc-state-hover,
+	.fc-state-down,
+	.fc-state-active,
+	.fc-state-disabled {
+		color: @mainText;
+		background: white;
+	}
+	
+	.fc-day {
+		.fc-day-content {
+			position: relative !important;
+
+			&:after {
+				display:block;
+				position: absolute;
+				content: 'Available' !important;
+				text-align: center;
+				color: darken(@main,15%);
+				bottom: -10px;
+				width: 100%;
+			}
+		}
+		
+		&.with-event {
+			background: @main;
+			.fc-day-content {
+				&:after {
+					display:block;
+					position: absolute;
+					width: 100%;
+					content: 'Busy' !important;
+					text-align: center;
+					color: darken(@main,15%);
+				}
+			}
+		}
+	}	
+
+	
+	
+	.fc-day-number {
+		padding: 15px 5px !important;
+		text-align: left;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	
+	.fc-state-highlight {
+		background: @mainD5 !important;
+		
+		.fc-day-number {
+			color: @primary;
+			font-weight: 700;
+		}
+	}
+	
+	.event {
+		background: @primary;
+		.border-radius(4px);
+		color: white;
+			
+			
+	}
+	
+	.fc-grid .fc-day-number {
+		float: none;
+		padding: 0 2px;
+		text-align: center;
+	}
+	
+	.fc-grid .fc-other-month .fc-day-number {
+		opacity: 1;
+		filter: alpha(opacity=1);
+		color: @main;
+	}
+	
+	.fc-other-month {
+		position: relative;	
+		
+		&:after {
+			color:  @main;
+		}
+		
+		&.with-event {
+			.fc-day-number {
+				color: @mainD5;
+			}			
+			background: lighten(@main,2%);
+			&:after {
+				color: @mainD5;
+			}
+		}
+	}
+	
+	.fc-event {
+		display: none;
+		
+		.fc-event-inner {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 640px) { 
+	.calendar {
+
+		.fc-day {
+			
+			.fc-day-content {
+
+				&:after {
+					bottom: 5px;
+					font-size: 10px;
+				}
+			}	
+
+			&.with-event {
+				
+				.fc-day-content {
+				
+					&:after {
+						bottom: 5px;
+						font-size: 10px;
+					}
+				}	
+			}
+		}
+	}
+}	

@@ -1,0 +1,39 @@
+.attacks
+
+.attacks
+.menu
+
+.menu
+.menu
+
+.menu
+.menu
+
+.menu
+.menu
+
+.menu
+.detail
+
+.detail
+.attack detail
+
+.attack detail
+.detail attack
+
+.detail attack
+.detail-attacks
+
+.detail-attacks
+
+
+
+
+clear
+
+
+
+
+
+
+clear

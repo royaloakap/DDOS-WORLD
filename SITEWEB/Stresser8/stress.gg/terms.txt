@@ -1,0 +1,60 @@
+  stressing.cc - exploité par des pentesters du monde entier.
+  Pourquoi des "conditions générales" ? Parce qu'il s'agit d'une exigence légale, que vous devez savoir qui est autorisé à utiliser ce site, au sujet des droits d'auteur et de votre vie privée. Si vous avez des questions ou des remarques, n'hésitez pas à nous contacter.
+
+  == CONDITIONS D'UTILISATION ==
+
+  - En utilisant stressing.cc, vous acceptez les conditions d'utilisation énumérées ci-dessous, et vous êtes responsable du respect de toute loi locale applicable. Si vous n'acceptez pas ces conditions de service, vous n'êtes pas autorisé à utiliser stressing.cc.
+  - Si vous continuez à naviguer et à utiliser ce site web, vous acceptez de respecter et d'être lié par les conditions d'utilisation suivantes.
+  - Si vous n'êtes pas d'accord avec une partie quelconque de ces conditions, ne continuez pas à utiliser ce site.
+  L'utilisation de ce site est soumise aux conditions d'utilisation suivantes :
+      > Le contenu des pages de ce site est destiné à votre information générale et à votre utilisation uniquement.
+      Il est susceptible d'être modifié sans préavis.
+      > Vous devez être âgé d'au moins 13 ans pour utiliser ce site. Si vous n'avez pas au moins 13 ans, n'utilisez pas ce site.
+      > Ce site utilise des cookies pour surveiller les préférences de navigation.
+      Si vous autorisez l'utilisation de cookies, les informations personnelles suivantes peuvent être stockées par nous pour être utilisées par des tiers.
+      > En utilisant ce site web, vous comprenez qu'il comporte des contenus créés par l'utilisateur tels que du texte, des images et des scripts.
+      Nous ne serons pas tenus responsables de ces contenus créés par un utilisateur, ni des dommages causés à vous ou à vos biens.
+      > L'utilisation de toute information ou matériel sur ce site web est entièrement à vos propres risques, pour lesquels nous ne sommes pas responsables.
+      > Ce site web contient du matériel qui est la propriété ou sous licence de stressing.cc., une société enregistrée en Australie.
+      Ce matériel comprend, sans s'y limiter, le nom, la conception, la mise en page, l'aspect, l'apparence, les graphiques et le code source.
+      La reproduction à des fins commerciales est interdite. La copie de ce matériel est strictement interdite.
+      > De temps en temps, ce site web peut également inclure des liens vers d'autres sites web.
+      Ces liens sont fournis pour votre commodité afin de vous fournir des informations complémentaires.
+      Ils ne signifient pas que nous approuvons le(s) site(s) web. Nous n'avons aucune responsabilité quant au contenu des sites web liés.
+      > Nous n'assumons aucune responsabilité pour tout dommage causé à votre ordinateur, appareil ou personne par l'utilisation de ce site.
+      > L'utilisation de ce système se fait à vos propres risques. Le téléchargement ou la modification de
+      le contenu / le code est effectué aux risques et à la discrétion de l'utilisateur et
+      stresing.cc. n'est pas responsable et ne paiera aucun frais,
+      de compensation ou de redevances, sauf si cela est convenu par un contrat écrit entre
+      le fournisseur et stressing.cc. Il est de l'entière responsabilité
+      de l'utilisateur afin de s'assurer qu'aucune loi sur le droit d'auteur ou la protection de la vie privée n'est enfreinte.
+      Le système / code fourni par stressing.cc. est couvert par
+      et ne peuvent être téléchargés, utilisés ou modifiés, sauf
+      cela est convenu par écrit.
+  == TEST DE STRESS ==
+  - Les tests de stress ne sont strictement autorisés que sur les réseaux que vous avez le droit de stresser. Les tests de stress sur des sites que vous n'avez pas l'autorisation de stresser entraîneront une suspension de votre compte sans aucun avertissement.
+   Les tests de stress de spam sont interdits et vous recevrez un avertissement à la première infraction, avec un délai de récupération de 20 minutes par test de stress. Pour la deuxième infraction, il y aura une restriction d'accès temporaire à stressing.cc.
+   stressing.cc ne peut pas garantir qu'un test de stress échouera ou réussira. Nous ne pouvons malheureusement pas effectuer de remboursement si c'est la raison.
+  == COMPTES ==
+  - La multiplicité des comptes n'est pas autorisée. Si vous avez perdu l'accès à votre compte, envoyez un message au télégramme de stressing.cc ou aux salons de discussion Discord. Ne créez pas un autre compte et parlez dans le salon de discussion du site.
+  Le partage de votre compte n'est pas autorisé, et nous nous réservons le droit de résilier votre compte ou d'abandonner votre plan. Aucun remboursement ne sera effectué dans ce type de circonstances.
+
+  == POLITIQUE DE CONFIDENTIALITÉ ==
+  - Si vous continuez à naviguer et à utiliser ce site web, vous acceptez notre politique de confidentialité.
+
+  == TIERS ==
+  - Des tiers peuvent placer et lire des cookies sur votre navigateur, ou utiliser des balises web pour collecter des informations suite à la diffusion d'annonces sur ce site.
+   Pour plus d'informations sur les tiers, veuillez consulter le site suivant : http://www.google.com/policies/privacy/partners/
+
+  == QUELLES INFORMATIONS SONT COLLECTÉES ==
+
+     stressing.cc. ne collecte pas de données personnelles
+     des utilisateurs. Lorsque vous vous inscrivez sur stressing.cc, n'utilisez pas de nom,
+     qui contient des informations personnelles. Vous ne pouvez pas saisir de données personnelles
+     des informations telles que le courrier électronique, l'adresse, les numéros de téléphone, etc. sur stressing.cc
+
+  - Certains outils d'analyse et de publicité liés à notre site peuvent également recueillir des informations sur :
+     > Votre situation géographique (pays, ville)
+     > Le temps que vous passez sur ce site
+     > Le site web d'où vous venez
+     > Adresse IP

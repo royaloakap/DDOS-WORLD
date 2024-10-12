@@ -1,0 +1,9 @@
+[97mPlan details:
+    Username: [ [92m<<$username>> [97m]
+    Membership: [ [91m<<$membership>> [97m]
+    Expiry: [ [91m<<$expiry>> [97m]
+    Vip: [ [91m<<$vip>> [97m]
+    Private: [ [91m<<$private>> [97m]
+    Cooldown: [ [91m<<$cooldown>> [97m]
+    Concurrents: [ [91m<<$concurrents>> [97m]
+    Max time: [ [91m<<$maxtime>> [97m]

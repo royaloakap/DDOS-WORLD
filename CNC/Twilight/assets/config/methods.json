@@ -1,0 +1,79 @@
+{
+    "HOME":{
+        "type":1,
+        "name":"HOME (HOME)",
+        "description":"",
+        "subnet":1,
+        "mtype":1
+    },
+    "SOCKET":{
+        "type":1,
+        "name":"SOCKET (BYPASS)",
+        "description":"",
+        "subnet":1,
+        "mtype":1
+    },
+    "GUDP":{
+        "type":1,
+        "name":"GUDP (BYPASS)",
+        "description":"",
+        "subnet":1,
+        "mtype":1
+    },
+    "OVH":{
+        "type":1,
+        "name":"OVH (BYPASS)",
+        "description":"",
+        "subnet":1,
+        "mtype":1
+    },
+    "TCP BYPASS":{
+        "type":1,
+        "name":"TCP (Bypass)",
+        "description":"Amplification vector using TCP servers",
+        "subnet":1,
+        "mtype":1
+    },
+    "UDP BYPASS":{
+        "type":1,
+        "name":"UDP (High Gbit Bypass)",
+        "description":"Amplification vector using UDP servers",
+        "subnet":1,
+        "mtype":1
+    },
+    "GAME":{
+        "type":1,
+        "name":"GAME (TCP Game Servers)",
+        "description":"Amplification vector, great for game servers",
+        "subnet":1,
+        "mtype":1
+    },
+    "HTTPS":{
+        "type":1,
+        "name":"HTTPS (Layer 7)",
+        "description":"Layer 7, good for web targets",
+        "subnet":1,
+        "mtype":1
+    },
+    "TLS":{
+        "type":1,
+        "name":"TLS (Layer 7)",
+        "description":"Layer 7, good for web targets",
+        "subnet":1,
+        "mtype":1
+        },
+    "BROWSER":{
+        "type":1,
+        "name":"BROWSER (Layer 7)",
+        "description":"Layer 7, good for web targets",
+        "subnet":1,
+        "mtype":1
+                },
+    "HOLD":{
+        "type":1,
+        "name":"HOLD (HOME HOLD)",
+        "description":"Layer 4, Home Hold Flood",
+        "subnet":1,
+        "mtype":1
+    }
+}

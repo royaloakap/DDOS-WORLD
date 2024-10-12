@@ -1,0 +1,29 @@
+{
+    "themes" : [
+
+        {
+            "Name" : "botnet",
+            "Description" : "a theme (some people say it looks like tsunami)",
+            "ClearWhenChange" : true,
+            "BlockedCommands" : [
+            ],
+
+            "Views_Prompt" : "botnet/botnet_prompt.tfx",
+            "Views_HomeClear" : "botnet/botnet_clear.tfx",
+            "Views_AttackSplash" : "botnet/botnet_attack.tfx"
+        },
+
+        {
+            "Name" : "rainbow",
+            "Description" : "a rainbow theme (not for LGBTQ though)",
+            "ClearWhenChange" : true,
+            "BlockedCommands" : [
+            ],
+
+            "Views_Prompt" : "rainbow/rainbow_prompt.tfx",
+            "Views_HomeClear" : "rainbow/rainbow_clear.tfx",
+            "Views_AttackSplash" : "rainbow/rainbow_attack.tfx"
+        }
+    ]
+}
+

@@ -1,0 +1,24 @@
+name=plan
+description=Shows your current plan!
+admin=false
+reseller=false
+vip=false
+================== MENU SPLIT DONE ==================
+[97m╔╦╗ ╦═╗ ╦[91m ╔╦╗ ╔═╗ ╔╗╔
+[97m ║  ╠╦╝ ║[91m  ║  ║ ║ ║║║
+[97m ╩  ╩╚═ ╩[91m  ╩  ╚═╝ ╝╚╝
+
+[0mID: [38;5;11m<<$id>>[0m
+Username: <<$username>>
+Admin: <<$admin>>
+Reseller: <<$reseller>>
+VIP Plan: <<$vip>>
+Banned: <<$banned>>
+Bypass Blacklist: <<$bypassblacklist>>
+
+Days Left: [38;5;11m<<$days_left>>[0m
+
+MaxTime: [38;5;11m<<$maxtime>>[0m
+Cooldown: [38;5;11m<<$cooldown>>[0m
+Concurrents: [38;5;11m<<$concurrents>>[0m
+Max Sessions: [38;5;11m<<$maxsessions>>[0m

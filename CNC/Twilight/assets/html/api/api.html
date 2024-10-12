@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible,
+            powerful, clean &amp; modern responsive bootstrap 4 admin template
+            with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template,
+            dashboard template, flat admin template, responsive admin template,
+            web app">
+    <meta name="author" content="PIXINVENT">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/extensions/nouislider.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-sliders.css">
+    <!-- END: Page CSS-->
+
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+<body class="vertical-layout vertical-menu-modern content-left-sidebar navbar-floating footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar" id="style-3">
+
+<!-- Include Navigation Menu -->
+{{ template "nav.html" . }}
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+
+                <!-- users list start -->
+                <section class="app-user-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.ServersCount}}</h3>
+                                        <span>Servers</span>
+                                    </div>
+                                    <div class="avatar bg-light-success
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="server" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Ongoing}}</h3>
+                                        <span>{{if eq .Ongoing 1 }}Running attack{{ else }}Running attacks{{ end
+                                            }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-primary
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="wifi-off" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Slots}}</h3>
+                                        <span>{{if eq .Slots 1 }}Slot{{ else }}Slots{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-warning
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="command" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Users}}</h3>
+                                        <span>{{if eq .Users 1 }}User{{ else }}Users{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-danger
+                                            p-50">
+                                        <span class="avatar-content">
+                                            {{if eq .Users 1}}<i data-feather='user'
+                                                class="font-medium-4"></i>{{else}}<i data-feather='users'
+                                                class="font-medium-4"></i>{{end}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="row">
+                    <div class="card">
+                        <div class="nav-tabs-shadow nav-align-left">
+                            <div class="ps-0 ps-sm-2 d-flex flex-column mb-2 mb-sm-0t">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#apiLink">API</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#apiKey">Key</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#docs">Docs</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#whitelist">Whitelist</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <!--API Link-->
+                                    <div class="tab-pane fade show active" id="apiLink">
+                                        <span class="card-header-title me-">Api Link</span>
+                                        <div class="card-body">
+                                            <input class="form-control" id="clipboard-example" type="text"
+                                                value="https://tsuki-solutions.cc//api/start?user={{.Username}}&key=password&target=1.1.1.1&port=53&time=30&method=UDP-DNS" readonly>
+                                        </div>
+                                    </div>
+                                    <!--API key-->
+                                    <div class="tab-pane fade" id="apiKey">
+                                        <span class="card-header-title me-2">Api Key</span>
+                                        <div class="card-body">
+                                            <input class="form-control" id="clipboard-example" type="text"
+                                                value="The key to the api is ur site password!" readonly>
+                                        </div>
+                                    </div>
+                                    <!--Docs-->
+                                    <div class="tab-pane fade" id="docs">
+                                        <span class="card-header-title me-2">Docs</span>
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card accordion-item active">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button type="button" class="accordion-button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionOne"
+                                                        aria-expanded="true" aria-controls="accordionOne"
+                                                        role="tabpanel">
+                                                        How to use
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionOne" class="accordion-collapse collapse show"
+                                                    data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        to start an attack navigate to the panel/api url with ur designated target, port, method & attack duration<br>
+                                                        example: https://tsuki-solutions.cc//api/start?user={{.Username}}&key=password&target=70.70.70.7&port=53&time=30&method=UDP-DNS
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button type="button" class="accordion-button collapsed"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionTwo"
+                                                        aria-expanded="false" aria-controls="accordionTwo"
+                                                        role="tabpanel">
+                                                        Response
+                                                    </button>
+                                                </h2>
+                                                <div id="accordionTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        Json body data<br>
+                                                        example: <br>
+                                                        - {"status":"success","message":"attack succesfully started", "attack_ids":[1241,1242,1243]}<br>
+                                                        the attack ids can be parsed & used to stop attacks
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button type="button" class="accordion-button collapsed"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionThree"
+                                                        aria-expanded="false" aria-controls="accordionThree"
+                                                        role="tabpanel">
+                                                        optional parameters
+                                                    </button>
+                                                </h2>
+                                                <div id="accordionThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        threads - &threads=4 - threads can be used to increase the output of each attack the same as concurrents<br>
+                                                        concurrents - &concurrents=3 - concurrents can be used to send multiple attacks at once to output more power<br>
+                                                        pps - &pps=1000000 - pps is the packets per second limit on each attack it can be used to output more pps<br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Whitelist-->
+                                    <div class="tab-pane fade" id="whitelist">
+                                        <span class="card-header-title me-2">Whitelist</span>
+                                        <div class="card-body" class="mb-1 col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInput"
+                                                    aria-describedby="floatingInputHelp" placeholder="This does not currently work! sharing will be banned."/>
+                                                <label for="floatingInput">Whitelist</label>
+                                                <div id="floatingInputHelp" class="form-text">IP you want to whitelist.
+                                                </div>
+                                                <br>
+                                            </div>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="floatingInput2"
+                                                    placeholder="Name" aria-describedby="floatingInputHelp2" />
+                                                <label for="floatingInput2">Name</label>
+                                                <div id="floatingInputHelp2" class="form-text">Server name.
+                                                </div>
+                                                <br>
+                                                <div col-md-6>
+                                                    <button id="startatk" class="btn btn-primary btn-icon" type="submit"
+                                                        onclick="addWhilelist()">Add Whitelist</button>
+                                                </div>
+                                                <br>
+                                            </div>
+
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>IP</th>
+                                                            <th>NAME</th>
+                                                            <th>DATE</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="table-border-bottom-0">
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>1.2.2.1</td>
+                                                            <td>Main Server</td>
+                                                            <td>2-2-2024</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>1.1.1.1</td>
+                                                            <td>Backup Server</td>
+                                                            <td>2-2-2024</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header header-elements">
+                            <div class="ps-0 ps-sm-2 d-flex flex-column mb-2 mb-sm-0">
+                                <p class="card-subtitle text-muted mb-1">Methods Used</p>
+                            </div>
+                            <div class="card-action-element ms-auto py-0">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="horizontalBarChart" class="chartjs" data-height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- END: Content-->
+
+        <div class="sidenav-overlay"></div>
+        <div class="drag-target"></div>
+        <h4 class="py-3 mb-4">
+            <span class="text-muted fw-light">Dashboard / Client Panel /</span> API
+        </h4>
+    </div>
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0"><span class="float-md-start d-block
+                        d-md-inline-block mt-25">Copyright &copy; 2024<a class="ms-25" href="https://nasa-federation.co.uk"
+                    target="_blank">Twilight</a><span class="d-none
+                            d-sm-inline-block">, All rights Reserved</span></span><span
+                class="float-md-end d-none d-md-block">Vers: {{.Vers}} \\ Hand-crafted &
+                Made with
+                <a href="https://discord.gg/9PuvcEsMVA"> <i data-feather="heart"></i> </a>
+            </span>
+        </p>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+
+        <!-- BEGIN: Vendor JS-->
+        <script src="/_assets/vendors/js/vendors.min.js"></script>
+        <!-- BEGIN Vendor JS-->
+
+        <!-- BEGIN: Page Vendor JS-->
+        <script src="/_assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+        <script src="/_assets/vendors/js/charts/chart.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/jszip.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+        <script src="/_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+        <script src="/_assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+
+        <script src="/_assets/vendors/js/extensions/wNumb.min.js"></script>
+        <script src="/_assets/vendors/js/extensions/nouislider.min.js"></script>
+        <!-- BEGIN: Page JS-->
+        <script src="/_assets/js/scripts/extensions/ext-component-toastr.js"></script>
+        <!-- END: Page JS-->
+
+        <!-- BEGIN: Page Vendor JS-->
+        <script src="/_assets/vendors/js/extensions/toastr.min.js"></script>
+        <script src="/_assets/vendor/libs/chartjs/chartjs.js"></script>
+        <!-- END: Page Vendor JS-->
+        <!-- END: Page Vendor JS-->
+
+        <!-- BEGIN: Theme JS-->
+        <script src="/_assets/js/core/app-menu.js"></script>
+        <script src="/_assets/js/core/app.js"></script>
+        <!-- END: Theme JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!--START: Scrollbar-->
+        <style>
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                background-color: #161D31;
+            }
+
+            ::-webkit-scrollbar {
+                width: 6px;
+                background-color: #1e1f26;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #283046;
+            }
+        </style>
+        <!--START: Scrollbar-->
+        <script>
+            function startAttack() {
+                var host = $("#target").val();
+                var port = $("#port").val();
+                var duration = $("#duration").val();
+                var method = $("#method").val();
+
+                var concurrentslider = document.getElementById("concurrentSlider");
+                var concurrents = concurrentslider.noUiSlider.get();
+                console.log(concurrents);
+                document.getElementById("startatk").disabled = true;
+
+                $.post('/api/start', {
+                    host,
+                    port,
+                    duration,
+                    method,
+                    concurrents
+                }, function (response) {
+                    console.log(response.error)
+                    var json = $.parseJSON(response);
+                    console.log(json)
+                    if (json.status == "success") {
+                        toastr['success']('Attack sent succesfully', 'Attacks', { "toastClass": "toast-dark" });
+                        document.getElementById("startatk").disabled = false;
+                    } else if (json.status == "error") {
+                        toastr['warning'](json.message, 'Attacks', { "toastClass": "toast-dark" });
+                        document.getElementById("startatk").disabled = false;
+                    }
+                    document.getElementById("startatk").disabled = false;
+                })
+            };
+            $(window).on('load', function () {
+                size = document.getElementById('concurrentSlider');
+                if (typeof size !== undefined && size !== null) {
+                    // Range
+                    noUiSlider.create(size, {
+                        start: 1,
+                        step: 1,
+                        range: {
+                            min: 1,
+                            max: 10
+                        },
+                        tooltips: false,
+                        pips: {
+                            mode: 'steps',
+                            stepped: true,
+                            density: 5
+                        }
+                    });
+                }
+            });
+        </script>
+
+
+        <script>
+            $(window).on('load', function () {
+                if (feather) {
+                    feather.replace({
+                        width: 14,
+                        height: 14
+                    });
+                }
+            })
+        </script>
+</body>
+<!-- END: Body-->
+
+</html>

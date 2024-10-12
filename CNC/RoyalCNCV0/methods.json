@@ -1,0 +1,24 @@
+[
+  {
+    "enabled": true,
+    "method": "tcp",
+    "group": "LAYER 4",
+    "defaultPort": 80,
+    "defaultTime": 60,
+    "permission": [""],
+    "API": [
+      "https://you're=api.com/api/attack?username=USERNAME&secret=PASSWORDS&host={HOST}&port={PORT}&time={TIME}&method=udp"
+    ]
+  },
+  {
+    "enabled": true,
+    "method": "tcp",
+    "group": "LAYER 4",
+    "defaultPort": 80,
+    "defaultTime": 60,
+    "permission": [""],
+    "API": [
+      "https://you're=api.com/api/attack?username=USERNAME&secret=PASSWORDS&host={HOST}&port={PORT}&time={TIME}&method=udp"
+    ]
+  }
+]

@@ -1,0 +1,271 @@
+
+<!-- BEGIN: Header -->
+<nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-dark navbar-shadow container-xxl">
+    <div class="navbar-container d-flex content">
+        <div class="bookmark-wrapper d-flex align-items-center">
+            <ul class="nav navbar-nav d-xl-none">
+                <li class="nav-item">
+                    <a class="nav-link menu-toggle" href="#">
+                        <i class="ficon" data-feather="menu"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link bookmark-star">
+                        <i class="ficon text-warning" data-feather="star"></i>
+                    </a>
+                    <div class="bookmark-input search-input">
+                        <div class="bookmark-input-icon"><i data-feather="search"></i></div>
+                        <input class="form-control input" type="text" placeholder="Bookmark" tabindex="0" data-search="search">
+                        <ul class="search-list search-list-bookmark"></ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav align-items-center ms-auto">
+            <li class="nav-item d-none d-lg-block">
+                <a class="nav-link nav-link-style">
+                    <i class="ficon" data-feather="sun"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown dropdown-notification me-25">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                    <i class="ficon" data-feather="bell"></i>
+                    <span class="badge rounded-pill bg-primary badge-up">1</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                    <li class="dropdown-menu-header">
+                        <div class="dropdown-header d-flex">
+                            <h4 class="notification-title mb-0 me-auto">Notifications</h4>
+                        </div>
+                    </li>
+                    <li class="scrollable-container media-list">
+                        <a class="d-flex" href="#">
+                            <div class="list-item d-flex align-items-start">
+                                <div class="list-item-body flex-grow-1">
+                                    <p class="media-heading"><span class="fw-bolder">kitty (admin)</span></p>
+                                    <small class="notification-text"> is cute but wont admit it.</small>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="dropdown-menu-footer">
+                        <a class="btn btn-primary w-100" href="#">Read all notifications</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown dropdown-user">
+                <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="user-nav d-sm-flex d-none">
+                        <span class="user-name fw-bolder">{{.Username}}</span>
+                        <span class="user-status">{{ if .User.HasPermission "admin" }}Admin {{ else }} User{{ end }}</span>
+                    </div>
+                    <span class="avatar"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
+                    <a class="dropdown-item" href="/account">
+                        <i class="me-50" data-feather="user"></i>
+                        Profile
+                    </a>
+                    <a class="dropdown-item" href="/logs">
+                        <i class="me-50" data-feather="check-square"></i>
+                        Logs
+                    </a>
+                    {{if .HasPermission "admin"}}
+                    <a class="dropdown-item" href="/admin/dash">
+                        <i class="me-50" data-feather="shield"></i>
+                        Admin
+                    </a>
+                    {{end}}
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/logout">
+                        <i class="me-50" data-feather="power"></i> Logout
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- END: Header -->
+
+
+<!-- START: NAV -->
+<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item me-auto">
+                <a class="navbar-brand" href="/">
+                    <span class="brand-logo">
+                        <h2 class="brand-text">{{.Name}}</h2>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="shadow-bottom"></div>
+    <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" navigation-header">
+                <span>Home</span><i data-feather="more-horizontal"></i>
+            </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="/dashboard">
+                    <i data-feather="home"></i>
+                    <span class="menu-title text-truncate">Dashboard</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="/attack">
+                    <i data-feather='wifi-off'></i>
+                    <span class="menu-title text-truncate">Panel</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="/api">
+                    <i data-feather='cloud'></i>
+                    <span class="menu-title text-truncate">API Manager</span>
+                </a>
+            </li>
+            <li class=" navigation-header">
+                <span>Account</span><i data-feather="more-horizontal"></i>
+            </li>
+            <li class="nav-item">
+                <a class="d-flex align-items-center" href="/account">
+                    <i data-feather='user'></i>
+                    <span class="menu-title text-truncate">Account</span>
+                </a>
+            </li>
+                <li class="menu-item">
+                    <a class="menu-link menu-toggle">
+                        <i data-feather='shopping-cart'></i>
+                        <span class="menu-title text-truncate">Shop</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="/upgrade" class="menu-link">
+                                <div data-i18n="Roles">Upgrade</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/addons" class="menu-link">
+                                <div data-i18n="Roles">Addons</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/deposit" class="menu-link">
+                                <div data-i18n="Roles">Deposit</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="/faq">
+                    <i data-feather='help-circle'></i>
+                    <span class="menu-title text-truncate">FaQ</span>
+                </a>
+            </li>
+            <li class=" navigation-header">
+                <span>Tickets</span><i data-feather="more-horizontal"></i>
+            </li>
+            <li class=" nav-item">
+                <a class="d-flex align-items-center" href="/ticket">
+                    <i data-feather='help-circle'></i>
+                    <span class="menu-title text-truncate">New Ticket</span>
+                </a>
+            </li>
+
+            {{if .HasPermission "admin"}}
+            <li class=" navigation-header">
+                <span>Administration</span><i data-feather="more-horizontal"></i>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link menu-toggle">
+                    <i data-feather='shield'></i>
+                    <span class="menu-title text-truncate">Admin</span>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a href="/admin/dash" class="menu-link">
+                            <div data-i18n="Roles">Dashboard</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/admin/ul" class="menu-link">
+                            <div data-i18n="Roles">Userlist</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link menu-toggle">
+                            <i data-feather='globe'></i>
+                            <span class="menu-title text-truncate">Management</span>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="/admin/apisettings" class="menu-link">
+                                    <div data-i18n="Roles">API's</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/admin/servers" class="menu-link">
+                                    <div data-i18n="Roles">Servers</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-link menu-toggle">
+                            <i data-feather='shopping-cart'></i>
+                            <span class="menu-title text-truncate">Shop</span>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="/admin/invoices" class="menu-link">
+                                    <div data-i18n="Invoices">Invoices</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/admin/coupons" class="menu-link">
+                                    <div data-i18n="Coupons">Coupons</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            {{end}}
+            <div class="divider">
+                <div class="divider-text">/\</div>
+            </div>
+        </ul>
+    </div>
+</div>
+<!-- END: NAV -->
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current URL
+    var currentPageUrl = window.location.pathname;
+    var navLinks = document.querySelectorAll('.navigation-main .nav-item');
+
+    navLinks.forEach(function(navLink) {
+        var linkUrl = navLink.querySelector('a').getAttribute('href');
+
+        if (currentPageUrl === linkUrl) {
+            navLink.classList.add('active');
+        }
+
+        // Check if the current page URL is a submenu link
+        var subLinks = navLink.querySelectorAll('.menu-sub .menu-item a');
+        subLinks.forEach(function(subLink) {
+            var subLinkUrl = subLink.getAttribute('href');
+            if (currentPageUrl === subLinkUrl) {
+                navLink.closest('.menu-sub').classList.add('active');
+            }
+        });
+    });
+});
+</script>

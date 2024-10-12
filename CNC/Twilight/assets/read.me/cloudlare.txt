@@ -1,0 +1,21 @@
+buy domain 
+-namecheap
+-cloudflare
+-ovh
+
+open cloudflare account
+
+link domain name servers there should be 2
+
+update dns record
+-add record
+--add A type pointing domain to server
+
+update ssl/tls encryption mode to full
+
+go to ssl/tls > origin server
+-create certificate (dont close)
+
+copy cert and key to assets cert.pem and key.pem
+
+enable secure in config and ur good to go

@@ -1,0 +1,1 @@
+<<$name>> ~ User: <<$username>> ~ Online: <<$online>> ~ Expiry: <<$expiry>> ~ Slots: [<<$usedslots>>/<<$totalslots>>]

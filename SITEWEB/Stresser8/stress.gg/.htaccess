@@ -1,0 +1,21 @@
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+
+#Options +FollowSymLinks
+RewriteEngine On
+
+ErrorDocument 404 /pages/hub.php
+
+RewriteRule ^$ pages/authentification.php [L]
+RewriteRule ^authentification$ pages/authentification.php [L]
+RewriteRule ^login$ pages/login.php [L]
+RewriteRule ^deconnexion$ logout.php [L]
+
+RewriteRule ^hub$ pages/hub.php [L]
+RewriteRule ^boutique$ pages/boutique.php [L]
+RewriteRule ^support$ pages/support.php [L]
+RewriteRule ^api$ pages/api.php [L]
+RewriteRule ^deposer$ pages/deposer.php [L]
+
+RewriteRule ^favicon.ico images/favicon.ico [L]

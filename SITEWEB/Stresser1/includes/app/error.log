@@ -1,0 +1,2 @@
+ERROR: SQLSTATE[HY000] [2005] Unknown MySQL server host 'DB_HOST' (-2) - /includes/app/config.php at Friday 20th of May, 2022, 02:11:39 PM
+ERROR: SQLSTATE[HY000] [2005] Unknown MySQL server host 'DB_HOST' (-2) - /includes/app/config.php at Friday 20th of May, 2022, 02:11:41 PM

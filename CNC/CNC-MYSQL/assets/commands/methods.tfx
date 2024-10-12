@@ -1,0 +1,21 @@
+name=methods
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+<<clear()>>
+
+\x1b[97m                            ╔╦╗ ╦═╗ ╦ \x1b[91m╔╦╗ ╔═╗ ╔╗╔
+\x1b[97m                             ║  ╠╦╝ ║ \x1b[91m ║  ║ ║ ║║║
+\x1b[97m                             ╩  ╩╚═ ╩ \x1b[91m ╩  ╚═╝ ╝╚╝
+\x1b[91m     ╔═══════════════╗╔═══════════════╗\x1b[97m\x1b[97m╔═══════════════╗╔═══════════════╗
+\x1b[91m     ║ NTP           ║║ TCP-SYNv2     ║\x1b[97m║ ARK-PC        ║║ OVHGAME-VULN  ║
+\x1b[91m     ║ CLDAP         ║║ UDP-BYPASS    ║\x1b[97m║ HOME-FLOOD    ║║ OVHBETA-VULN  ║
+\x1b[91m     ║ ARD           ║║ SOURCE        ║\x1b[97m║ HOME-AMPMIX   ║║ 100UP-EXPLOIT ║
+\x1b[91m     ╚═══════════════╝╚═══════════════╝\x1b[97m╚═══════════════╝╚═══════════════╝
+\x1b[91m     ╔═══════════════╗╔═══════════════╗\x1b[97m╔═══════════════╗╔═══════════════╗
+\x1b[91m     ║ WSD           ║║ XBYPASS       ║\x1b[97m║ OVH-VULN      ║║ 100UP-BYPASS  ║
+\x1b[91m     ║ UDP           ║║ KILLALLv2     ║\x1b[97m║ OVH-EXPLOIT   ║║ 100UP-BETA    ║
+\x1b[91m     ║ TCP-BYPASS    ║║ ARK-XBOX      ║\x1b[97m║ OVH-LITE      ║║ NFO-VULN      ║
+\x1b[91m     ╚═══════════════╝╚═══════════════╝\x1b[97m╚═══════════════╝╚═══════════════╝

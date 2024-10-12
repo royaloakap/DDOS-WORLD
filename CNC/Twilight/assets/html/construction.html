@@ -1,0 +1,30 @@
+
+<!-- Modal -->
+<div class="modal fade show" id="backDropModal" data-bs-backdrop="static" tabindex="-1" style="display: block;">
+    <div class="modal-dialog">
+      <form class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="backDropModalTitle">Site under construction!</h5>
+          <a href="/dashboard" type="button" class="btn-close" aria-label="Close"></a>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body">
+                <p>This page has not been finished please come back soon!</p>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <a href="/dashboard" class="btn btn-primary">Back to dash!</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var myModal = new bootstrap.Modal(document.getElementById('backDropModal'), {
+        backdrop: 'static',
+        keyboard: false
+      });
+      myModal.show();
+    });
+  </script>

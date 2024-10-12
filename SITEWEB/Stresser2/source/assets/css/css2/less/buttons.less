@@ -1,0 +1,281 @@
+/* Buttons
+=================================================================== */
+.btn {
+	border: none;
+	.border-radius(2px);
+	text-shadow: none;
+	color: @mainText;
+	
+	i {
+		margin-top: 2px;
+	}	
+}
+
+.btn-default {
+	@color: @mainD5;
+	
+	color: @mainText;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}
+}
+
+.btn-primary {
+	@color: @primary;
+	
+	color: white;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}	
+}
+
+.btn-warning {
+	@color: @warning;
+	
+	color: white;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}	
+}
+
+.btn-danger {
+	@color: @danger;
+	
+	color: white;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}	
+}
+
+.btn-success {
+	@color: @success;
+	
+	color: white;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}	
+}
+
+
+.btn-info {
+	@color: @info;
+	
+	color: white;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}	
+}
+
+.btn-inverse {
+	@color: @inverse;
+	
+	color: white;
+  	background: @color;
+	border: 1px solid @color;
+	
+	&:hover,
+	&.disabled,
+	&[disabled] {
+  		background-color: darken(@color,10%);
+		border-color: darken(@color,10%);
+		color: white;
+	}
+
+	&:active,
+	&.active {
+  		background-color: darken(@color,12%);
+		border-color: darken(@color,12%);
+	}	
+}
+
+.btn-facebook,
+.btn-twitter,
+.btn-linkedin {
+	color: white;
+	position:relative;
+	text-align: center;
+	height: 40px;
+	width: 100%;
+	font-family: 'FontAwesome';
+	font-weight: bold;
+	padding: 10px 0;
+	
+	&:before {
+		position: absolute;
+		display: block;
+		height: 40px;
+		width: 40px;
+		top: 0;
+		left: 0;
+		.border-radius(2px);
+		font-size: 20px;
+		padding: 6px 0;
+	}
+	
+	span {
+		margin-left: 40px;
+	}
+	
+	&:hover {
+		color: white;
+	}
+}
+
+.btn-facebook {
+	@color: #3b5998;
+	
+	background: @color;
+	border: 1px solid @color;
+	
+	&:before {
+		content: "\f09a";
+		background: darken(@color, 5%);
+		margin: -1px;
+	}
+	
+	&:hover {
+		background: darken(@color, 5%);
+		
+		&:before {
+			background: darken(@color, 10%);
+		}
+		
+	}
+	
+}
+
+.btn-twitter {
+	@color: #00aced;
+	
+	background: @color;
+	border: 1px solid @color;
+	
+	&:before {
+		content: "\f099";
+		background: darken(@color, 5%);
+		margin: -1px;
+	}
+	
+	&:hover {
+		background: darken(@color, 5%);
+		
+		&:before {
+			background: darken(@color, 10%);
+		}
+		
+	}
+}
+
+.btn-linkedin {
+	@color: #4875B4;
+	
+	background: @color;
+	border: 1px solid @color;
+	
+	&:before {
+		content: "\f0e1";
+		background: darken(@color, 5%);
+		margin: -1px;
+	}
+	
+	&:hover {
+		background: darken(@color, 5%);
+		
+		&:before {
+			background: darken(@color, 10%);
+		}
+		
+	}
+}
+
+.dropdown-menu {
+	.border-radius(2px);
+	border: 1px solid @mainD5;
+	.box-shadow(0 2px 4px rgba(0,0,0,.125));
+	
+	li {
+		
+		a {
+			&:hover {
+				background-color: @main;
+			}
+		}
+		
+		&.divider {
+		  background-color: @main;
+		}
+		
+	}
+}

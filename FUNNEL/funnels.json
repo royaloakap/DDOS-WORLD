@@ -1,0 +1,63 @@
+{
+    "listener":"127.0.0.1:8090",
+    "api_key":"PwBlGAJbuOnRK86xE7ut",
+    "timeout":3,
+    "methods":{
+        "tcpbypass":{
+            "enabled":true,
+            "maxtime":8000,
+            "targets":[
+                {
+                    "method":"tcp-bypass",
+                    "target":"https://www.google1.com/",
+                    "pathEncoding":true,
+                    "verbosity" : true
+                },
+                {
+                    "method":"tcp-bypass1",
+                    "target":"https://www.google2.com/",
+                    "pathEncoding":true,
+                    "verbosity" : true
+                }
+            ]
+        },
+
+        "udpbypass":{
+            "enabled":true,
+            "maxtime":8000,
+            "targets":[
+                {
+                    "method":"udp-bypass",
+                    "target":"https://www.google1.com/",
+                    "pathEncoding":true,
+                    "verbosity" : true
+                },
+                {
+                    "method":"udp-bypass1",
+                    "target":"https://www.google2.com/",
+                    "pathEncoding":true,
+                    "verbosity" : true
+                }
+            ]
+        },
+
+        "ovhbypass":{
+            "enabled":true,
+            "maxtime":8000,
+            "targets":[
+                {
+                    "method":"ovh-bypass",
+                    "target":"https://www.google1.com/",
+                    "pathEncoding":true,
+                    "verbosity" : true
+                },
+                {
+                    "method":"ovh-bypass1",
+                    "target":"https://www.google2.com/",
+                    "pathEncoding":true,
+                    "verbosity" : true
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+
+    "methods" : [
+        
+        {
+            "api_name" : "funnel",
+            "target" : "https://golang.org/src/",
+            "urlEncode" : true,
+            "attack_methods" : ["t-ftp"],
+
+            "custom_define" : [
+                
+                {
+                    "method" : "tcp",
+                    "description" : "simple tcp attack flood sent through api",
+
+                    "default_port" : 80,
+                    "vip_method" : true
+                }
+            ]
+        }
+    ]
+}

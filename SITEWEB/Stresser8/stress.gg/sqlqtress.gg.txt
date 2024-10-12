@@ -1,0 +1,611 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1
+-- Généré le : jeu. 18 nov. 2021 à 20:43
+-- Version du serveur :  10.4.18-MariaDB
+-- Version de PHP : 7.3.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `stressing`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `ip_config` varchar(255) NOT NULL DEFAULT 'off',
+  `ip` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `ip_config`, `ip`) VALUES
+(1, 'YumekoSh', '$2y$10$Ks6cnu/f8YnocjU4kUuyhuJuSj9rKwqlb5n8JMDlPAbjjxGv3ZxT6', 'off', '127.0.0.1');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin_logs`
+--
+
+CREATE TABLE `admin_logs` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `action` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `admin_logs`
+--
+
+INSERT INTO `admin_logs` (`id`, `username`, `ip`, `date`, `action`) VALUES
+(1, 'YumekoSh', '2a04:cec0:11a8:a0ac:dd86:d93f:bfc0:e1aa', '16-05-2021 à 22:49:50', 'Connexion'),
+(2, 'YumekoSh', '2001:861:30c1:9150:e8c0:415d:e3a2:cd26', '17-05-2021 à 13:39:27', 'Connexion'),
+(3, 'YumekoSh', '2001:861:30c1:9150:e8c0:415d:e3a2:cd26', '18-05-2021 à 01:21:37', 'Connexion'),
+(4, 'YumekoSh', '2001:861:30c1:9150:bd06:1d61:3a73:2dde', '18-05-2021 à 03:36:14', 'Connexion');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin_mail`
+--
+
+CREATE TABLE `admin_mail` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `userid` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `date` varchar(255) NOT NULL,
+  `statut` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `attaques`
+--
+
+CREATE TABLE `attaques` (
+  `id` int(11) NOT NULL,
+  `server` int(11) NOT NULL,
+  `type` varchar(2500) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `target` varchar(200) NOT NULL,
+  `methode` varchar(200) NOT NULL,
+  `duree` int(11) NOT NULL,
+  `date` varchar(200) NOT NULL,
+  `timestamp` int(11) NOT NULL,
+  `timestamp_end` int(11) NOT NULL,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `statut` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `attaques`
+--
+
+INSERT INTO `attaques` (`id`, `server`, `type`, `userid`, `username`, `target`, `methode`, `duree`, `date`, `timestamp`, `timestamp_end`, `content`, `statut`) VALUES
+(1, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:27:12', 1637263632, 1637263642, NULL, 0),
+(2, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:31:13', 1637263873, 1637263883, NULL, 0),
+(3, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:31:42', 1637263902, 1637263912, NULL, 0),
+(4, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:32:16', 1637263936, 1637263946, NULL, 0),
+(5, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:34:34', 1637264074, 1637264084, NULL, 0),
+(6, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:34:52', 1637264092, 1637264102, NULL, 0),
+(7, 1, '7', 13, 'NagatoroSh', 'https://zataz.com', 'HTTP-RAW', 10, '18-11-2021 à 20:35:20', 1637264120, 1637264130, NULL, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `blacklist`
+--
+
+CREATE TABLE `blacklist` (
+  `id` int(11) NOT NULL,
+  `note` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `liaison_nooder`
+--
+
+CREATE TABLE `liaison_nooder` (
+  `id` int(11) NOT NULL,
+  `cible` varchar(200) NOT NULL,
+  `attaqueID` int(11) NOT NULL,
+  `serverID` int(11) NOT NULL,
+  `time` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `logs`
+--
+
+CREATE TABLE `logs` (
+  `id` int(11) NOT NULL,
+  `action` varchar(200) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `date` varchar(200) NOT NULL,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `logs`
+--
+
+INSERT INTO `logs` (`id`, `action`, `userid`, `username`, `date`, `content`) VALUES
+(1, 'register', 1, 'YumekoSh', '16-05-2021 à 22:48:22', '{\"ip\":\"2a04:cec0:11a8:a0ac:dd86:d93f:bfc0:e1aa\"}'),
+(2, 'login', 1, 'YumekoSh', '16-05-2021 à 22:48:27', '{\"ip\":\"2a04:cec0:11a8:a0ac:dd86:d93f:bfc0:e1aa\"}'),
+(3, 'login', 1, 'YumekoSh', '16-05-2021 à 22:59:56', '{\"ip\":\"2a04:cec0:11a8:a0ac:dd86:d93f:bfc0:e1aa\"}'),
+(4, 'attaque', 1, 'YumekoSh', '17-05-2021 à 00:06:32', '{\"cible\":\"https:\\/\\/zataz.com\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(5, 'register', 2, 'Listory', '17-05-2021 à 01:10:56', '{\"ip\":\"193.23.127.52\"}'),
+(6, 'login', 2, 'Listory', '17-05-2021 à 01:11:21', '{\"ip\":\"193.23.127.52\"}'),
+(7, 'register', 3, 'SeraxYT', '17-05-2021 à 01:12:10', '{\"ip\":\"185.128.25.220\"}'),
+(8, 'login', 3, 'SeraxYT', '17-05-2021 à 01:12:32', '{\"ip\":\"185.128.25.220\"}'),
+(9, 'register', 4, 'rgrgrdgrg', '17-05-2021 à 09:33:51', '{\"ip\":\"94.242.206.66\"}'),
+(10, 'login', 4, 'rgrgrdgrg', '17-05-2021 à 09:34:01', '{\"ip\":\"94.242.206.66\"}'),
+(11, 'login', 1, 'YumekoSh', '17-05-2021 à 13:35:57', '{\"ip\":\"2001:861:30c1:9150:e8c0:415d:e3a2:cd26\"}'),
+(12, 'register', 5, 'test', '17-05-2021 à 13:36:42', '{\"ip\":\"81.66.114.143\"}'),
+(13, 'login', 5, 'test', '17-05-2021 à 13:36:55', '{\"ip\":\"81.66.114.143\"}'),
+(14, 'attaque', 5, 'test', '17-05-2021 à 13:38:39', '{\"cible\":\"https:\\/\\/zdstresser.net\\/\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(15, 'attaque', 5, 'test', '17-05-2021 à 13:40:39', '{\"cible\":\"https:\\/\\/power-bypass.com\\/hub\\/login.php\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(16, 'register', 6, 'DUKSON', '17-05-2021 à 13:52:32', '{\"ip\":\"85.169.184.51\"}'),
+(17, 'login', 6, 'DUKSON', '17-05-2021 à 13:52:46', '{\"ip\":\"85.169.184.51\"}'),
+(18, 'attaque', 1, 'YumekoSh', '17-05-2021 à 13:59:34', '{\"cible\":\"https:\\/\\/power-bypass.com\\/hub\\/login.php\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(19, 'attaque', 6, 'DUKSON', '17-05-2021 à 13:59:46', '{\"cible\":\"https:\\/\\/power-bypass.com\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(20, 'register', 7, 'test45', '17-05-2021 à 13:59:55', '{\"ip\":\"2001:67c:2660:425:92e2:baff:fe0b:6dec\"}'),
+(21, 'login', 7, 'test45', '17-05-2021 à 14:00:05', '{\"ip\":\"2001:67c:2660:425:92e2:baff:fe0b:6dec\"}'),
+(22, 'attaque', 7, 'test45', '17-05-2021 à 14:00:42', '{\"cible\":\"https:\\/\\/power-bypass.com\\/hub\\/login.php\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(23, 'attaque', 1, 'YumekoSh', '17-05-2021 à 14:03:16', '{\"cible\":\"https:\\/\\/power-bypass.com\\/hub\\/login.php\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(24, 'attaque', 1, 'YumekoSh', '17-05-2021 à 14:05:28', '{\"cible\":\"https:\\/\\/power-bypass.com\\/hub\\/login.php\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(25, 'login', 5, 'test', '17-05-2021 à 14:13:02', '{\"ip\":\"2001:67c:2660:425:92e2:baff:fe0b:6dec\"}'),
+(26, 'login', 1, 'YumekoSh', '17-05-2021 à 14:16:25', '{\"ip\":\"2001:861:30c1:9150:e8c0:415d:e3a2:cd26\"}'),
+(27, 'attaque', 1, 'YumekoSh', '17-05-2021 à 14:16:32', '{\"cible\":\"https:\\/\\/zataz.com\",\"duree\":\"10\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(28, 'attaque', 5, 'test', '17-05-2021 à 14:17:34', '{\"cible\":\"https:\\/\\/power-bypass.com\\/hub\\/login.php\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(29, 'attaque', 5, 'test', '17-05-2021 à 14:18:35', '{\"cible\":\"https:\\/\\/zdstresser.net\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(30, 'attaque', 1, 'YumekoSh', '17-05-2021 à 14:19:14', '{\"cible\":\"https:\\/\\/zataz.com\",\"duree\":\"10\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(31, 'register', 8, 'mizhayy', '17-05-2021 à 14:26:42', '{\"ip\":\"86.208.228.52\"}'),
+(32, 'login', 8, 'mizhayy', '17-05-2021 à 14:26:54', '{\"ip\":\"86.208.228.52\"}'),
+(33, 'attaque', 8, 'mizhayy', '17-05-2021 à 14:27:21', '{\"cible\":\"https:\\/\\/pepsi.nl\\/\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(34, 'attaque', 8, 'mizhayy', '17-05-2021 à 14:30:52', '{\"cible\":\"https:\\/\\/pepsi.nl\\/\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(35, 'attaque', 8, 'mizhayy', '17-05-2021 à 14:32:05', '{\"cible\":\"http:\\/\\/141.94.23.178:30120\\/\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(36, 'attaque', 8, 'mizhayy', '17-05-2021 à 23:39:04', '{\"cible\":\"http:\\/\\/78.122.244.75\\/\",\"duree\":\"55\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(37, 'register', 9, 'Nyzix', '18-05-2021 à 00:15:27', '{\"ip\":\"2a01:e0a:352:15f0:59bc:8553:a43:5b74\"}'),
+(38, 'register', 10, 'L7MAN', '18-05-2021 à 00:57:37', '{\"ip\":\"2001:861:36c4:5a10:a5dc:1f69:fa3c:4e4f\"}'),
+(39, 'login', 10, 'L7MAN', '18-05-2021 à 00:57:41', '{\"ip\":\"2001:861:36c4:5a10:a5dc:1f69:fa3c:4e4f\"}'),
+(40, 'attaque', 10, 'L7MAN', '18-05-2021 à 00:58:13', '{\"cible\":\"http:\\/\\/layerwall.to\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(41, 'attaque', 10, 'L7MAN', '18-05-2021 à 01:00:00', '{\"cible\":\"https:\\/\\/www.zataz.com\\/\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(42, 'login', 1, 'YumekoSh', '18-05-2021 à 02:01:48', '{\"ip\":\"2001:861:30c1:9150:e8c0:415d:e3a2:cd26\"}'),
+(43, 'login', 1, 'YumekoSh', '18-05-2021 à 02:20:29', '{\"ip\":\"2001:861:30c1:9150:e8c0:415d:e3a2:cd26\"}'),
+(44, 'login', 1, 'YumekoSh', '18-05-2021 à 02:51:46', '{\"ip\":\"2001:861:30c1:9150:bd06:1d61:3a73:2dde\"}'),
+(45, 'attaque', 1, 'YumekoSh', '18-05-2021 à 03:14:43', '{\"cible\":\"https:\\/\\/zataz.com\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(46, 'attaque', 1, 'YumekoSh', '18-05-2021 à 03:28:43', '{\"cible\":\"https:\\/\\/zataz.com\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(47, 'attaque', 10, 'L7MAN', '18-05-2021 à 03:30:31', '{\"cible\":\"https:\\/\\/layerwall.to\\/\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(48, 'attaque', 1, 'YumekoSh', '18-05-2021 à 03:32:39', '{\"cible\":\"https:\\/\\/zataz.com\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(49, 'attaque', 10, 'L7MAN', '18-05-2021 à 03:33:37', '{\"cible\":\"https:\\/\\/www.zataz.com\\/\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(50, 'login', 6, 'DUKSON', '18-05-2021 à 03:35:11', '{\"ip\":\"85.169.184.51\"}'),
+(51, 'attaque', 1, 'YumekoSh', '18-05-2021 à 03:35:37', '{\"cible\":\"https:\\/\\/iplogger.com\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(52, 'attaque', 6, 'DUKSON', '18-05-2021 à 03:35:38', '{\"cible\":\"http:\\/\\/power-bypass.com\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(53, 'login', 6, 'DUKSON', '18-05-2021 à 03:36:41', '{\"ip\":\"85.169.184.51\"}'),
+(54, 'attaque', 6, 'DUKSON', '18-05-2021 à 03:37:00', '{\"cible\":\"http:\\/\\/power-bypass.com\",\"duree\":\"30\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(55, 'attaque', 10, 'L7MAN', '18-05-2021 à 03:41:04', '{\"cible\":\"https:\\/\\/iplogger.org\\/2yaq56\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(56, 'login', 8, 'mizhayy', '18-05-2021 à 04:00:22', '{\"ip\":\"86.208.228.52\"}'),
+(57, 'attaque', 8, 'mizhayy', '18-05-2021 à 04:00:34', '{\"cible\":\"https:\\/\\/pepsi.nl\\/\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(58, 'attaque', 8, 'mizhayy', '18-05-2021 à 04:03:06', '{\"cible\":\"https:\\/\\/78.122.244.75\\/\",\"duree\":\"60\",\"serveur\":\"1\",\"methode\":\"AUTO-BYPASS\"}'),
+(59, 'register', 11, 'NagatoroSh', '18-11-2021 à 19:43:55', '{\"ip\":\"127.0.0.1\"}'),
+(60, 'register', 12, 'NagatoroSh', '18-11-2021 à 19:44:27', '{\"ip\":\"127.0.0.1\"}'),
+(61, 'login', 12, 'NagatoroSh', '18-11-2021 à 19:44:59', '{\"ip\":\"127.0.0.1\"}'),
+(62, 'register', 13, 'NagatoroSh', '18-11-2021 à 19:52:53', '{\"ip\":\"127.0.0.1\"}'),
+(63, 'login', 13, 'NagatoroSh', '18-11-2021 à 19:53:05', '{\"ip\":\"127.0.0.1\"}');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `methodes`
+--
+
+CREATE TABLE `methodes` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `displayname` varchar(200) NOT NULL,
+  `type` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `methodes`
+--
+
+INSERT INTO `methodes` (`id`, `name`, `displayname`, `type`) VALUES
+(1, 'HTTP-RAW', 'HTTP-RAW', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `payments`
+--
+
+CREATE TABLE `payments` (
+  `id` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `croncheck` int(11) NOT NULL DEFAULT 0,
+  `from_currency` varchar(500) NOT NULL,
+  `entered_amount` varchar(1000) NOT NULL,
+  `to_currency` varchar(500) NOT NULL,
+  `amount` varchar(50) NOT NULL,
+  `gateway_id` varchar(1000) NOT NULL,
+  `gateway_url` text NOT NULL,
+  `status` varchar(500) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `plans`
+--
+
+CREATE TABLE `plans` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `concurents` int(11) NOT NULL,
+  `maxtime` int(11) NOT NULL,
+  `duree` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `network` varchar(255) NOT NULL,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `plans`
+--
+
+INSERT INTO `plans` (`id`, `name`, `concurents`, `maxtime`, `duree`, `price`, `network`, `content`) VALUES
+(1, 'ddos', 1, 900, 1, 1, '1', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `servers`
+--
+
+CREATE TABLE `servers` (
+  `id` int(11) NOT NULL,
+  `note` varchar(200) DEFAULT NULL,
+  `type` int(11) NOT NULL,
+  `methodes` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `active_concurent` int(11) NOT NULL,
+  `max_concurent` int(11) NOT NULL,
+  `statut` int(11) NOT NULL,
+  `api` varchar(400) NOT NULL,
+  `ssh` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `servers`
+--
+
+INSERT INTO `servers` (`id`, `note`, `type`, `methodes`, `active_concurent`, `max_concurent`, `statut`, `api`, `ssh`) VALUES
+(1, 'AUTOBYPASS', 7, '[\"HTTP-RAW\"]', 0, 20, 1, '', NULL),
+(2, 'AUTOBYPASS', 7, '[\"AUTO-BYPASS\"]', 0, 20, 1, 'https://api.sst-destroyer.net/layer7/auto-bypass.php?host=%hote%&temps=%temps%&id=%attaqueID%&srvid=%srv%&pwd=D0EB6B3F0C06FA7C128D53A2A478B4188B089776485CA1E594E5E6B75A3E1C32', '{\"ip\": \"185.165.241.12\", \"pass\": \"Predatore1337@@@\", \"port\": 22, \"user\": \"root\"}');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `support`
+--
+
+CREATE TABLE `support` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `sujet` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `ip` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tickets`
+--
+
+CREATE TABLE `tickets` (
+  `id` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `objet` varchar(200) NOT NULL,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `date` varchar(200) NOT NULL,
+  `timestamp` int(11) NOT NULL,
+  `statut` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `plan` varchar(255) NOT NULL DEFAULT 'Free',
+  `points` int(11) NOT NULL DEFAULT 0,
+  `endplan` int(11) NOT NULL DEFAULT 0,
+  `concurrents` int(11) NOT NULL DEFAULT 1,
+  `extra_concurrents` int(11) NOT NULL DEFAULT 0,
+  `secondes` int(11) NOT NULL DEFAULT 60,
+  `extra_secondes` int(11) NOT NULL DEFAULT 0,
+  `network` varchar(255) NOT NULL DEFAULT 'free',
+  `ban` int(11) NOT NULL DEFAULT 0,
+  `last-login` varchar(200) NOT NULL,
+  `last-ip` varchar(200) NOT NULL,
+  `reg-date` varchar(200) NOT NULL,
+  `reg-ip` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `plan`, `points`, `endplan`, `concurrents`, `extra_concurrents`, `secondes`, `extra_secondes`, `network`, `ban`, `last-login`, `last-ip`, `reg-date`, `reg-ip`) VALUES
+(13, 'NagatoroSh', '$2y$10$WSek2iLat7AG7VbctsOCGOoQDzJMnNM8IG5GRVwWy0HDOwaT8icpG', 'Free', 0, 0, 1, 0, 60, 0, 'free', 0, '18-11-2021 à 19:53:05', '127.0.0.1', '18-11-2021 à 19:52:53', '127.0.0.1');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users_online`
+--
+
+CREATE TABLE `users_online` (
+  `userid` int(11) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `time` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `users_online`
+--
+
+INSERT INTO `users_online` (`userid`, `username`, `time`) VALUES
+(1, 'YumekoSh', 1621310915),
+(2, 'Listory', 1621216423),
+(3, 'SeraxYT', 1621214044),
+(4, 'rgrgrdgrg', 1621244078),
+(5, 'test', 1621310915),
+(6, 'DUKSON', 1621309155),
+(7, 'test45', 1621260306),
+(8, 'mizhayy', 1621310645),
+(10, 'L7MAN', 1621310914),
+(13, 'NagatoroSh', 1637264587);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `variables`
+--
+
+CREATE TABLE `variables` (
+  `nom` varchar(200) NOT NULL,
+  `value` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `admin_logs`
+--
+ALTER TABLE `admin_logs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `admin_mail`
+--
+ALTER TABLE `admin_mail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `attaques`
+--
+ALTER TABLE `attaques`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `blacklist`
+--
+ALTER TABLE `blacklist`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `liaison_nooder`
+--
+ALTER TABLE `liaison_nooder`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `logs`
+--
+ALTER TABLE `logs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `methodes`
+--
+ALTER TABLE `methodes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `plans`
+--
+ALTER TABLE `plans`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `servers`
+--
+ALTER TABLE `servers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `support`
+--
+ALTER TABLE `support`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `tickets`
+--
+ALTER TABLE `tickets`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users_online`
+--
+ALTER TABLE `users_online`
+  ADD PRIMARY KEY (`userid`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `admin_logs`
+--
+ALTER TABLE `admin_logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `admin_mail`
+--
+ALTER TABLE `admin_mail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `attaques`
+--
+ALTER TABLE `attaques`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT pour la table `blacklist`
+--
+ALTER TABLE `blacklist`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `liaison_nooder`
+--
+ALTER TABLE `liaison_nooder`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `logs`
+--
+ALTER TABLE `logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+
+--
+-- AUTO_INCREMENT pour la table `methodes`
+--
+ALTER TABLE `methodes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `payments`
+--
+ALTER TABLE `payments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `plans`
+--
+ALTER TABLE `plans`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `servers`
+--
+ALTER TABLE `servers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `support`
+--
+ALTER TABLE `support`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `tickets`
+--
+ALTER TABLE `tickets`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

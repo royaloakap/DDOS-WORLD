@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Twilight">
+    <meta name="keywords" content="Twilight">
+    <meta name="author" content="PIXINVENT">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <script src="https://kit.fontawesome.com/d106b983f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+</head>
+<!-- END: Head-->
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern content-left-sidebar
+        navbar-floating footer-static " data-open="click" data-menu="vertical-menu-modern"
+    data-col="content-left-sidebar" id="style-3">
+
+<!-- BEGIN: Body-->
+<body class="vertical-layout vertical-menu-modern content-left-sidebar navbar-floating footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar" id="style-3">
+
+<!-- Include Navigation Menu -->
+{{ template "nav.html" . }}
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content" id="scroll">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- users list start -->
+                <section class="app-user-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.ServersCount}}</h3>
+                                        <span>Servers</span>
+                                    </div>
+                                    <div class="avatar bg-light-success
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="server" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Ongoing}}</h3>
+                                        <span>{{if eq .Ongoing 1 }}Running attack{{ else }}Running attacks{{ end
+                                            }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-primary
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="wifi-off" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Slots}}</h3>
+                                        <span>{{if eq .Slots 1 }}Slot{{ else }}Slots{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-warning
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="command" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Users}}</h3>
+                                        <span>{{if eq .Users 1 }}User{{ else }}Users{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-danger
+                                            p-50">
+                                        <span class="avatar-content">
+                                            {{if eq .Users 1}}<i data-feather='user'
+                                                class="font-medium-4"></i>{{else}}<i data-feather='users'
+                                                class="font-medium-4"></i>{{end}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-mb-12">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Looking For Something?</h5>
+                                    <p class="card-text">Look No Further Then The FaQ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12">
+<div class="nav-align-top">
+  <ul class="nav nav-pills mb-6" role="tablist">
+    <li class="nav-item">
+      <button type="button" class="flex-sm-fill text-sm-center nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#general" aria-controls="general" aria-selected="true">General</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#profile" aria-controls="profile" aria-selected="false">Profile</button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#attacks" aria-controls="attacks" aria-selected="false">Attacks</button>
+    </li>
+    <li class="nav-item">
+        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#network" aria-controls="network" aria-selected="false">Network</button>
+      </li>
+  </ul>
+  <div class="tab-content">
+
+    <div class="tab-pane fade show active" id="general" role="tabpanel">
+        <div class="accordion" id="accordionExample">
+            <div class="card accordion-item active">
+              <h2 class="accordion-header" id="headingOne">
+                <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne" role="tabpanel">
+                    What is this website for ?
+                </button>
+              </h2>
+          
+              <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    We're a specialized IP stress testing service designed to evaluate network and server resilience against threats like DDoS attacks. Administrators can assess resource capacity to ensure robust stresser preparedness.
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="card accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo" role="tabpanel">
+                    Why {{.Name}}?
+                </button>
+              </h2>
+              <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Choose {{.Name}} for unparalleled DDoS booting and stress testing services. We bring you custom solutions to achieve your goals with certainty, making us the top provider in the market.
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel">
+                <div class="accordion" id="accordionExample">
+                    <div class="card accordion-item active">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne" role="tabpanel">
+                            Can I share my account with someone else?
+                        </button>
+                      </h2>
+                  
+                      <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Based on our terms and conditions, you can not share your account, share your API or sell your account to anyone else. If the system detects such an account, it will auto-ban the account and you will lose access to your membership.
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="card accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo" role="tabpanel">
+                            What is the difference between Premium and Non-Premium?
+                        </button>
+                      </h2>
+                      <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Paid memberships come with an impressive 300% increase in capabilities compared to standard packages. Additionally, subscribers to paid plans enjoy priority support services and exclusive access to specialized methods crafted by our skilled engineers..
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="card accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionTwo" role="tabpanel">
+                            How long does it take to activate my membership?
+                          </button>
+                        </h2>
+                        <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            We offers automated services, after our nodes declare the payment as "complete" it usually takes another 5-10 minutes for you to receive your purchased membership.
+                          </div>
+                        </div>
+                      </div>
+    </div>
+    </div>
+    <div class="tab-pane fade" id="attacks" role="tabpanel">
+
+        <div class="accordion" id="accordionExample">
+            <div class="card accordion-item active">
+              <h2 class="accordion-header" id="headingOne">
+                <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionOne" aria-expanded="true" aria-controls="accordionOne" role="tabpanel">
+                    Can I Send Attacks To A BlackList
+                </button>
+              </h2>
+          
+              <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    No! All Blacklisted ip's arent allowed to be hit, they mostly contain .gov and .edu for legal purposes :)
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="card accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo" role="tabpanel">
+                    Are There Free Plans?
+                </button>
+              </h2>
+              <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    We currently do not offer a free plan but you can get one for cheap!
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="Network" role="tabpanel">
+
+            </div>
+    </div>
+  </div>
+</div>
+                              </nav>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    {{ template "footer.html" . }}
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="/_assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/_assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/_assets/vendors/js/charts/apexcharts.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/_assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="/assets/branding/vendors/js/perfectscrollbar/perfect-scrollbar.min.js"></script>
+
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/_assets/js/core/app-menu.js"></script>
+    <script src="/_assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+
+    <!-- BEGIN: Dashboard JS-->
+    <script src="/_assets/scripts/dashboard.js"></script>
+    <!-- END: Dashboard JS-->
+
+    <!--START: Scrollbar-->
+    <style>
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #161D31;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            background-color: #1e1f26;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #283046;
+        }
+    </style>
+    <!--START: Scrollbar-->
+
+    </style>
+    <script>
+        $(window).on('load', function () {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>

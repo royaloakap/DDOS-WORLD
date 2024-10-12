@@ -1,0 +1,12 @@
+name=royal
+attacksenabled=true
+slots=5
+generatehelp=true
+generatemethods=true
+license=HERE
+port=2137
+mysqlhost=localhost
+mysqluser=user1231
+mysqlpassword=1236@
+mysqldb=betacnc
+

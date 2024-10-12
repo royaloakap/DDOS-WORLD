@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOPZ Prices</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #121212; /* Darker background */
+            color: #fff;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #f0f0f0; /* Lighter text color */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            display: flex; /* Use flexbox for alignment */
+        }
+        li::before {
+            content: '•'; /* Bullet symbol */
+            color: #fff; /* Bullet color */
+            margin-right: 10px; /* Space between bullet and text */
+        }
+        a {
+            color: #f0f0f0; /* Link color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tabs and Sections */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: #151515; /* Dark tab background */
+            padding: 10px 0;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .tab:hover {
+            background-color: #333; /* Darken on hover */
+        }
+        .tab.active {
+            background-color: #000; /* Active tab color */
+        }
+        .section {
+            display: none; /* Hide all sections initially */
+            margin-top: 20px;
+        }
+        .section.active {
+            display: block; /* Show active section */
+        }
+
+        /* Contact Information */
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact-info a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            width: 210px; /* Fixed width for each item */
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer; /* Change cursor to pointer when hovering */
+            overflow: hidden;
+        }
+        .gallery-item img, .gallery-item iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .modal {
+            display: none; /* Hide modal by default */
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab active" onclick="showSection('zopzC2ApiPanel')" data-section="zopzC2ApiPanel">ZOPZ C2</div>
+        <div class="tab" onclick="showSection('zopzSniff')" data-section="zopzSniff">ZOPZ SNIFF</div>
+        <div class="tab" onclick="showSection('gallery')" data-section="gallery">Gallery</div>
+        <div class="tab" onclick="showSection('contactInfo')" data-section="contactInfo">Contact Info</div>
+    </div>
+
+    <div id="zopzC2ApiPanel" class="section active" tabindex="0">
+        <h1>ZOPZ C2/API/PANEL Prices</h1>
+
+        <h2>Monthly Plans</h2>
+        <ul>
+            <li>Level 1: 1 Concurrents/10800 Seconds Homeholder - Bypasses 60 Seconds - $20</li>
+            <li>Level 2: 3 Concurrents/15000 Seconds Homeholder - Bypasses 60 Seconds Gold - $40</li>
+            <li>Level 3: 4 Concurrents/50000 Seconds Homeholder - Bypasses 120 Seconds - $60</li>
+        </ul>
+
+<h2>3x Monthly Plans</h2>
+        <ul>
+            <li>Level 1: 1 Concurrents/10800 Seconds Homeholder - Bypasses 60 Seconds - $50</li>
+            <li>Level 2: 3 Concurrents/15000 Seconds Homeholder - Bypasses 60 Seconds - $80</li>
+            <li>Level 3: 4 Concurrents/50000 Seconds Homeholder - Bypasses 120 Seconds - $100</li>
+        </ul>
+
+        <h2>Lifetime Plans</h2>
+        <ul>
+            <li>Level 1: 1 Concurrents/10800 Seconds Homeholder - Bypasses 60 Seconds - $150</li>
+            <li>Level 2: 3 Concurrents/15000 Seconds Homeholder - Bypasses 60 Seconds -  $210</li>
+            <li>Level 3: 4 Concurrents/50000 Seconds Homeholder - Bypasses 120 Seconds - $250</li>
+        <h2>Monthly Homeholder</h2>
+        <ul>
+            <li>5 Concurrents - 86400 Seconds = 60$</li>
+            <li>6 Concurrents - 86400 Seconds = 70$</li>
+            <li>7 Concurrents - 86400 Seconds = 80$</li>
+            <li>10 Concurrents - 86400 Seconds = 110$</li>
+        </ul>
+
+        <h2>Add-ons</h2>
+        <ul>
+            <li>1 Con = $10</li>
+            <li>Homeholder Seconds 1K = $5</li>
+            <li>60 sec bypass Seconds = $10</li>
+            <li>VIP = 120 Seconds bypass $60</li>
+            <li>Botnet Network - 50$ C2 only</li>
+            <!-- Add more add-ons as needed -->
+        </ul>
+
+        <h2>Payment Methods</h2>
+        <ul>
+            <li>Paypal</li>
+            <li>Cashapp</li>
+            <li>BTC</li>
+            <li>LTC</li>
+            <!-- Add more payment methods if required -->
+        </ul>
+    </div>
+
+    <div id="zopzSniff" class="section" tabindex="0">
+        <h1>ZOPZ SNIFF Prices</h1>
+
+        <h2>Functions</h2>
+        <ul>
+            <li>Xbox Live Party Tool</li>
+            <li>IP To Psn/Xbox</li>
+            <li>Xbox/PSN TO IP</li>
+            <li>Gamertag Decryption</li>
+            <li>Label Saver</li>
+            <li>Packet Filters</li>
+            <li>Xbox Username AI</li>
+            <li>Port Filtering</li>
+            <li>Game Filters</li>
+            <li>Discord Presence</li>
+            <li>Geo Info - Country Region City ISP Protected</li>
+            <li>Live Chat</li>
+        </ul>
+
+        <h2>Price</h2>
+        <ul>
+            <li>$5 lifetime</li>
+        </ul>
+
+        <h2>Payment Methods</h2>
+        <ul>
+            <li>Paypal</li>
+            <li>Cashapp</li>
+            <li>BTC</li>
+            <li>LTC</li>
+            <!-- Add more payment methods if required -->
+        </ul>
+    </div>
+
+    <div id="gallery" class="section" tabindex="0">
+        <h1>Gallery</h1>
+    
+        <div class="gallery">
+            <!-- Example images and videos displayed via URLs -->
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <img src="https://cdn.discordapp.com/attachments/1248490190641827939/1254845925302730913/path_to_your_image1.png?ex=667af9d6&is=6679a856&hm=603631fcc1a3b2191d6a8794db746f67154d260f79944dac533e901776144a48&" alt="Image 1">
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <img src="https://cdn.discordapp.com/attachments/1248490190641827939/1254845925537480754/Screenshot_2024-06-24_130245.png?ex=667af9d6&is=6679a856&hm=b21c2adae30c1d3f58373a56937dd813e01d2b3ccfcb330890125fc04bb81aad&" alt="Image 2">
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <img src="https://cdn.discordapp.com/attachments/1248490190641827939/1254845925797400677/path_to_your_image2.png?ex=667af9d6&is=6679a856&hm=58d4a0bef8e79a759a75391e4509a008559c717d5bd67fac22973158b010f514&" alt="Image 3">
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <img src="https://cdn.discordapp.com/attachments/1248490190641827939/1254848106969956534/image.png?ex=667afbde&is=6679aa5e&hm=c8423bc4b5eb3c6ea2b56a1814c19d8299c34b1d514c0c40419a2dc33407b14b&" alt="Image 4">
+            </div>
+            <!-- YouTube videos with correct embed URLs -->
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <iframe width="210" height="180" src="https://www.youtube.com/embed/Wv6Ptw-0Rhg" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <iframe width="210" height="150" src="https://www.youtube.com/embed/t7B3pWMDXlA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <iframe width="210" height="150" src="https://www.youtube.com/embed/DTpzZvrGdLU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <iframe width="210" height="150" src="https://www.youtube.com/embed/eKskX9mCbto" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item" onclick="openModal('myModal', this)">
+                <iframe width="210" height="150" src="https://www.youtube.com/embed/AJb3VDtbbvk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal('myModal')">&times;</span>
+            <div class="modal-content">
+                <iframe id="modalVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="contactInfo" class="section" tabindex="0">
+        <h1>Contact Information</h1>
+
+        <div class="contact-info">
+            <a href="zopz1" target="_blank">Discord</a>
+            <a href="https://t.me/projectzopzcom" target="_blank">Telegram Channel</a>
+            <a href="https://t.me/ProjectZOPZ" target="_blank">Telegram Chat</a>
+            <a href="https://www.instagram.com/projectz0pz" target="_blank">Instagram</a>
+            <a href="https://github.com/ProjectZOPZ" target="_blank">GitHub</a>
+            <a href="https://www.youtube.com/@ZOPZSNIFF" target="_blank">YouTube</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle arrow key navigation
+        function handleArrowKeys(event) {
+            const activeTabIndex = document.activeElement.tabIndex; // Get current active section's tabindex
+            let newIndex;
+
+            switch (event.key) {
+                case "ArrowUp":
+                    newIndex = Math.max(0, activeTabIndex - 1); // Move to previous section
+                    break;
+                case "ArrowDown":
+                    newIndex = Math.min(document.querySelectorAll('.section').length - 1, activeTabIndex + 1); // Move to next section
+                    break;
+                case "ArrowLeft":
+                    // Navigate to previous tab
+                    const currentTab = document.querySelector('.tab.active');
+                    const tabs = document.querySelectorAll('.tab');
+                    const currentIndex = Array.from(tabs).indexOf(currentTab);
+                    const previousIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1;
+                    tabs[previousIndex].click(); // Simulate click on previous tab
+                    return;
+                case "ArrowRight":
+                    // Navigate to next tab
+                    const currentTabRight = document.querySelector('.tab.active');
+                    const tabsRight = document.querySelectorAll('.tab');
+                    const currentIndexRight = Array.from(tabsRight).indexOf(currentTabRight);
+                    tabsRight[currentIndexRight + 1].click(); // Simulate click on next tab
+                    return;
+            }
+
+            // Focus the new section based on newIndex
+            const newSection = document.querySelectorAll('.section')[newIndex];
+            if (newSection) {
+                newSection.focus(); // Focus on the new section
+            }
+        }
+
+        // Event listener for arrow keys
+        document.addEventListener('keydown', handleArrowKeys);
+
+        // Function to show a section and activate its tab
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Deactivate all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Activate the selected section and tab
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelector(`.tab[data-section=${sectionId}]`).classList.add('active');
+        }
+
+        // Function to open modal with image or video
+        function openModal(modalId, element) {
+            var modal = document.getElementById(modalId);
+            var modalVideo = document.getElementById("modalVideo");
+            modal.style.display = "flex"; // Display the modal
+
+            if (element.querySelector('img')) {
+                modalVideo.style.display = "none";
+                modal.querySelector('.modal-content').innerHTML = `<img src="${element.querySelector('img').src}" class="modal-content-img">`;
+            } else if (element.querySelector('iframe')) {
+                modal.querySelector('.modal-content').innerHTML = "";
+                modalVideo.style.display = "block";
+                modalVideo.src = element.querySelector('iframe').src;
+            }
+        }
+
+        // Function to close modal
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            var modalVideo = document.getElementById("modalVideo");
+            modal.style.display = "none"; // Hide the modal
+            modalVideo.src = ""; // Reset video source
+        }
+    </script>
+</body>
+</html>

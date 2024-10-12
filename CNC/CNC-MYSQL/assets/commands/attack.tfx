@@ -1,0 +1,7 @@
+name=attack
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+\x1b[97mexample: [method] [target] [duration] [port]

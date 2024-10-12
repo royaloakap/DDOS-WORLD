@@ -1,0 +1,44 @@
+{
+
+
+    "masters" : {
+        "masters_host" : ":999",
+        "masters_config_maxauthtries" : 3
+    },
+
+    "database" : {
+        "sql_host" : "localhost:3306",
+        "sql_username" : "shooterlicense-12147838",
+        "sql_password" : "zG2t22NNZruG3PUM",
+        "sql_name" : "shooterlicense"
+    },
+
+    "app_config" : {
+        "app_name" : "Triton",
+        "app_sig_colour" : "[38;5;204m"
+    },
+
+    "Disabled_commands" : [
+        "commandtodisable"
+    ],
+
+
+    "Extra" : {
+        "TableType" : "lite",
+        "TitleSpinner" : true,
+        "TitleSpinnerFrames" : ["/", "\\"],
+        "DefaultColours" : "[0m"
+    },
+
+
+    "User_Defaults" : {
+        "Admin" : false, 
+        "Reseller" : false,
+        "VIP" : false, 
+        "Banned" : false, 
+        "MaxSessions" : 3, 
+        "PowerSavingExempt" : false, 
+        "BypassBlacklist" : false,
+        "DefaultDays" : 30
+    }
+}

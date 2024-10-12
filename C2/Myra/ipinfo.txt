@@ -1,0 +1,10 @@
+{
+  "ip": "1.1.1.1",
+  "city": "New York City",
+  "region": "New York",
+  "country": "US",
+  "loc": "40.7143,-74.0060",
+  "postal": "10004",
+  "timezone": "America/New_York",
+  "readme": "https://ipinfo.io/missingauth"
+}

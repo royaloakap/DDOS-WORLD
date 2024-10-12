@@ -1,0 +1,53 @@
+{
+ "KEY": {
+    "matrixa": {
+        "TIME":"0",
+        "THREAD":"0",
+        "METHODS":"ALL"
+    },
+    "hex1629": {
+       "TIME":"0",
+       "THREAD":"0",
+       "METHODS":"ALL"
+    },
+    "test": {
+      "TIME":"100",
+      "THREAD":"100",
+      "METHODS":"HTTP-19 HTTP-26 HTTP-41 HTTP-84 HTTP-170 HTTP-HEX PPS HTTP-LETTER HTTP-OHIO HTTP-RAP"
+   }
+ 
+ },
+ "CLASS": {
+   "L7": {
+    "ID":{
+      "1":"HTTP-19",
+      "2":"HTTP-26",
+      "3":"HTTP-41",
+      "4":"HTTP-84",
+      "5":"HTTP-170",
+      "6":"HTTP-LETTER",
+      "7":"PPS",
+      "8":"TLS",
+      "9":"STRONG",
+      "10":"STRONG2",
+      "11":"AMP-L7",
+      "12":"HANDSHAKE",
+      "13":"ORIGINAL-VISITOR",
+      "14":"BIG-PACKET",
+      "15":"AUTH",
+      "16":"FORWARDED",
+      "17":"RAPID",
+      "18":"OVH-RPS",
+      "19":"OVH-CONNECT",
+      "20":"OVH-ALL",
+      "21":"HTTP-HEX",
+      "22":"HTTP-ALL",
+      "23":"HTTP-RAP",
+      "24":"HTTP-OHIO",
+      "25":"REQUEST-HELL"
+    },
+    "IP":"1 2 3 4 5 6 7 18 19 20 21 22 23 24",
+    "LINK":"8 9 10 11 12 13 14 15 16 17 25"
+   }
+ }
+}

@@ -1,0 +1,44 @@
+.weather {
+	
+	&.widget {
+		
+		.today {
+			padding-bottom: 20px;
+			
+			i.climacon { 
+				color: @mainD5;
+				font-size: 100px !important;
+			}
+			
+			.date {
+				
+				div {
+					margin-bottom: -5px;
+				}
+			}
+			
+			.temp {
+				margin-top: -7px;
+				font-size: 34px;
+			}	
+		}
+		
+		.forecast {
+			border-top: 1px solid @mainD5;
+			background: @main;
+			padding: 20px 0;
+			margin-bottom: -15px;
+			
+			i {
+				display: block;
+				width: 100%;
+				color: @mainD25;
+			}
+			
+			.label {
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+		}
+	} 
+}

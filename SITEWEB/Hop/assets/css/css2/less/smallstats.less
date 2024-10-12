@@ -1,0 +1,218 @@
+/* Widget Stats
+=================================================================== */
+
+.jqstooltip {
+	.box-sizing(content-box);
+}
+
+.smallstat {
+	background: white;
+	position: relative;
+	text-align: right;
+	margin-bottom: 30px;
+	height: 70px;
+	border: 1px solid @mainD5;
+	
+	.linechart-overlay, .boxchart-overlay {
+		width: 100px;
+		height: 68px;
+		padding: 20px 0;
+		text-align: center;
+		margin-right: 10px;
+		float: left;
+		.backgroundColor;
+		overflow: hidden;
+	}
+	
+	.piechart-overlay {
+		width: 100px;
+		height: 68px;
+		padding: 15px 28px;
+		text-align: center;
+		margin-right: 10px;
+		float: left;
+		.backgroundColor;
+		overflow: hidden;
+	}
+	
+	.piechart {
+		color: white; 
+		font-size: 10px;
+	}
+	
+	i {
+		text-align: center;
+		display: block;
+		color: white;
+		width: 100px;
+		height: 68px;
+		font-size: 22px;
+		line-height: 68px;
+		float: left;
+		margin-right: 10px;
+		.backgroundColor;
+		
+	}
+	
+	.title, .value {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.value {
+		padding-top: 16px;
+		font-size: 16px;
+	}
+	
+	.title {
+		color: darken(@main,15%);
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;	
+	}
+	
+}
+
+/* Box Stats
+=================================================================== */
+ul.stats {
+	list-style: none;
+	padding: 0;
+	border-top: 1px solid @mainD5;
+	background: @main;
+	margin: 20px -15px 0px -15px;
+	.clearfix;
+	
+	li {
+		position: relative;
+		z-index: 2;
+		width: 25%;
+		border-right: 1px solid @mainD5;
+		float: left;
+		text-align: center;
+		padding: 20px 0px;
+		margin: 0;
+		overflow:hidden;
+		
+		&:fisrt-child {
+			
+		}
+		
+		&:last-child {
+			border: none;
+		}
+		
+		.bgchart {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			top: 0px;
+			left: 0px;
+		}
+		
+	}
+	
+}
+
+/* Info Box
+=================================================================== */
+.info-box {
+	
+	.backgroundColor {
+		color: white;
+		padding: 10px;
+	}
+	
+	.title, .value {
+		font-weight: bold;
+		font-size: 12px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.date, .change {
+		font-size: 10px;
+		margin: 0;
+		padding: 0;		
+	}
+	
+	.title, .date {
+		float: left;
+	}
+	
+	.value, .change {
+		float: right;
+	}
+	
+	.quarters {
+		background: white;
+		.clearfix;
+		
+		.quarter {
+			padding: 10px;
+			span {
+				display: block;
+				font-size: 10px;
+				color: @mainD15;
+			}
+		}
+		
+		.q1, .q2, .q3, .q4 {
+			width: 50%;
+			float:left;
+		}
+		
+		.q1, .q2 {
+			border-bottom: 1px solid @mainD5;
+			height: 60px;
+		}
+		
+		.q2 {
+			padding: 0;
+		}
+		
+		.q2, .q4 {
+			text-align: right;
+		}
+		
+		.q4 {
+			border-left: 1px solid @mainD5;
+		}
+		
+		.verticalChart {
+			float: right;
+			text-align: center;
+			margin: 3px 0 0 0;
+			width: 100%;
+			padding: 6px;
+
+		    .singleBar {
+		        width: 10.5%;
+		        margin:0 0px 0 3px;
+
+		        .bar {
+		            height: 22px;
+		            .border-radius(1px);
+
+		            .value {
+		                background: @mainD15;
+		                .border-radius(1px);
+		            }
+		        }
+
+		        .title {
+		            margin: 2px auto 0 auto;
+		            text-align: center;
+					color: @mainD15;
+					font-size: 8px;
+					font-weight: 400;
+					width: 100%;
+		        }
+		    }
+		}
+		
+	}
+	
+}

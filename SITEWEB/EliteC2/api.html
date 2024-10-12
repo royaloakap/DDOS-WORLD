@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="assets/js/embed.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your name | Home</title>
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <script src="https://kit.fontawesome.com/b609cde7a9.js" crossorigin="anonymous"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wrld" />
+    <meta property="og:title" content="Introducing Name projet" />
+    <meta
+      property="og:description"
+      content="en attente de texte"
+    />
+</head>
+<body>
+    <section class="main">
+      <div class="navbar">
+        <div class="brand-box">
+            <h1 class="brand-name">Name projet</h1>
+        </div>
+        <ul class="pc-navigation-menu">
+            <li onclick="scrollto('features')" >Features</li>
+            <li onclick="scrollto('methods')">Methods</li>
+            <li onclick="scrollto('pricing')">C2 Pricing</li>
+            <li onclick="location.href = '/api.html'">API Pricing</li>
+            <div class="separator"></div>
+            <div class="status-box">
+                <span class="status-circle"></span>
+                <p class="status-text">Online</p>
+                <div class="status-tip">
+                    <i class="online-icon fa-solid fa-signal"></i>
+                    <p class="status-tip-text">Name projet is Online</p>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <i onclick="window.location.href='https://discord.gg/discord'" class="nav-icon fa-brands fa-discord"></i>
+            <i onclick="window.location.href='https://t.me/telegram'" class="nav-icon fa-brands fa-telegram"></i>
+            <i onclick="window.location.href='tos.html'" class="nav-icon fa-solid fa-book"></i>
+        </ul>
+        <div onclick="toggle_mobile_navigation()" class="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <ul class="mobile-navigation-menu">
+                <li onclick="scrollto('features')">Features</li>
+                <li onclick="scrollto('methods')">Methods</li>
+                <li onclick="scrollto('pricing')">C2 Pricing</li>
+                <li onclick="location.href = '/api.html'">API Pricing</li>
+                <div class="mobile-separator"></div>
+                <li onclick="window.location.href='https://discord.gg/discord'">Discord</li>
+                <li onclick="window.location.href='https://t.me/telegram'">Telegram</li>
+                <li onclick="window.location.href='tos.html'">TOS</li>
+                <div class="mobile-separator"></div>
+                <li class="mobile-online">Online</li>
+            </ul>
+        </div>
+      </div>
+      <div class="home-wrapper">
+        <div class="home-container">
+            <div class="home-text-box">
+                <p class="home-text-1">#1 SERVICE</p>
+                <h1 class="home-introducing-text">Introducing <span class="wrld-text">Name projets</span></h1>
+                <div class="home-features-box">
+                    <p class="home-features-text"><i class="fa-solid fa-bolt"></i>Powerful</p>
+                    <p class="home-features-text"><i class="fa-solid fa-star"></i>Reliable</p>
+                    <p class="home-features-text"><i class="fa-solid fa-chart-simple"></i>Efficient</p>
+                </div>
+                <p class="home-text-2">Name projets is one of the best choices if not the best for its price with over 1400 satisfied clients.</p>
+                <div class="home-button-box">
+                    <button onclick="scrollto('pricing')" class="home-button buy-now">Pricing</button>
+                    <button onclick="scrollto('pricing')" class="home-button buy-now">Buy Now</button>
+                </div>
+            </div>
+            <img class="home-img" src="./assets/img/wrld_home.png" alt="">
+        </div>
+      </div>
+      <div id="features" class="features-wrapper">
+        <div  class="features-container">
+            <div class="feature-box">
+                <img class="feature-img" src="./assets/img/powerful.png" alt="">
+                <h1 class=feature-header>Powerful Attacks</h1>
+                <p class="feature-description">When you send an attack its handled by our advanced attack handlers and being broadcasted to many API's & Servers for the best possible output.</p>
+            </div>
+            <div class="feature-box">
+                <img class="feature-img" src="./assets/img/deliver.png" alt="">
+                <h1 class=feature-header>Highly Reliable</h1>
+                <p class="feature-description">Name projets is an extremely reliable service with extremely good uptime & good feedback from clients.</p>
+            </div>
+            <div class="feature-box">
+                <img class="feature-img" src="./assets/img/pricing.png" alt="">
+                <h1 class=feature-header>Pricing</h1>
+                <p class="feature-description">Name projets is the only C2 that offers that much power for this kind of price, its affordable by anyone and everyone can enjoy taking down their targets with ease.</p>
+            </div>
+            <div class="feature-box">
+                <img class="feature-img" src="./assets/img/server.png" alt="">
+                <h1 class=feature-header>99% Uptime</h1>
+                <p class="feature-description">Name projets has a 99% uptime guarantee , anyone could easily say that we are the most reliable C2 service in the community.</p>
+            </div>
+        </div>
+      </div>
+      <div id="methods" class="methods-wrapper">
+        <h1 class="method-header">Methods</h1>
+        <div  class="methods-container">
+            <div class="methods-box">
+                <h1 class="method-box-header">BASIC</h1>
+                <ul>
+                    <li>TCP</li>
+                    <li>SYN</li>
+                    <li>ACK</li>
+                    <li>UDP</li>
+                    <li>DNS</li>
+                    <li class="premium-method">MIXAMP</li>
+                    <li class="premium-method">UDP-PPS</li>
+                </ul>
+            </div>
+            <div class="methods-box">
+                <h1 class="method-box-header">GAME</h1>
+                <ul>
+                    <li class="premium-method">GAME</li>
+                    <li class="premium-method">VSE</li>
+                    <li class="premium-method">R6-DROP</li>
+                    <li class="premium-method">WZ-DROP</li>
+                    <li class="premium-method">FN-KILL</li>
+                    <li class="premium-method">OVERWATCH-SMACK</li>
+                    <li class="premium-method">PUBG-KILL</li>
+                    <li class="premium-method">APEX-DROP</li>
+                    <li class="premium-method">DAYZ-DROP</li>
+                    <li class="premium-method">MC-DROP</li>
+                    <li class="premium-method">FIVEM</li>
+                </ul>
+            </div>
+            <div class="methods-box">
+                <h1 class="method-box-header">BYPASS</h1>
+                <ul>
+                    <li>OVH-TCP</li>
+                    <li>OVH-UDP</li>
+                    <li>NFO</li>
+                    <li>SSH-RIOT</li>
+                    <li class="premium-method">SOCKET</li>
+                    <li class="premium-method">HANDSHAKE</li>
+                </ul>
+            </div>
+            <div class="methods-box">
+                <h1 class="method-box-header">HTTP/S</h1>
+                <ul>
+                    <li>HTTP-PULSE</li>
+                    <li>HTTP-ONION</li>
+                    <li>HTTPS-MIX</li>
+                    <li class="premium-method">HTTP-BROWSER</li>
+                    <li class="premium-method">HTTPS-BYPASS</li>
+                    <li class="premium-method">TLS</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div id="pricing" class="pricing-wrapper">
+        <h1  class="pricing-header">Pricing & Plans</h1>
+        <div class="pricing-container">
+           <div class="pricing-box">
+            <h1 class="pricing-box-header">Starter</h1>
+            <ul>
+                <li class="basic-plans">Duration: <span class="basic-text">Monthly (30d)</span></li>
+                <li class="basic-plans">Concurrents: <span class="basic-text">1</span></li>
+                <li class="basic-plans">Maxtime: <span class="basic-text">120s</span></li>
+                <li class="basic-plans">Cooldown: <span class="basic-text">30s</span></li>
+                <li class="basic-plans">Vip: <span class="basic-text">False</span></li>
+                <li class="basic-plans">Powersaving Bypass: <span class="basic-text">False</span></li>
+                <li class="basic-plans">Price: <span class="basic-text">15€</span></li>
+            </ul>
+            <button class="pricing-button basic-button" type="submit" data-sellix-product="£££££££££££££" class="pricing-button basic-button">Buy Now!</button>
+           </div>
+           <div class="pricing-box">
+            <h1 class="pricing-box-header">Intermediate</h1>
+            <ul>
+                <li class="basic-plans">Duration: <span class="basic-text">Monthly (30d)</span></li>
+                <li class="basic-plans">Concurrents: <span class="basic-text">2</span></li>
+                <li class="basic-plans">Maxtime: <span class="basic-text">200s</span></li>
+                <li class="basic-plans">Cooldown: <span class="basic-text">30s</span></li>
+                <li class="basic-plans">Vip: <span class="basic-text">True</span></li>
+                <li class="basic-plans">Powersaving Bypass: <span class="basic-text">False</span></li>
+                <li class="basic-plans">Price: <span class="basic-text">25€</span></li>
+            </ul>
+            <button class="pricing-button basic-button" type="submit" data-sellix-product="*********" class="pricing-button basic-button">Buy Now!</button>
+           </div>
+           <div class="pricing-box">
+            <h1 class="pricing-box-header">Advanced</h1>
+            <ul>
+                <li class="basic-plans">Duration: <span class="basic-text">Monthly (30d)</span></li>
+                <li class="basic-plans">Concurrents: <span class="basic-text">3</span></li>
+                <li class="basic-plans">Maxtime: <span class="basic-text">300s</span></li>
+                <li class="basic-plans">Cooldown: <span class="basic-text">30s</span></li>
+                <li class="basic-plans">Vip: <span class="basic-text">True</span></li>
+                <li class="basic-plans">Powersaving Bypass: <span class="basic-text">False</span></li>
+                <li class="basic-plans">Price: <span class="basic-text">45€</span></li>
+            </ul>
+            <button class="pricing-button basic-button" type="submit" data-sellix-product="********" class="pricing-button basic-button">Buy Now!</button>
+           </div>
+        </div>
+
+        <div id="pricing" class="pricing-wrapper">
+            <div class="pricing-container">
+               <div class="pricing-box">
+                <h1 class="pricing-box-header">Extreme</h1>
+                <ul>
+                    <li class="basic-plans">Duration: <span class="basic-text">Monthly (30d)</span></li>
+                    <li class="basic-plans">Concurrents: <span class="basic-text">4</span></li>
+                    <li class="basic-plans">Maxtime: <span class="basic-text">300s</span></li>
+                    <li class="basic-plans">Cooldown: <span class="basic-text">20s</span></li>
+                    <li class="basic-plans">Vip: <span class="basic-text">True</span></li>
+                    <li class="basic-plans">Powersaving Bypass: <span class="basic-text">False</span></li>
+                    <li class="basic-plans">Price: <span class="basic-text">65€</span></li>
+                </ul>
+                <button class="pricing-button basic-button" type="submit" data-sellix-product="*****" class="pricing-button basic-button">Buy Now!</button>
+               </div>
+               <div class="pricing-box">
+                <h1 class="pricing-box-header">Expert</h1>
+                <ul>
+                    <li class="basic-plans">Duration: <span class="basic-text">Monthly (30d)</span></li>
+                    <li class="basic-plans">Concurrents: <span class="basic-text">6</span></li>
+                    <li class="basic-plans">Maxtime: <span class="basic-text">300s</span></li>
+                    <li class="basic-plans">Cooldown: <span class="basic-text">15s</span></li>
+                    <li class="basic-plans">Vip: <span class="basic-text">True</span></li>
+                    <li class="basic-plans">Powersaving Bypass: <span class="basic-text">True</span></li>
+                    <li class="basic-plans">Price: <span class="basic-text">100€</span></li>
+                </ul>
+                <button class="pricing-button basic-button" type="submit" data-sellix-product="****" class="pricing-button basic-button">Buy Now!</button>
+               </div>
+               <div class="pricing-box premium-box">
+                <h1 class="pricing-box-header">Business</h1>
+                <ul>
+                    <li class="basic-plans">Duration: <span class="basic-text">Monthly (30d)</span></li>
+                    <li class="basic-plans">Concurrents: <span class="basic-text">8</span></li>
+                    <li class="basic-plans">Maxtime: <span class="basic-text">300s</span></li>
+                    <li class="basic-plans">Cooldown: <span class="basic-text">10s</span></li>
+                    <li class="basic-plans">Vip: <span class="basic-text">True</span></li>
+                    <li class="basic-plans">Powersaving Bypass: <span class="basic-text">True</span></li>
+                    <li class="basic-plans">Price: <span class="basic-text">135€</span></li>
+                </ul>
+                <button class="pricing-button basic-button" type="submit" data-sellix-product="" class="pricing-button basic-button">Buy Now!</button>
+               </div>
+            </div>
+            <p class="pricing-addon-text">For Concurrent/Maxtime Addons Contact Me On Telegram : @yourname</p>
+      </div>
+      <div class="footer">
+        <p>Copyright &copy; Name projet 2022-2024. All Rights Reserved.</p>
+        <p>Founded By Your name. </p>
+      </div>
+      <div class="tos-box">
+        <h1 class="tos-header">Terms & Conditions</h1>
+        <p class="tos-description">Name projet as an individual organisation has it's own terms and conditions and as a user / customer you will have to accept the given terms and conditions to be able to use Name projet</p>
+        <button onclick="accept_tos()" class="accept-tos-button">Accept TOS</button>
+      </div>
+    </section>
+    <!-- Linking Mobile Navigation Script -->
+    <script src="./assets/js/mobile-navigation.js"></script>
+    <!-- Linking Scroll Script -->
+    <script src="./assets/js/scroll.js"></script>
+    <!-- Linking TOS Accept -->
+    <script src="./assets/js/accept-tos.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.ping
+
+.ping
+.ping 108.273.245
+
+.ping 108.273.245
+.
+
+.
+.clear
+
+.clear
+.status
+
+.status
+.status
+
+.status
+.lookup
+
+.lookup
+back
+
+.back
+
+.back
+.home
+
+.home
+.home
+
+.home
+.popularity
+
+.popularity
+.iplookup
+
+.iplookup
+.iptracker
+
+.iptracker
+.lookup
+
+.lookup
+.attack
+
+.attack
+.attacks
+
+.attacks
+.witch
+
+.witch
+.witch 89.242.124.195 80 120
+
+.witch 89.242.124.195 80 120
+.ping 89.242.124.195
+
+.ping 89.242.124.195
+.pinger
+
+.pinger
+.witch 89.242.124.195 80 120
+
+.witch 89.242.124.195 80 120
+.logout
+.logout

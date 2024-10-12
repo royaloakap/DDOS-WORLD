@@ -1,0 +1,2 @@
+use
+./royal -v

@@ -1,0 +1,43 @@
+$background-color:#f6f6f6;
+$main-transp:rgba(0,0,0,0.4);
+$dark:#444;
+$grey:#e5e5e5;
+$dark-grey:#9a9a9a;
+$skyblue:#60c6cf;
+$skyblue-light:#66cccc;
+$anzac:#e09c4b;
+
+
+$violet:#989cff;
+$orange:#ff9c4b;
+$blue:#1c7dfa;
+$green:#52d669;
+$yellow:#ffd769;
+$red:#f35857;
+$white:white;
+$black:black;
+
+
+$colors: 
+'violet' $violet,
+'orange' $orange,
+'blue' $blue,
+'green' $green,
+'yellow' $yellow,
+'red' $red,
+'white' $white,
+'dark' $black;
+
+
+$text: rgba(255,255,255,0.9);
+
+// Sizes variables
+$top_Height: 63px;
+$profile_Width: 260px; // sidebar also
+$search_Padding: 70px;
+$search_Width: 313px;
+$search_Total: $search_Padding + $search_Width;
+
+$black-025: rgba(0,0,0,0.25);
+$black-04: rgba(0,0,0,0.4);
+

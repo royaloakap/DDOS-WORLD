@@ -1,0 +1,9 @@
+made by FileGone (@FileGone) And Pazdano (Kinda, @pxzdano)
+
+credits to the people i annoyed asking questions too
+fb (@FBN123)
+bleach (@lolinekos)
+
+The frontend of this project is powered by Vuexy.
+For more information about Vuexy and its features, please visit: https://vuexy.dev
+

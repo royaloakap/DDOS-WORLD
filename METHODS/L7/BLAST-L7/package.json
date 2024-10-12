@@ -1,0 +1,17 @@
+{
+  "name": "blast",
+  "version": "1.0.0",
+  "description": "a strongest multi-thread http flood.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "hexify",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "events": "^3.2.0",
+    "fs": "0.0.1-security",
+    "net": "^1.0.2",
+    "url": "^0.11.0"
+  }
+}

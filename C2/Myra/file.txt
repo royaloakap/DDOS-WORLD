@@ -1,0 +1,1 @@
+PRETTY_NAME="CentOS Linux 7 (Core)"

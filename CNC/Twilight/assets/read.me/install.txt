@@ -1,0 +1,17 @@
+How to install
+--===========--
+download snap
+
+    `apt install snap` 
+
+snap install go 1.21.4
+
+    `sudo snap install go --channel=1.21/stable --classic`
+
+    `CGO_ENABLED=1`
+
+start program
+
+    `go run . || screen go run .`
+
+

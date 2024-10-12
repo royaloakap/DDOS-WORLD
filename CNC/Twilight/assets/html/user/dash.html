@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Twilight">
+    <meta name="keywords" content="Twilight">
+    <meta name="author" content="PIXINVENT">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <script src="https://kit.fontawesome.com/d106b983f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+<body class="vertical-layout vertical-menu-modern content-left-sidebar navbar-floating footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar" id="style-3">
+
+<!-- Include Navigation Menu -->
+{{ template "nav.html" . }}
+
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content" id="scroll">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- users list start -->
+                <section class="app-user-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.ServersCount}}</h3>
+                                        <span>Servers</span>
+                                    </div>
+                                    <div class="avatar bg-light-success
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="server" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75" id="ongoing">{{.Ongoing}}</h3>
+                                        <span>{{if eq .Ongoing 1 }}Running attack{{ else }}Running attacks{{ end
+                                            }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-primary
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="wifi-off" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Slots}}</h3>
+                                        <span>{{if eq .Slots 1 }}Slot{{ else }}Slots{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-warning
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="command" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Users}}</h3>
+                                        <span>{{if eq .Users 1 }}User{{ else }}Users{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-danger
+                                            p-50">
+                                        <span class="avatar-content">
+                                            {{if eq .Users 1}}<i data-feather='user'
+                                                class="font-medium-4"></i>{{else}}<i data-feather='users'
+                                                class="font-medium-4"></i>{{end}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Main: Start-->
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-header d-flex d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h5 class="card-title mb-0">News</h5>
+                                        <h5 class="card-header">Advanced</h5>
+                                        <div class="card-body pb-0">
+                                            <ul class="timeline pt-3" id="timeline-list">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-4 mb-4">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="user-avatar-section">
+                                        <div class=" d-flex align-items-center flex-column">
+                                            <img class="img-fluid rounded mb-3 pt-1 mt-4"
+                                            src="/_assets/images/user.png" alt="user-male-circle" height="100" width="150">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-around flex-wrap mt-3 pt-3 pb-4 border-bottom">
+                                        <div class="d-flex align-items-start me-4 mt-3 gap-2">
+                                            <span class="badge bg-label-primary p-2 rounded"><i
+                                                    class="ti ti-checkbox ti-sm"></i></span>
+                                            <div>
+                                                <p class="mb-0 fw-medium" id="duration">{{.Duration}}</p>
+                                                <small>Time</small>
+                                            </div>
+
+                                            <span class="badge bg-label-primary p-2 rounded"><i
+                                                    class="ti ti-checkbox ti-sm"></i></span>
+                                            <div>
+                                                <p class="mb-0 fw-medium" id="concurrents">{{.Concurrents}}</p>
+                                                <small>Cons</small>
+                                            </div>
+                                            <span class="badge bg-label-primary p-2 rounded"><i
+                                                    class="ti ti-checkbox ti-sm"></i></span>
+                                            <div>
+                                                <p class="mb-0 fw-medium" id="expiry">{{.Expiry}}</p>
+                                                <small>Expiry</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 small text-uppercase text-muted">Details</p>
+                                    <div class="info-container">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <span class="fw-medium me-1">Username: </span>
+                                                <span>{{ .Username }}</span>
+                                            </li>
+                                            <li class="mb-2 pt-1">
+                                                <span class="fw-medium me-1">Balance: </span>
+                                                <span id="bal">---</span>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex justify-content-center">
+                                            <button class="btn btn-primary me-3 waves-effect waves-light"
+                                                herf="/upgrade">Upgrade</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                </section>
+
+                <!-- Line Chart Starts-->
+                <div class="row">
+                    <div class="col-md-12 col-12 mb-4">
+                        <div class="card">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h5 class="card-title mb-0">Network Usage</h4>
+                                </div>
+                            </div>
+                            <div class="card-body" style="position: relative;">
+                                <small class="text-muted">Layer 7 network usage today</small>
+                                <p class="mb-0" style="text-align: right" id="layer7_network"></p>
+                                <div id="network_load_layer7" style="min-height: 90px;">
+                                </div>
+                                <div class="table-responsive text-nowrap">
+                                    <table class="table" style="text-align: center;">
+                                        <thead>
+                                            <tr class="text-nowrap">
+                                                <th>NAME</th>
+                                                <th>LOAD</th>
+                                                <th>NETWORK</th>
+                                                <th>STATUS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="server-data-layer7">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-body" style="position: relative;">
+                                <small class="text-muted">Layer 4 network usage today</small>
+                                <p class="mb-0" style="text-align: right" id="layer4_network"></p>
+                                <div id="network_load_layer4" style="min-height: 90px;"></div>
+                                <div class="table-responsive text-nowrap">
+                                    <table class="table" style="text-align: center;">
+                                        <thead>
+                                            <tr class="text-nowrap">
+                                                <th>NAME</th>
+                                                <th>LOAD</th>
+                                                <th>NETWORK</th>
+                                                <th>STATUS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="server-data-layer4">
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Line Chart Ends-->
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    {{ template "footer.html" . }}
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="/_assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/_assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/_assets/vendors/js/charts/apexcharts.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/_assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+
+    <!-- END: Page Vendor JS-->
+    <!-- Include htmx from CDN -->
+    <script src="https://unpkg.com/htmx.org/dist/htmx.min.js"></script>
+
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/_assets/js/core/app-menu.js"></script>
+    <script src="/_assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+
+    <!-- BEGIN: Dashboard JS-->
+    <script src="/_assets/scripts/dashboard.js"></script>
+    <!-- END: Dashboard JS-->
+
+    <!--START: Scrollbar-->
+    <style>
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #161D31;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            background-color: #1e1f26;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #283046;
+        }
+    </style>
+    <!--START: Scrollbar-->
+
+    </style>
+    <script>
+        $(window).on('load', function () {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "Plans": [
+    {
+      "Name": "Basic",
+      "Description": "1 GB/s Power",
+      "Price": 5.0,
+      "MaxTime": 60,
+      "MaxCons": 1,
+      "Rank": 3
+    },
+    {
+      "Name": "Advanced",
+      "Description": "2 GB/s Power",
+      "Price": 10.0,
+      "MaxTime": 120,
+      "MaxCons": 2,
+      "Rank": 2
+    },
+    {
+      "Name": "Pro",
+      "Description": "8 GB/s Power",
+      "Price": 20.0,
+      "MaxTime": 600,
+      "MaxCons": 4,
+      "Rank": 1
+    }
+  ]
+}

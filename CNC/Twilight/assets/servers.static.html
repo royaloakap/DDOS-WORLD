@@ -1,0 +1,23 @@
+{{ range $name, $server := .Remotes }}
+                                            {{ if (eq .Type 1 )}}
+                                            <tr>
+                                                <td>
+                                                    {{$name}}
+                                                </td>
+                                                <td>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" style="width: {{.Load}}%"
+                                                            aria-valuenow="{{ .Load }}" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                            {{ .Load }}%</div>
+                                                    </div>
+                                                </td>
+                                                <td> <span class="badge bg-primary">{{ if (eq .Type 1) }} Layer 4 {{
+                                                        else }} Layer 7 {{ end}}</span>
+                                                </td>
+                                                <td>
+                                                    <i data-feather="check" style="color: green;"></i>Online
+                                                </td>
+                                            </tr>
+                                            {{ end }}
+                                            {{ end }}

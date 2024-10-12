@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+          rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/pages/authentication.css">
+
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+    <!-- END: Page CSS-->
+
+</head>
+
+<body class="vertical-layout vertical-menu-modern blank-page navbar-floating footer-static  " data-open="click"
+      data-menu="vertical-menu-modern" data-col="blank-page">
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <div class="auth-wrapper auth-basic px-2">
+                <div class="auth-inner my-2">
+                    <!-- Login basic -->
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <a href="/" class="brand-logo">
+                                <h2 class="brand-text text-primary">{{.Name}}</h2>
+                            </a>
+                            <a>
+                                <h4 class="text-center">Signin</h4>
+                            </a>
+
+                            <form class="auth-login-form mt-2" action="/login" method="POST">
+                                <div class="mb-1">
+                                    <label for="login-username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="login-username" name="login-username"
+                                           placeholder="Administrator" aria-describedby="login-email" tabindex="1"
+                                           autofocus/>
+                                </div>
+
+                                <div class="mb-1">
+                                    <label for="login-password" class="form-label">Password</label>
+                                    <div class="input-group input-group-merge form-password-toggle">
+                                        <input type="password" class="form-control form-control-merge"
+                                               id="login-password" name="login-password" tabindex="2"
+                                               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                               aria-describedby="login-password"/>
+                                        <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                                    </div>
+                                </div>
+                                <div class="mb-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="remember-me" type="checkbox" id="remember-me" tabindex="3"/>
+                                        <label class="form-check-label" for="remember-me"> Remember Me </label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-100" tabindex="4">Sign in</button>
+                                <div class="divider">
+                                    <div class="divider-text">or</div>
+                                  </div>
+                            <p class="text-center">
+                                <span>Dont have an account?</span>
+                                <a href="/signup">
+                                  <span>Signup!</span>
+                                </a>
+                              </p>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- /Login basic -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END: Content-->
+
+
+<!-- BEGIN: Vendor JS-->
+<script src="/_assets/vendors/js/vendors.min.js"></script>
+<!-- BEGIN Vendor JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/_assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+<!-- END: Page Vendor JS-->
+
+<!-- BEGIN: Theme JS-->
+<script src="/_assets/js/core/app-menu.js"></script>
+<script src="/_assets/js/core/app.js"></script>
+<!-- END: Theme JS-->
+
+<!-- BEGIN: Page JS-->
+<script src="/_assets/js/scripts/extensions/ext-component-toastr.js"></script>
+<!-- END: Page JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/_assets/vendors/js/extensions/toastr.min.js"></script>
+<!-- END: Page Vendor JS-->
+
+
+<!-- BEGIN: Page JS-->
+<script src="/_assets/js/scripts/pages/auth-login.js"></script>
+<!-- END: Page JS-->
+
+
+{{.Script}}
+
+<script>
+    $(window).on('load', function () {
+        if (feather) {
+            feather.replace({
+                width: 14,
+                height: 14
+            });
+        }
+    })
+</script>
+</body>
+<!-- END: Body-->
+</html>

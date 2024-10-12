@@ -1,0 +1,75 @@
+Royal CNC – Installation and Troubleshooting Guide
+Welcome to the installation and troubleshooting guide for Royal CNC, a secure SSH-based command and control (C2) tool. This guide will help you set up the necessary environment and troubleshoot common issues that might arise.
+
+Royal CNC installation
+System update and installation of MySQL Server:
+
+
+
+sudo apt update
+sudo apt install mysql-server
+Securing MySQL:
+
+
+
+sudo mysql_secure_installation
+Follow the instructions to set up a secure root password and respond to other security options.
+
+Connection to MySQL:
+
+
+
+sudo mysql -u root -p
+Enter the root password you configured earlier.
+
+Creation of the database:
+
+
+CREATE DATABASE cnc;
+USE cnc;
+Importing the database schema:
+Make sure to export the appropriate SQL file (database.sql) to the specified directory and run the following command to import it:
+
+
+SOURCE /root/RoyalCNC/database.sql;
+Creating a MySQL user:
+Replace user123412 and 583384951293032 with your chosen username and password.
+
+
+
+CREATE USER 'user123412'@'localhost' IDENTIFIED BY '583384951293032';
+GRANT ALL PRIVILEGES ON cnc.* TO 'user123412'@'localhost';
+FLUSH PRIVILEGES;
+MySQL output:
+
+
+
+EXIT;
+Generating an SSH key pair for authentication:
+Make sure to run this command in the correct directory to store SSH keys.
+
+
+
+ssh-keygen -t rsa -b 4096 -f ssh/ssh.cat
+Guide to troubleshooting common errors
+Error 1: SSH Connection Issues
+Symptoms: Unable to connect to server via SSH.
+Solution :
+Verify that the SSH keys are correctly generated and added to the server.
+Make sure the ssh/ssh.cat file contains the private key corresponding to the public key added to the server.
+Check the permissions of files and directories related to SSH keys.
+Error 2: Database problems
+Symptoms: Errors while importing SQL file or accessing database.
+Solution :
+Make sure the cnc database is created correctly and the MySQL user privileges are configured correctly.
+Check the SQL file path and make sure it is accessible.
+Check the specific MySQL errors shown in the logs (/var/log/mysql/error.log).
+Error 3: Installation Problems
+Symptoms: Failed to install required dependencies or packages.
+Solution :
+Make sure all required packages are installed correctly using apt or any other appropriate package manager.
+Check the system requirements specified in the Royal CNC documentation and ensure that your system meets them.
+About Royal CNC
+Royal CNC is a secure, SSH-based command and control (C2) system designed to provide a secure and flexible interface for managing and controlling systems remotely. Developed by @royaloakap, this system is optimized for a small footprint and high level of security, using SSH keys for authentication and a robust protocol for communications.
+
+For any questions or additional support, please contact @royaloakap on Telegram or visit https://t.me/Royal_FAQ.

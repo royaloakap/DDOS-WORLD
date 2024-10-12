@@ -1,0 +1,7 @@
+NECESSITIES : 
+
+password asterisk effect
+
+automatic re-screening if cnc crashes, then automatically alerts discord users that the c2 crashed
+
+nmap implementation, whois search

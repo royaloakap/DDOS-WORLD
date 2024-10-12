@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible,
+            powerful, clean &amp; modern responsive bootstrap 4 admin template
+            with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template,
+            dashboard template, flat admin template, responsive admin template,
+            web app">
+    <meta name="author" content="PIXINVENT">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/extensions/nouislider.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-sliders.css">
+    <!-- END: Page CSS-->
+
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+<body class="vertical-layout vertical-menu-modern content-left-sidebar navbar-floating footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar" id="style-3">
+
+<!-- Include Navigation Menu -->
+{{ template "nav.html" . }}
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- users list start -->
+                <section class="app-user-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.ServersCount}}</h3>
+                                        <span>Servers</span>
+                                    </div>
+                                    <div class="avatar bg-light-success
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="server" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Ongoing}}</h3>
+                                        <span>{{if eq .Ongoing 1 }}Running attack{{ else }}Running attacks{{ end
+                                            }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-primary
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="wifi-off" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Slots}}</h3>
+                                        <span>{{if eq .Slots 1 }}Slot{{ else }}Slots{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-warning
+                                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="command" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                                        align-items-center
+                                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75">{{.Users}}</h3>
+                                        <span>{{if eq .Users 1 }}User{{ else }}Users{{ end }}</span>
+                                    </div>
+                                    <div class="avatar bg-light-danger
+                                            p-50">
+                                        <span class="avatar-content">
+                                            {{if eq .Users 1}}<i data-feather='user'
+                                                class="font-medium-4"></i>{{else}}<i data-feather='users'
+                                                class="font-medium-4"></i>{{end}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- UserCard -->
+                        <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="user-avatar-section">
+                                        <div class=" d-flex align-items-center flex-column">
+                                            <img class="img-fluid rounded mb-3 pt-1 mt-4"
+                                            src="/_assets/images/user.png" alt="user-male-circle" height="100" width="150">
+                                            <div class="user-info text-center">
+                                                <h4 class="mb-2">{{ .Username }}</h4>
+                                                <span class="badge bg-label-secondary mt-1">{{ if
+                                                    .User.HasPermission "admin" }}Admin {{ else }} User{{ end }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-around flex-wrap mt-3 pt-3 pb-4 border-bottom">
+                                        <div class="d-flex align-items-start me-4 mt-3 gap-2">
+                                            <span class="badge bg-label-primary p-2 rounded"><i
+                                                class="ti ti-checkbox ti-sm"></i></span>
+                                            <div>
+                                                <p class="mb-0 fw-medium" id="duration">{{.Duration}}</p>
+                                                <small>Time</small>
+                                            </div>
+                                            <span class="badge bg-label-primary p-2 rounded"><i
+                                                class="ti ti-checkbox ti-sm"></i></span>
+                                            <div>
+                                                <p class="mb-0 fw-medium" id="concurrents">{{.Concurrents}}</p>
+                                                <small>Cons</small>
+                                            </div>
+                                            <span class="badge bg-label-primary p-2 rounded"><i
+                                                class="ti ti-checkbox ti-sm"></i></span>
+                                            <div>
+                                                <p class="mb-0 fw-medium" id="expiry">---</p>
+                                                <small>Expiry</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 small text-uppercase text-muted">Details</p>
+                                    <div class="info-container">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <span class="fw-medium me-1">Username:</span>
+                                                <span>{{ .Username }}</span>
+                                            </li>
+                                            <li class="mb-2 pt-1">
+                                                <span class="fw-medium me-1">Balance: </span>
+                                                <span id="bal">{{.Balance}}</span>
+                                            </li>
+                                            <li class="mb-2 pt-1">
+                                                <span class="fw-medium me-1">Plan: </span>
+                                                <span id="plan">{{.Membership}}</span>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="javascript:;"
+                                                class="btn btn-label-danger suspend-user waves-effect">Suspended</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SettingssNav -->
+
+                        </div>
+                        <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+                            <ul class="nav nav-pills flex-column flex-md-row mb-4" role="tablist">
+                                <li class="nav-item">
+                                    <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                                        data-bs-target="#logs" aria-controls="logs" aria-selected="true">Home</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                        data-bs-target="#password" aria-controls="password"
+                                        aria-selected="false">Password</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                        data-bs-target="#email" aria-controls="email"
+                                        aria-selected="false">Email</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="logs" role="tabpanel">
+                                    <div class="card mb-4">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Host</th>
+                                                        <th>Time</th>
+                                                        <th>Method</th>
+                                                        <th>Stop</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-border-bottom-0" id="attacks">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="password" role="tabpanel">
+                                    <div class="card mb-4">
+                                        <h5 class="card-header">Change Password</h5>
+                                        <div class="card-body">
+                                            <form id="formChangePassword" method="GET" onsubmit="return false"
+                                                class="fv-plugins-bootstrap5 fv-plugins-framework"
+                                                novalidate="novalidate">
+                                                <div class="alert alert-warning" role="alert">
+                                                    <h5 class="alert-heading mb-2">Ensure that these requirements are
+                                                        met</h5>
+                                                    <span>Minimum 8 characters long, uppercase &amp; symbol</span>
+                                                </div>
+                                                <div class="row">
+                                                    <div
+                                                        class="mb-3 col-12 col-sm-6 form-password-toggle fv-plugins-icon-container">
+                                                        <label class="form-label" for="newPassword">New Password</label>
+                                                        <div class="input-group input-group-merge has-validation">
+                                                            <input class="form-control" type="password" id="newPassword"
+                                                                name="newPassword" placeholder="············">
+                                                            <span class="input-group-text cursor-pointer"><i
+                                                                    class="ti ti-eye-off"></i></span>
+                                                        </div>
+                                                        <div
+                                                            class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="mb-3 col-12 col-sm-6 form-password-toggle fv-plugins-icon-container">
+                                                        <label class="form-label" for="confirmPassword">Confirm New
+                                                            Password</label>
+                                                        <div class="input-group input-group-merge has-validation">
+                                                            <input class="form-control" type="password"
+                                                                name="confirmPassword" id="confirmPassword"
+                                                                placeholder="············">
+                                                            <span class="input-group-text cursor-pointer"><i
+                                                                    class="ti ti-eye-off"></i></span>
+                                                        </div>
+                                                        <div
+                                                            class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <button type="submit"
+                                                            class="btn btn-primary me-2 waves-effect waves-light">Change
+                                                            Password</button>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="email" role="tabpanel">
+                                    <div class="card mb-4">
+                                        <h5 class="card-header">Change Email</h5>
+                                        <div class="card-body">
+                                            <form id="formChangeEmail" method="GET" onsubmit="return false"
+                                                class="fv-plugins-bootstrap5 fv-plugins-framework"
+                                                novalidate="novalidate">
+                                                <div class="row">
+                                                    <div
+                                                        class="mb-3 col-12 col-sm-6 form-email-toggle fv-plugins-icon-container">
+                                                        <label class="form-label" for="newEmail">New email</label>
+                                                        <div class="input-group input-group-merge has-validation">
+                                                            <input class="form-control" type="email" id="newEmail"
+                                                                name="newEmail" placeholder="urmom@example.com">
+                                                            <span class="input-group-text cursor-pointer"><i
+                                                                    class="ti ti-eye-off"></i></span>
+                                                        </div>
+                                                        <div
+                                                            class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                                        </div>
+                                                    </div>
+
+                                                    <div
+                                                        class="mb-3 col-12 col-sm-6 form-email-toggle fv-plugins-icon-container">
+                                                        <label class="form-label" for="confirmEmail">Confirm New
+                                                            Email</label>
+                                                        <div class="input-group input-group-merge has-validation">
+                                                            <input class="form-control" type="email" name="confirmEmail"
+                                                                id="confirmEmail" placeholder="urmom@example.com">
+                                                            <span class="input-group-text cursor-pointer"><i
+                                                                    class="ti ti-eye-off"></i></span>
+                                                        </div>
+                                                        <div
+                                                            class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <button type="submit"
+                                                            class="btn btn-primary me-2 waves-effect waves-light">Change
+                                                            Email</button>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <h4 class="py-3 mb-4">
+            <span class="text-muted fw-light">Dashboard / Account /</span> Account Panel
+        </h4>
+        <div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    {{ template "footer.html" . }}
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+    </div>
+</body>
+
+</section>
+
+
+<!-- BEGIN: Vendor JS-->
+<script src="/_assets/vendors/js/vendors.min.js"></script>
+<!-- BEGIN Vendor JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/_assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+<script src="/_assets/vendors/js/charts/apexcharts.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/jszip.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+<script src="/_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+<script src="/_assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+<!-- END: Page Vendor JS-->
+
+<!-- BEGIN: Theme JS-->
+<script src="/_assets/js/core/app-menu.js"></script>
+<script src="/_assets/js/core/app.js"></script>
+<script src="/_assets/scripts/account.js"></script>
+<!-- END: Theme JS-->
+
+<!--START: Scrollbar-->
+<style>
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #161D31;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        background-color: #1e1f26;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #283046;
+    }
+</style>
+<!--START: Scrollbar-->
+
+<script>
+    $(window).on('load', function () {
+        if (feather) {
+            feather.replace({
+                width: 14,
+                height: 14
+            });
+        }
+    })
+</script>
+</body>
+<!-- END: Body-->
+
+</html>

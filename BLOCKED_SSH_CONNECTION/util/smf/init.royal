@@ -1,0 +1,133 @@
+#!/sbin/sh
+
+
+#
+# ident "@(#)royal.sh    1.8  3 YV"
+#
+
+#############
+# Variables #
+#############
+
+# Base installation directory
+BASE_DIR="/usr/local"
+BASE_CONFIG_DIR=$BASE_DIR"/etc"
+
+# royal files paths  
+royal_PATH="$BASE_DIR""/bin"
+royal_CONF_PATH="$BASE_CONFIG_DIR"
+
+# royal files
+royal_BIN_FILE="royal"
+royal_CONF_FILE=$royal_BIN_FILE".conf"
+
+# Daemon settings
+royal_CONF="$royal_CONF_PATH/$royal_CONF_FILE"
+
+# Log
+LOG_DIR="/var/log"
+LOGFILE=$LOG_DIR/$royal_BIN_FILE".log"
+
+#   
+# OS Commands location variables
+#
+CUT=`which cut`
+ECHO=`which echo`
+KILL=`which kill`
+PGREP=`which pgrep`
+UNAME=`which uname`
+
+# OS release
+OS_VER=`$UNAME -r|$CUT -f2 -d"."`
+OS_NAME=`$UNAME -s|$CUT -f1 -d" "`
+
+###############
+# Subroutines #
+###############
+
+check_royal ()
+{
+ # Check royal installed
+ program=$1
+ if [ ! -f "$royal_PATH/$program" -a ! -x "$royal_PATH/$program" ]; then
+  $ECHO "ERROR: royal not found!"
+  $ECHO "Exiting..."
+  exit 1
+ fi
+}
+
+check_os ()
+{
+ # Check OS version
+ if [ ! "$OS_NAME" = "SunOS" -a ! "$OS_VER" -lt "10" ]; then
+  $ECHO "ERROR: Unsupported OS $OS_NAME $OS_VER"
+  $ECHO "Exiting..."
+  exit 1
+ fi
+}
+
+checkconf ()
+{
+# Check royal config file
+ config=$1
+ if [ -f "$royal_CONF_PATH"/"$config" ]; then
+  $ECHO "1"
+ else
+  $ECHO "0"
+ fi  
+}
+
+startproc() 
+{
+# Start royal daemon
+ program=$1
+ if [ "`checkconf $royal_CONF_FILE`" != "1" ]; then
+  $ECHO "ERROR: Config file $royal_CONF_PATH/$royal_CONF_FILE not found."  
+  $ECHO "Exiting..."
+  exit 2
+ else
+  $royal_PATH/$program -f $royal_CONF_PATH/$royal_CONF_FILE -v >$LOGFILE &
+ fi
+}
+
+stopproc() 
+{
+# Stop royal daemon
+ program=$1
+ if [ "`checkconf $royal_CONF_FILE`" != "1" ]; then
+  $ECHO "ERROR: Config file $royal_CONF_PATH/$royal_CONF_FILE not found."  
+  $ECHO "Exiting..."
+  exit 2
+ else
+  $KILL -s TERM `$PGREP $program`>/dev/null 2>&1
+ fi
+}
+
+
+
+# Check royal installed
+check_royal $royal_BIN_FILE
+
+# Check OS version
+check_os
+
+case "$1" in
+"start")
+  startproc $royal_BIN_FILE
+  ;;
+"stop")
+  stopproc $royal_BIN_FILE
+  ;;
+"refresh")
+  $KILL -s HUP `$PGREP $royal_BIN_FILE`>/dev/null 2>&1
+  ;;
+"restart")
+  stopproc $royal_BIN_FILE
+  startproc $royal_BIN_FILE
+  ;;
+*)
+  $ECHO "Usage: $0 { start | stop | restart | refresh }"
+  exit 1
+esac
+
+exit 0

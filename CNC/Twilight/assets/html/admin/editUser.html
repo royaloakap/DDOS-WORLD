@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Twilight">
+    <meta name="keywords" content="Twilight">
+    <meta name="author" content="PIXINVENT">
+    <title>{{.Name}} | {{.Title}}</title>
+    <link rel="apple-touch-icon" href="/_assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/_assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
+        rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <script src="https://kit.fontawesome.com/d106b983f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/_assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/_assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <link rel="stylesheet" type="text/css" href="/_assets/css/plugins/extensions/ext-component-toastr.css">
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern content-left-sidebar
+        navbar-floating footer-static " data-open="click" data-menu="vertical-menu-modern"
+    data-col="content-left-sidebar">
+
+    <!-- BEGIN: Header-->
+    <nav class="header-navbar navbar navbar-expand-lg align-items-center
+            floating-nav navbar-dark navbar-shadow container-xxl">
+        <div class="navbar-container d-flex content">
+            <div class="bookmark-wrapper d-flex align-items-center">
+                <ul class="nav navbar-nav d-xl-none">
+                    <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon"
+                                data-feather="menu"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon
+                                    text-warning" data-feather="star"></i></a>
+                        <div class="bookmark-input search-input">
+                            <div class="bookmark-input-icon"><i data-feather="search"></i></div>
+                            <input class="form-control input" type="text" placeholder="Bookmark" tabindex="0"
+                                data-search="search">
+                            <ul class="search-list search-list-bookmark"></ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav align-items-center ms-auto">
+                <li class="nav-item d-none d-lg-block"><a class="nav-link
+                            nav-link-style"><i class="ficon" data-feather="sun"></i></a></li>
+                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#"
+                        data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span
+                            class="badge rounded-pill bg-primary badge-up">1</span></a>
+                    <ul class="dropdown-menu dropdown-menu-media
+                            dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                            <div class="dropdown-header d-flex">
+                                <h4 class="notification-title mb-0 me-auto">Notifications</h4>
+                            </div>
+                        </li>
+                        <li class="scrollable-container media-list"><a class="d-flex" href="#">
+                                <div class="list-item d-flex
+                                        align-items-start">
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">kitty
+                                                (admin)</span></p><small class="notification-text"> is
+                                            cute but wont admit it.</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-footer"><a class="btn
+                                    btn-primary w-100" href="#">Read all
+                                notifications</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link"
+                        id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <div class="user-nav d-sm-flex d-none"><span
+                                class="user-name fw-bolder">{{.Username}}</span><span class="user-status">{{ if
+                                .User.HasPermission "admin" }}Admin {{ else }} User{{ end }}</span>
+                        </div>
+                        <span class="avatar"></span></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user"><a
+                            class="dropdown-item" href="/account"><i class="me-50" data-feather="user"></i>
+                            Profile</a><a class="dropdown-item" href="/logs"><i class="me-50"
+                                data-feather="check-square"></i>
+                            Logs</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout"><i class="me-50" data-feather="power"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- END: Header-->
+
+    <!-- main menu -->
+
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item me-auto"><a class="navbar-brand" href="/"><span class="brand-logo">
+                            <h2 class="brand-text">{{.Name}} Admin</h2>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" navigation-header"><span>Admin Panel</span><i data-feather="more-horizontal"></i>
+                    <li class=" nav-item">
+                        <a class="d-flexbalign-items-center" href="/admin/dash">
+                            <i data-feather='shield'></i>
+                            <span class="menu-title text-truncate">Dashboard</span>
+                        </a>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                                <i data-feather='globe'></i>
+                                <span class="menu-title text-truncate">Management</span>
+                            </a>
+                            <ul class="menu-sub">
+                                <li class="menu-item">
+                                    <a href="/admin/apisettings" class="menu-link">
+                                        <div data-i18n="API">API's</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/admin/servers" class="menu-link">
+                                        <div data-i18n="Servers">Servers</div>
+                                    </a>
+                                </li>
+                                <li class="active menu-item">
+                                    <a href="/admin/edit" class="menu-link">
+                                        <div data-i18n="user">Edit Users</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/admin/ticket_dash" class="menu-link">
+                                        <div data-i18n="user">Tickets</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li class="menu-item">
+                        <a class="menu-link menu-toggle">
+                            <i data-feather='shopping-cart'></i>
+                            <span class="menu-title text-truncate">Shop</span>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class=" menu-item">
+                                <a href="/admin/sales" class="menu-link">
+                                    <div data-i18n="Sales">Sales</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="/admin/coupon" class="menu-link">
+                                    <div data-i18n="Coupons">Coupons</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" nav-item">
+                        <a class="d-flex align-items-center" href="/admin/ul">
+                            <i data-feather='list'></i>
+                            <span class="menu-title text-truncate">User List</span>
+                        </a>
+                    <li class=" nav-item">
+                        <a class="d-flex align-items-center" href="/dashboard">
+                            <i data-feather='log-out'></i>
+                            <span class="menu-title text-truncate">Back</span>
+                        </a>
+                        <div class="divider">
+                            <div class="divider-text">/\</div>
+                        </div>
+                    </li>
+    
+                </ul>
+    
+    
+            </div>
+        </div>
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!--Header: START-->
+                <section class="app-user-list">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                        align-items-center
+                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75" id="dailyAttacks">0</h3>
+                                        <span>IDK</span>
+                                    </div>
+                                    <div class="avatar bg-light-success
+                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="activity" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                        align-items-center
+                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75" id="profit">${{.Slots}}</h3>
+                                        <span>Total Profit Today</span>
+                                    </div>
+                                    <div class="avatar bg-light-warning
+                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="dollar-sign" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex
+                        align-items-center
+                        justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75" id="dailyAttacks">{{.Users}}</h3>
+                                        <span>Active Users</span>
+                                    </div>
+                                    <div class="avatar bg-light-success
+                            p-50">
+                                        <span class="avatar-content">
+                                            <i data-feather="activity" class="font-medium-4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card">
+                                <div class="card-body d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h3 class="fw-bolder mb-75" id="users">{{.Users}}</h3>
+                                        <span>Total Users</span>
+                                    </div>
+                                    <div class="avatar bg-light-danger
+                            p-50">
+                                        <span class="avatar-content">
+                                            {{if eq .Users 1}}<i data-feather='user'
+                                                class="font-medium-4"></i>{{else}}<i data-feather='users'
+                                                class="font-medium-4"></i>{{end}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Header: END-->
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xl">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div>
+                                                <h4 class="card-title">Update User</h4>
+                                                <span class="card-subtitle text-muted">Update a users info here!</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="mb-1 col-md-12">
+                                                    <label class="form-label" for="userOption">User</label>
+                                                    <select class="form-select" id="userOption" aria-label="Default select example">
+                                                    </select>
+                                                </div>
+                                                <div class="mb-1 col-md-6">
+                                                    <label class="form-label" for="concurrents">Concurrents</label>
+                                                    <input type="text" name="concurrents" id="concurrents" class="form-control"
+                                                        placeholder="1" />
+                                                </div>
+                                                <div class="mb-1 col-md-6">
+                                                    <label class="form-label" for="mbt">Max Time</label>
+                                                    <input type="text" name="mbt" id="mbt" class="form-control" placeholder="1200" />
+                                                </div>
+                                                <div class="mb-1 col-md-6">
+                                                    <label class="form-label" for="servers">Servers</label>
+                                                    <input type="text" name="servers" id="servers" class="form-control"
+                                                        placeholder="5" />
+                                                </div>
+                                                <div class="mb-1 col-md-6">
+                                                    <label class="form-label" for="roleOption">Roles</label>
+                                                    <select multiple class="form-select" id="roleOption" aria-label="Default select example">
+                                                        <option>member</option>
+                                                        <option>admin</option>
+                                                        <option>vip</option>
+                                                        <option>api</option>
+                                                        <option>cnc</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-1 col-md-6">
+                                                    <label class="form-label" for="balance">Balance</label>
+                                                    <input type="text" name="balance" id="balance" class="form-control"
+                                                        placeholder="100$" />
+                                                </div>
+                                                <div class="mb-1 col-md-6">
+                                                    <label class="form-label" for="balance">Expire</label>
+                                                    <input class="form-control" type="date" value="2024-06-18" id="expire" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-center"> <!-- Add this div and class to center the buttons -->
+                                                <button id="updateUser" class="btn btn-primary btn-icon" type="submit" style="width: 320px; margin-left: 10px; margin-top: 10px;" onclick="UpdateUser()">Update User</button>
+                                                <button id="banUser" class="btn btn-danger btn-icon" type="submit" style="width: 320px; margin-left: 10px; margin-top: 10px;" onclick="BanUser()">Ban User</button>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl">
+                                    <div class="card">
+                                        <h5 class="card-header">Users</h5>
+                                        <div class="table-responsive text-nowrap">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>User</th>
+                                                        <th>Conns</th>
+                                                        <th>Servers</th>
+                                                        <th>Duration</th>
+                                                        <th>Status</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-border-bottom-0" id="userTable">
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination justify-content-center">
+                                            <!-- Pagination links will be dynamically added here -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            
+                </section>
+            </div>
+            <h4 class="py-3 mb-4">
+                <span class="text-muted fw-light">Dashboard / Admin Panel / Management /</span> Dashboard
+            </h4>
+        </div>
+    </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0"><span class="float-md-start d-block
+                        d-md-inline-block mt-25">Copyright &copy; 2024<a class="ms-25" href="https://twilight.lol"
+                    target="_blank">Twilight</a><span class="d-none
+                            d-sm-inline-block">, All rights Reserved</span></span><span
+                class="float-md-end d-none d-md-block">Vers: {{.Vers}} \\ Hand-crafted &
+                Made with
+                <a href="https://discord.gg/9PuvcEsMVA"> <i data-feather="heart"></i> </a>
+            </span>
+        </p>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="/_assets/vendors/js/vendors.min.js"></script>
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/_assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/_assets/vendors/js/charts/apexcharts.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/_assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/_assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Dashboard JS-->
+    <script src="/_assets/scripts/admin/editUser2.js"></script>
+
+    <style>
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #161D31;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            background-color: #1e1f26;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #283046;
+        }
+    </style>
+    <script>
+        $(window).on('load', function () {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+    <!-- END: Dashboard JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/_assets/js/core/app-menu.js"></script>
+    <script src="/_assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>

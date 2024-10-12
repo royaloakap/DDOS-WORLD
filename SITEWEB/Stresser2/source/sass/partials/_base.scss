@@ -1,0 +1,42 @@
+@import "modules/all";
+
+body {	
+	background: url(../img/bg.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	color:$text;
+	font-weight: 300;
+
+	&.bg1 {	
+		background: url(../img/bg.jpg); 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	&.bg2 {	
+		background: url(../img/bg2.jpg); 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	&.bg3 {	
+		background: url(../img/bg3.jpg); 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	&.bg4 {	
+		background: url(../img/bg4.jpg); 
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+
+
+hr {
+	height: 1px;
+	border:none;
+	background-color: rgba(255,255,255,0.4);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pad20 { padding:20px; }

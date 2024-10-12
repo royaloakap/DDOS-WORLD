@@ -1,0 +1,187 @@
+/* UI - Sliders
+=================================================================== */
+
+.slider {
+	background: @main;
+	border: none;
+	position: relative;
+	z-index: 10;
+	margin: 5px 0px !important;
+	
+	.ui-slider-range {
+		position: absolute;
+		.box-sizing(content-box);
+		background: lighten(@primary,10%);
+	}
+	
+	.ui-slider-handle {
+		.border-radius(2px);
+		border: 1px solid @mainD5;
+		background: white;
+		.box-shadow(0 1px 1px @mainD15);
+		.transition(0.1s);
+		
+		
+		&:hover {
+			width: 30px;
+			margin-left: -15px;
+		}
+		
+		&:focus {
+			width: 30px;
+			margin-left: -15px;
+			outline: none;
+			.transition(0s);
+		}
+	}
+	
+	
+	&.slider-success {
+		
+		.ui-slider-range {
+			background: lighten(@success,10%);
+		}
+
+	}
+	
+	&.slider-info {
+		
+		.ui-slider-range {
+			background: lighten(@info,10%);
+		}
+		
+	}
+	
+	&.slider-warning {
+		
+		.ui-slider-range {
+			background: lighten(@warning,10%);
+		}
+
+	}
+	
+	&.slider-danger {
+		
+		.ui-slider-range {
+			background: lighten(@danger,10%);
+		}
+
+	}
+	
+	&.slim {
+		height: 6px;
+		
+		.ui-slider-handle {
+			margin-top: -1px;
+			height: 14px;
+			width: 14px;
+			
+			&:hover {
+				width: 20px;
+				margin-left: -12px;
+			}
+
+			&:focus {
+				width: 20px;
+				margin-left: -12px;
+			}
+			
+		}
+		
+	}
+		
+	&.vertical {
+		float: left;
+	    height: 100px;
+	    margin: 10px 20px !important;
+	
+		.ui-slider-handle {
+			margin-left: -3px;
+			
+			&:hover {
+				width: 18px;
+				height: 30px;
+				margin-bottom: -15px;
+			}
+
+			&:focus {
+				width: 18px;
+				height: 30px;
+				margin-bottom: -15px;
+			}
+		}
+		
+		&.slim {
+			width: 6px;
+			
+			.ui-slider-handle {
+				margin-left: -4px;
+				
+				&:hover {
+					width: 14px;
+					height: 18px;
+					margin-bottom: -12px;
+				}
+
+				&:focus {
+					width: 14px;
+					height: 18px;
+					margin-bottom: -12px;
+				}
+			}
+		}
+	}
+}
+
+/* UI - Progress Bars
+=================================================================== */
+
+.progressbar {
+	background: @main;
+	color: @mainD5;
+	border: none;
+	height: 12px;
+	position: relative;
+	
+	.ui-progressbar-value {
+		background: @primary;
+		border: none;
+		height: 100%;
+		top: 1px;
+		position: absolute;
+		left: 1px;
+		.border-radius(2px);
+	}
+	
+	&.progress-success {
+		
+		.ui-progressbar-value {
+			background: @success;
+		}
+	}
+	
+	&.progress-info {
+		
+		.ui-progressbar-value {
+			background: @info;
+		}
+	}
+	
+	&.progress-warning {
+		
+		.ui-progressbar-value {
+			background: @warning;
+		}
+	}
+	
+	&.progress-danger {
+		
+		.ui-progressbar-value {
+			background: @danger;
+		}
+	}
+	
+	&.slim {
+		height: 6px;
+	}	
+}

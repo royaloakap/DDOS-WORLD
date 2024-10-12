@@ -1,0 +1,10 @@
+[97mAttack details:
+    Status: [ [92mAttack sent On API'S [97m]
+    Target: [ [91m<<$target>> [97m]
+    Port: [ [91m<<$port>> [97m]
+    Time: [ [91m<<$time>> [97m]
+    Method: [ [91m<<$method>> [97m]
+[97mTarget details:
+    Org: [ [91m<<$org>> [97m]
+    Region: [ [91m<<$region>> [97m]
+    Country: [ [91m<<$country>> [97m]

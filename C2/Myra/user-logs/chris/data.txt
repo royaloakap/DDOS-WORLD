@@ -1,0 +1,216 @@
+.attacks
+
+.attacks
+.odin 198.27.115.236 22 60
+
+.odin 198.27.115.236 22 60
+.home 90.215.37.239 60 80
+.home 90.215.37.239 60 80
+
+
+.home 90.215.37.239 120 53
+
+.home 90.215.37.239 120 53
+.kill
+
+.kill
+.attacks
+
+.attacks
+.menu
+
+.menu
+.account
+
+.account
+.nmap
+.nmap
+.attacks
+.attacks
+
+
+.ethera 192.223.25.158 60
+.ethera 192.223.25.158 60
+
+
+.eris 192.223.25.158 80 60
+.eris 192.223.25.158 80 60
+
+
+.attakcs
+
+.attakcs
+.attacks
+
+.attacks
+.gunther 192.223.25.158 80 60
+
+.gunther 192.223.25.158 80 60
+.orys 192.223.25.158 80 60
+.orys 192.223.25.158 80 60
+
+
+bruh this nfo is so good wtf
+
+
+.clear
+.clear
+
+
+.attacks
+.attacks
+
+
+.orys 192.223.25.158 80 60
+
+.orys 192.223.25.158 80 60
+
+
+.kill
+
+.kill
+
+
+.attacks
+.attacks
+
+
+.orys 192.223.25.158 80 60
+
+.orys 192.223.25.158 80 60
+.orys 192.223.25.158 80 60
+.orys 192.223.25.158 80 60
+
+
+..status
+..status
+
+
+.status
+
+.status
+.status
+
+.status
+.lookup
+
+.lookup
+.orys 192.223.25.158 80 120
+.orys 192.223.25.158 80 120
+
+
+.kill
+
+.kill
+
+
+.attacks
+.attacks
+
+
+.attacks
+.attacks
+
+
+.attacks
+.attacks
+
+
+.home 90.215.37.239 80 60
+.home 90.215.37.239 80 60
+
+
+.odin 142.4.209.224 22 120
+
+.odin 142.4.209.224 22 120
+.odin 192.99.105.188 1184 60
+
+.odin 192.99.105.188 1184 60
+.attacks
+.attacks
+
+
+.massacre 192.99.105.188 1184 120
+
+.massacre 192.99.105.188 1184 120
+.kill
+
+.kill
+
+
+.massacre 192.99.105.188 1184 70
+.massacre 192.99.105.188 1184 70
+
+
+.massacre 192.99.105.188 1184 70
+
+.massacre 192.99.105.188 1184 70
+fuck
+
+
+.chat
+
+h
+
+hi
+
+
+.leave
+
+.exit-chat
+
+
+.disable-chat
+
+.disable-chat
+massacre 192.99.105.188 60
+
+
+.massacre 192.99.105.188 70
+.massacre 192.99.105.188 70
+
+
+.home 94.13.83.11 80 120
+
+.home 94.13.83.11 80 120
+.attacks
+.attacks
+
+
+.odin  139.99.190.87 9980 90
+.odin  139.99.190.87 9980 90
+
+
+.logout
+.logout
+.attacks
+.attacks
+
+.odin 199.231.233.28 65115 60
+.odin 199.231.233.28 65115 60
+.oryx 199.231.233.28 65115 60
+.oryx 199.231.233.28 65115 60
+.kill
+.kill
+
+.attacks
+.attacks
+.home 90.215.37.239 80 120
+.home 90.215.37.239 80 120
+ .attacks
+.attacks
+.attacks
+.massacre 208.83.82.220 120
+.massacre 208.83.82.220 120
+.attacks
+.attacks
+.massacre 198.27.115.236 60
+.massacre 198.27.115.236 60
+.eris 192.223.30.130 443 120
+.eris 192.223.30.130 443 120
+.eris 192.223.30.51 53517 60
+.eris 192.223.30.51 53517 60
+.attacks
+.attacks
+.logout
+.logout

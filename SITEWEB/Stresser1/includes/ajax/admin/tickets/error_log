@@ -1,0 +1,13 @@
+[22-Nov-2017 23:46:52 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/view.php on line 7
+[22-Nov-2017 23:46:58 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:02 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:02 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:04 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:08 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:09 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:24 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/view.php on line 7
+[22-Nov-2017 23:47:36 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/view.php on line 7
+[22-Nov-2017 23:47:37 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:40 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/close.php on line 7
+[22-Nov-2017 23:47:41 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/view.php on line 7
+[23-Nov-2017 03:55:34 UTC] PHP Fatal error:  Call to undefined method user::isSupporter() in /home/altgennc/lol.alt-gen.net/includes/ajax/admin/tickets/view.php on line 7

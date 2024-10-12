@@ -1,0 +1,290 @@
+[16-May-2021 14:48:08 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:48:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:48:47 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:48:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:49:02 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:49:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:49:02 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:49:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:49:04 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:49:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:49:07 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:49:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:49:48 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:49:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:08 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:28 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:28 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:29 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:47 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:47 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 14:50:48 UTC] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 14:50:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1044] Access denied for user 'sstdestr_destroyer'@'localhost' to database 'sstdestr_destroyer' in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:31 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: Packets out of order. Expected 0 received 1. Packet size=23 in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: Packets out of order. Expected 0 received 1. Packet size=23 in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Warning:  Packets out of order. Expected 0 received 1. Packet size=23 in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 15:59:32 UTC] PHP Warning:  mysqli_connect(): MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Warning:  mysqli_connect(): Error while reading greeting packet. PID=3302 in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 15:59:32 UTC] PHP Warning:  mysqli_connect(): (HY000/2006): MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: Packets out of order. Expected 0 received 1. Packet size=23 in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: Packets out of order. Expected 0 received 1. Packet size=23 in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 15:59:32 UTC] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 15:59:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 16:00:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 16:00:17 UTC] PHP Fatal error:  Uncaught PDOException: Packets out of order. Expected 0 received 1. Packet size=23 in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+
+Next PDOException: SQLSTATE[HY000] [2006] MySQL server has gone away in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 16:00:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 16:00:36 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Resource temporarily unavailable in /datas/sstdestr/public_html/include/bdd.php on line 2
+[16-May-2021 16:00:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Resource temporarily unavailable in /datas/sstdestr/public_html/include/bdd.php:3
+Stack trace:
+#0 /datas/sstdestr/public_html/include/bdd.php(3): PDO->__construct('mysql:host=loca...', 'sstdestr_destro...', 'KWT0_x)xd*M}')
+#1 /datas/sstdestr/public_html/require.php(14): include('/datas/sstdestr...')
+#2 /datas/sstdestr/public_html/pages/authentification.php(7): include('/datas/sstdestr...')
+#3 {main}
+  thrown in /datas/sstdestr/public_html/include/bdd.php on line 3
+[16-May-2021 16:00:36 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Resource temporarily unavailable in /datas/sstdestr/public_html/include/bdd.php on line 2
+[17-May-2021 01:10:59 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[17-May-2021 01:12:11 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[17-May-2021 09:33:52 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[17-May-2021 13:36:43 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[17-May-2021 13:52:33 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[17-May-2021 13:59:56 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[17-May-2021 14:26:43 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[18-May-2021 00:15:29 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40
+[18-May-2021 00:57:38 UTC] PHP Notice:  Undefined index: lastlogin in /datas/sstdestr/public_html/require.php on line 40

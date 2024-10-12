@@ -1,0 +1,90 @@
+{
+ "plans": {
+        "API Monthly #1": {
+            "duration": 120,
+            "concurrents": 1,
+            "api": true,
+            "expiry": 31,
+            "price": 20,
+            "fiat": "USD"
+        },
+        "API Monthly #2": {
+            "duration": 300,
+            "concurrents": 2,
+            "api": true,
+            "expiry": 31,
+            "price": 45,
+            "fiat": "USD"
+        },
+        "API Monthly #3": {
+            "duration": 500,
+            "concurrents": 4,
+            "api": true,
+            "expiry": 31,
+            "price": 70,
+            "fiat": "USD"
+                    },
+        "Monthly #1": {
+            "duration": 120,
+            "concurrents": 2,
+            "api": false,
+            "expiry": 31,
+            "price": 15,
+            "fiat": "USD"
+                    },
+        "Monthly #2": {
+            "duration": 200,
+            "concurrents": 3,
+            "api": false,
+            "expiry": 31,
+            "price": 40,
+            "fiat": "USD"
+                    },
+        "Monthly #3": {
+            "duration": 300,
+            "concurrents": 4,
+            "api": false,
+            "expiry": 31,
+            "price": 65,
+            "fiat": "USD"
+                    },
+        "HH Monthly #1": {
+            "duration": 54000,
+            "concurrents": 1,
+            "api": false,
+            "expiry": 31,
+            "price": 25,
+            "fiat": "USD"
+        }
+    },
+    "addons": {
+        "api":{
+            "price":20,
+            "fiat":"USD",
+            "upgrade":"api",
+            "value":1,
+            "expiry":31
+        },
+        "vip":{
+            "price":20,
+            "fiat":"USD",
+            "upgrade":"vip",
+            "value":1,
+            "expiry":31
+        },
+        "cnc":{
+            "price":10,
+            "fiat":"USD",
+            "upgrade":"cnc",
+            "value":1,
+            "expiry":31
+        }
+    },
+    "limits":{
+        "concurrents":5,
+        "duration":1200,
+        "api":1,
+        "vip":1,
+        "cnc":1
+    }
+}

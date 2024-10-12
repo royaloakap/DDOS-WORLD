@@ -1,0 +1,98 @@
+[22-Nov-2017 20:18:20 UTC] PHP Notice:  Undefined variable: testboots in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/attacks.php on line 15
+[22-Nov-2017 20:18:26 UTC] PHP Notice:  Undefined variable: testboots in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 16
+[22-Nov-2017 20:18:29 UTC] PHP Notice:  Undefined variable: testboots in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 16
+[22-Nov-2017 21:37:13 UTC] PHP Notice:  Undefined variable: testboots in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/attacks.php on line 15
+[22-Nov-2017 22:24:56 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:24:56 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:24:56 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[22-Nov-2017 22:24:56 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[22-Nov-2017 22:24:56 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[22-Nov-2017 22:26:37 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:26:37 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:26:37 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[22-Nov-2017 22:26:37 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[22-Nov-2017 22:26:37 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[22-Nov-2017 22:26:40 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:26:40 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:26:40 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[22-Nov-2017 22:26:40 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[22-Nov-2017 22:26:40 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[22-Nov-2017 22:26:42 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:26:42 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 22:26:42 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[22-Nov-2017 22:26:42 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[22-Nov-2017 22:26:42 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[22-Nov-2017 23:24:54 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 23:24:54 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[22-Nov-2017 23:24:54 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[22-Nov-2017 23:24:54 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[22-Nov-2017 23:24:54 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[23-Nov-2017 04:45:37 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:45:37 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:45:37 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:45:37 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:45:37 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[23-Nov-2017 04:46:22 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:22 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:22 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:46:25 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:25 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:25 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:46:30 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:30 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:30 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:46:32 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:32 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:32 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:46:33 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:33 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:33 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:46:35 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:35 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:46:35 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:46:35 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:46:36 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[23-Nov-2017 04:51:13 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:13 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:13 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:13 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:16 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:16 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:16 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:16 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:21 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:21 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:21 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:21 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:22 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:22 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:22 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:22 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:28 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:28 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:28 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:28 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:34 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:34 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:34 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:34 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:39 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:39 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:51:39 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:51:39 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:51:39 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[23-Nov-2017 04:52:46 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:52:46 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:52:46 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:52:46 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:52:46 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[23-Nov-2017 04:53:10 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:53:10 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:53:10 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:53:10 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:53:10 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207
+[23-Nov-2017 04:53:41 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:53:41 UTC] PHP Notice:  Undefined variable: maxattacks in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 134
+[23-Nov-2017 04:53:41 UTC] PHP Notice:  Undefined variable: cooldown in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 141
+[23-Nov-2017 04:53:41 UTC] PHP Notice:  Undefined variable: rotation in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 167
+[23-Nov-2017 04:53:41 UTC] PHP Warning:  date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in /home/altgennc/lol.alt-gen.net/includes/ajax/user/attacks/hub.php on line 207

@@ -1,0 +1,63 @@
+.gunther 86.163.234.188 80 120
+
+.gunther 86.163.234.188 80 120
+.kill
+
+.kill
+.gunther 86.184.37.74 80 120
+
+.gunther 86.184.37.74 80 120
+.kill
+
+.kill
+.gunther 98.15.176.219 80 120
+.gunther 98.15.176.219 80 120
+.gunther 98.15.176.219 80 120
+.gunther 98.15.176.219 80 120
+.gunther 73.188.70.78 80 30
+.gunther 73.188.70.78 80 30
+.detail-attacks
+.detail-attacks
+.attacks
+.attacks
+.detail-attacks
+.detail-attacks
+.oryx 98.15.176.219 0 45
+.oryx 98.15.176.219 0 45
+.kill
+.kill
+
+.attacks
+.attacks
+.ranking
+.ranking
+.oryx 98.15.176.219 80 45
+.oryx 98.15.176.219 80 45
+.oryx 98.15.176.219 80 120
+.oryx 98.15.176.219 80 120
+.oryx 3.237.163.230 9068 35
+.oryx 3.237.163.230 9068 35
+.oryx 3.237.125.108 9011 90
+.oryx 3.237.125.108 9011 90
+.kill
+.kill
+.massacre 3.237.125.108 80
+.massacre 3.237.125.108 80
+.kill
+.kill
+.ranking
+.ranking
+.oryx 3.237.159.39 9077 35
+.oryx 3.237.159.39 9077 35
+.oryx 51.222.33.61 120 63697
+.oryx 51.222.33.61 120 63697
+.attacks
+.attacks
+.oryx 51.222.33.61 63697 120
+.oryx 51.222.33.61 63697 120
+.oryx 98.15.176.219 80 90
+.oryx 98.15.176.219 80 90
+.ranking
+.ranking
+.kratos 51.222.33.61 63697 120
+.kratos 51.222.33.61 63697 120
