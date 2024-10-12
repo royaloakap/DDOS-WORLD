@@ -1,4 +1,0 @@
-[06-Jul-2019 18:07:29 America/New_York] PHP Notice:  Undefined index: path in /home/critjkpf/public_html/project/ajax/others/crypt/B64.php on line 9
-[06-Jul-2019 18:07:29 America/New_York] PHP Notice:  Undefined index: download_file in /home/critjkpf/public_html/project/ajax/others/crypt/B64.php on line 10
-[06-Jul-2019 18:07:29 America/New_York] PHP Notice:  Undefined index: extension in /home/critjkpf/public_html/project/ajax/others/crypt/B64.php on line 19
-[06-Jul-2019 18:09:05 America/New_York] PHP Notice:  Undefined index: download_file in /home/critjkpf/public_html/project/ajax/others/crypt/B64.php on line 10
