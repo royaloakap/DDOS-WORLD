@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head><script src="https://pay.sellsn.io/embed.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cypher Services</title>
+  <meta name="description" content="Cypher Services - The most advanced network stress testing platform. Evaluate your infrastructure security with our professional tools.">
+  <meta name="keywords" content="Cypher Services, network testing, security testing, infrastructure evaluation, stress testing, network security">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+              950: '#082f49',
+            },
+            secondary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+              950: '#2e1065',
+            },
+            dark: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            }
+          },
+          fontFamily: {
+            'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'gradient-x': 'gradient-x 15s ease infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            'gradient-x': {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              },
+            },
+            'float': {
+              '0%, 100%': {
+                transform: 'translateY(0)',
+              },
+              '50%': {
+                transform: 'translateY(-20px)',
+              },
+            },
+          },
+          backdropBlur: {
+            xs: '2px',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    /* Custom styles */
+    .bg-gradient-primary {
+      background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+    }
+    
+    .bg-gradient-dark {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+    
+    .text-gradient {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(90deg, #0ea5e9, #8b5cf6);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .glow {
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    }
+    
+    .glow-text {
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+    
+    .glow-purple {
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+    }
+    
+    /* Particle animation */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #38bdf8;
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0ea5e9;
+    }
+    
+    /* Terminal effect */
+    .terminal {
+      font-family: 'JetBrains Mono', monospace;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #38bdf8;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #38bdf8 }
+    }
+    
+    /* Pricing toggle switch */
+    .toggle-checkbox:checked {
+      right: 0;
+      border-color: #0ea5e9;
+    }
+    
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #0ea5e9;
+    }
+    
+    /* Hexagon grid */
+    .hexagon {
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+  </style>
+</head>
+
+<body class="bg-dark-950 text-white font-sans">
+  <!-- Particles Background -->
+  <div id="particles-js" class="fixed inset-0 z-0"></div>
+  
+  <!-- Announcement Banner -->
+  <div class="bg-gradient-primary py-2 px-4 text-center text-white relative z-10">
+    <p class="text-sm font-medium">Cypher Services - Cheapest & Most Reliable Service</p>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-dark-900/80 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#" class="flex-shrink-0 flex items-center">
+            <span class="text-2xl font-bold text-gradient">CYPHER</span>
+            <span class="ml-1 text-lg font-light">SERVICES</span>
+          </a>
+          <div class="hidden md:ml-10 md:flex md:space-x-8">
+            <a href="#" class="text-white hover:text-primary-400 px-3 py-2 text-sm font-medium border-b-2 border-primary-500">Home</a>
+            <a href="#features" class="text-gray-300 hover:text-white hover:border-primary-400 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Features</a>
+            <a href="#methods" class="text-gray-300 hover:text-white hover:border-primary-400 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Methods</a>
+            <a href="#pricing" class="text-gray-300 hover:text-white hover:border-primary-400 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Pricing</a>
+            <a href="#api" class="text-gray-300 hover:text-white hover:border-primary-400 px-3 py-2 text-sm font-medium border-b-2 border-transparent">API Pricing</a>
+            <a href="tos" class="text-gray-300 hover:text-white hover:border-primary-400 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Terms of Service</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="hidden md:flex">
+            <a href="https://t.me/brocypher" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-secondary-600 hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 transition duration-150 ease-in-out">
+              Contact on Telegram
+            </a>
+          </div>
+          <div class="flex md:hidden">
+            <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-b border-gray-800">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">Home</a>
+        <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Features</a>
+        <a href="#methods" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Methods</a>
+        <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Pricing</a>
+        <a href="#api" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">API Pricing</a>
+        <div class="pt-4 pb-3 border-t border-gray-700">
+          <div class="mt-3 flex items-center px-5">
+            <a href="https://t.me/brocypher" class="block w-full px-5 py-3 text-center font-medium text-white bg-secondary-600 hover:bg-secondary-700 rounded-md">Contact on Telegram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-dark-950 py-20 sm:py-32">
+    <!-- Background gradient effects -->
+    <div class="absolute inset-0 bg-dark-950 z-0">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500/20 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div class="text-center">
+        <h1 data-aos="fade-up" class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+          Experience the <span class="text-gradient glow-text">Ultimate</span> DDoS experience. 
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" class="mt-6 max-w-2xl mx-auto text-xl text-gray-300">
+          Use Cypher to test the protection of your website, server or network against real DDoS attacks.
+        </p>
+        <div data-aos="fade-up" data-aos-delay="200" class="mt-10 flex justify-center gap-4">
+          <a href="#features" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition duration-150 ease-in-out">
+            Explore Features
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#pricing" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-400 bg-dark-800 hover:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition duration-150 ease-in-out">
+            View Pricing
+          </a>
+        </div>
+      </div>
+      
+      <!-- Animated Terminal -->
+      <div data-aos="fade-up" data-aos-delay="300" class="mt-16 max-w-3xl mx-auto">
+        <div class="bg-dark-800 rounded-lg shadow-xl overflow-hidden border border-gray-700">
+          <div class="flex items-center px-4 py-2 bg-dark-900">
+            <div class="flex space-x-2">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="ml-4 text-gray-400 text-sm">Cypher Services ~ Expires in: 999 days</div>
+          </div>
+          <div class="p-4 font-mono text-sm text-gray-300">
+            <div class="flex">
+              <span class="text-primary-400">$</span>
+              <span class="ml-2 terminal">synflood 93.184.216.34 80 80</span>
+            </div>
+            <div class="mt-2" id="terminal-output"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Stats -->
+      <div data-aos="fade-up" data-aos-delay="400" class="mt-20">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800 card-hover">
+            <dt class="text-base font-normal text-gray-400">Uptime</dt>
+            <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+              <div class="flex items-baseline text-2xl font-semibold text-primary-400">
+                99.9%
+                <span class="ml-2 text-sm font-medium text-gray-500">Guaranteed</span>
+              </div>
+            </dd>
+          </div>
+          
+          <div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800 card-hover">
+            <dt class="text-base font-normal text-gray-400">Global Slots</dt>
+            <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+              <div class="flex items-baseline text-2xl font-semibold text-primary-400">
+                30
+              </div>
+            </dd>
+          </div>
+          
+          <div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800 card-hover">
+            <dt class="text-base font-normal text-gray-400">Most GBPS</dt>
+            <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+              <div class="flex items-baseline text-2xl font-semibold text-primary-400">
+                150+ Gbps
+                <span class="ml-2 text-sm font-medium text-gray-500">Per DNS concurrent</span>
+              </div>
+            </dd>
+          </div>
+          
+          <div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-800 card-hover">
+            <dt class="text-base font-normal text-gray-400">Satisfied Clients</dt>
+            <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+              <div class="flex items-baseline text-2xl font-semibold text-primary-400">
+                200+
+                <span class="ml-2 text-sm font-medium text-gray-500">Worldwide</span>
+              </div>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+  
+<!-- Features Section -->
+<section id="features" class="py-20 bg-dark-900 relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-dark-950 to-dark-900 z-0"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+    <div class="text-center">
+      <p data-aos="fade-up" data-aos-delay="100" class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+        Features
+      </p>
+    </div>
+    
+    <div class="mt-16">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature 1 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 card-hover">
+          <div class="h-20 w-20 flex items-center justify-center">
+            <img src="images/6477bc300e468ecab70d8236_support.webp" loading="lazy" sizes="160px" alt="support" class="h-20 w-20">
+          </div>
+          <h3 class="mt-6 text-xl font-medium text-white">Pricing</h3>
+          <p class="mt-2 text-base text-gray-300">
+            Cypher is the only C2 that offers that much power for this kind of price. It’s affordable by anyone and everyone can enjoy taking down their targets with ease.
+          </p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 card-hover">
+          <div class="h-20 w-20 flex items-center justify-center">
+            <img src="images/6477bc142db63afef32a7261_chart.webp" loading="lazy" sizes="160px" alt="chart" class="h-20 w-20">
+          </div>
+          <h3 class="mt-6 text-xl font-medium text-white">Powerful Attacks</h3>
+          <p class="mt-2 text-base text-gray-300">
+            When you send an attack, it's handled by our advanced attack handlers and broadcasted to many APIs & servers for the best possible output.
+          </p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 card-hover">
+          <div class="h-20 w-20 flex items-center justify-center">
+            <img src="images/6477b9fbfe56056a5eec0ce3_btc.webp" loading="lazy" sizes="160px" alt="crypto-btc" class="h-20 w-20">
+          </div>
+          <h3 class="mt-6 text-xl font-medium text-white">Fast & Secure Payments</h3>
+          <p class="mt-2 text-base text-gray-300">
+            Our payment options are anonymous, fast, and secure. You make a cryptocurrency payment and receive your plan instantly!
+          </p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div data-aos="fade-up" data-aos-delay="400" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 card-hover">
+          <div class="h-20 w-20 flex items-center justify-center">
+            <img src="images/6477bb06acd139016bb607fc_lock.webp" loading="lazy" sizes="160px" alt="lock" class="h-20 w-20">
+          </div>
+          <h3 class="mt-6 text-xl font-medium text-white">Data Protection</h3>
+          <p class="mt-2 text-base text-gray-300">
+            Your privacy is one of our top priorities. We operate with a no-user-logs policy, ensuring your data remains secure at all times.
+          </p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div data-aos="fade-up" data-aos-delay="500" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 card-hover">
+          <div class="h-20 w-20 flex items-center justify-center">
+            <img src="images/6477bddb8ea81ef5fcd45216_web.webp" loading="lazy" sizes="160px" alt="web-browser" class="h-20 w-20">
+          </div>
+          <h3 class="mt-6 text-xl font-medium text-white">Highly Reliable</h3>
+          <p class="mt-2 text-base text-gray-300">
+            Cypher is an extremely reliable service with great uptime, positive feedback from clients, and a solid reputation for performance.
+          </p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div data-aos="fade-up" data-aos-delay="600" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 card-hover">
+          <div class="h-20 w-20 flex items-center justify-center">
+            <img src="images/6477c4931f0ee28256b0dead_calendardark.webp" loading="lazy" sizes="160px" alt="calendar" class="h-20 w-20">
+          </div>
+          <h3 class="mt-6 text-xl font-medium text-white">Excellent Uptime</h3>
+          <p class="mt-2 text-base text-gray-300">
+            Cypher has a 99% uptime guarantee, making us one of the most reliable C2 services in the community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Methods Section -->
+  <section id="methods" class="py-20 bg-dark-950 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-dark-900 to-dark-950 z-0">
+      <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+      <div class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-secondary-500/10 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div class="text-center">
+        <p data-aos="fade-up" data-aos-delay="100" class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+          Our Methods
+        </p>
+        <p data-aos="fade-up" data-aos-delay="200" class="mt-4 max-w-2xl mx-auto text-xl text-gray-300">
+          Our platform offers a wide range of methods for all needs.
+        </p>
+      </div>
+      
+      <!-- Methods Display -->
+      <div class="mt-16 relative">
+        <div data-aos="fade-up" class="bg-dark-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 overflow-hidden">
+          <!-- Methods Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="methods-grid">
+            <!-- Methods will be dynamically inserted here -->
+          </div>
+          
+          <!-- 3D Visualization -->
+          <div class="mt-12 h-64 md:h-80 relative overflow-hidden rounded-lg">
+            <div id="methods-visualization" class="w-full h-full"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-800 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 bg-dark-900 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-dark-950 to-dark-900 z-0"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <div class="text-center">
+        <h2 data-aos="fade-up" class="text-base font-semibold text-primary-400 uppercase tracking-wide">Pricing</h2>
+        <p data-aos="fade-up" data-aos-delay="100" class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+          C2 Pricing & Plans
+        </p>
+        <p data-aos="fade-up" data-aos-delay="200" class="mt-4 max-w-2xl mx-auto text-xl text-gray-300">
+          Choose the plan that fits your requirements with our simple, straightforward pricing.
+        </p>
+      </div>
+      
+      <!-- Pricing Cards -->
+      <div data-aos="fade-up" data-aos-delay="400" class="mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+        <!-- Basic Plan -->
+        <div class="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500">
+          <div class="bg-dark-900 rounded-2xl p-8 h-full flex flex-col">
+            <h3 class="text-xl font-semibold text-white">Basic</h3>
+            <p class="mt-8">
+              <span class="text-4xl font-extrabold text-white pricing-amount">$15</span>
+              <span class="text-base font-medium text-gray-400 pricing-period">/month</span>
+            </p>
+            <ul class="mt-8 space-y-4 flex-1">
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">1 Concurrent</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">60 Second Max Duration</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">60 Second Cooldown</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">VIP: False</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">Fast support</p>
+              </li>
+            </ul>
+            <button 
+            data-sellsn-pid="20e33c2c-db48-4d62-af60-6f95c1fb6ea6"
+            data-sellsn-sid="43a46143-4174-4c55-9f11-efeaebdd2916" 
+            class="mt-8 block w-full bg-primary-600 hover:bg-primary-700 border border-transparent rounded-md py-3 px-8 text-center font-medium text-white transition duration-150 ease-in-out"> <!-- Basic C2-->
+          Get Started
+            </button>
+          </div>
+        </div>
+        
+        <!-- Advanced Plan -->
+        <div class="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500">
+          <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
+          <div class="bg-dark-900 rounded-2xl p-8 h-full flex flex-col relative">
+            <div class="absolute top-0 right-0 -mr-1 -mt-4 w-36 h-36 overflow-hidden">
+              <div class="absolute transform rotate-45 bg-primary-600 text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px] text-center">
+                Popular
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Advanced</h3>
+            <p class="mt-8">
+              <span class="text-4xl font-extrabold text-white pricing-amount">$25</span>
+              <span class="text-base font-medium text-gray-400 pricing-period">/month</span>
+            </p>
+            <ul class="mt-8 space-y-4 flex-1">
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">2 Concurrent</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">180 Second Max Duration</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">60 Second Cooldown</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">VIP: True</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">Fast support</p>
+              </li>
+            </ul>
+            <button 
+            data-sellsn-pid="104e87ea-b23c-4f59-a0fa-c4dc45c4572d"
+            data-sellsn-sid="43a46143-4174-4c55-9f11-efeaebdd2916"
+            class="mt-8 block w-full bg-primary-600 hover:bg-primary-700 border border-transparent rounded-md py-3 px-8 text-center font-medium text-white transition duration-150 ease-in-out"> <!-- Advanced C2 -->
+          Get Started
+            </button>
+          </div>
+        </div>
+        
+        <!-- Pro Plan -->
+        <div class="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500">
+          <div class="bg-dark-900 rounded-2xl p-8 h-full flex flex-col">
+            <h3 class="text-xl font-semibold text-white">Pro</h3>
+            <p class="mt-8">
+              <span class="text-4xl font-extrabold text-white pricing-amount">$35</span>
+              <span class="text-base font-medium text-gray-400 pricing-period">/month</span>
+            </p>
+            <ul class="mt-8 space-y-4 flex-1">
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">3 Concurrents</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">240 Second Max Duration</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">30 Second Cooldown</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">VIP: True</p>
+              </li>
+              <li class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="ml-3 text-gray-300">Fast support</p>
+              </li>
+            </ul>
+            <button 
+            data-sellsn-pid="607e23bb-0b5b-4a1c-a5d9-6ab8528e940a" 
+            data-sellsn-sid="43a46143-4174-4c55-9f11-efeaebdd2916" 
+            class="mt-8 block w-full bg-primary-600 hover:bg-primary-700 border border-transparent rounded-md py-3 px-8 text-center font-medium text-white transition duration-150 ease-in-out"> <!-- Pro C2 -->
+          Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- API Pricing Section -->
+    <section id="api" class="py-20 bg-dark-900 relative">
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div class="text-center">
+          <h2 data-aos="fade-up" class="text-base font-semibold text-primary-400 uppercase tracking-wide">API Pricing</h2>
+          <p data-aos="fade-up" data-aos-delay="100" class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+            API Pricing & Plans
+          </p>
+          <p data-aos="fade-up" data-aos-delay="200" class="mt-4 max-w-2xl mx-auto text-xl text-gray-300">
+            Choose the plan that fits your requirements with our simple, straightforward pricing.
+          </p>
+        </div>
+        
+        <!-- Pricing Cards -->
+        <div data-aos="fade-up" data-aos-delay="400" class="mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+          <!-- Basic API Plan -->
+          <div class="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500">
+            <div class="bg-dark-900 rounded-2xl p-8 h-full flex flex-col">
+              <h3 class="text-xl font-semibold text-white">Basic</h3>
+              <p class="mt-8">
+                <span class="text-4xl font-extrabold text-white pricing-amount">$20</span>
+                <span class="text-base font-medium text-gray-400 pricing-period">/month</span>
+              </p>
+              <ul class="mt-8 space-y-4 flex-1">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">1 Concurrent</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">60 Second Max Duration</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">30 Second Cooldown</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">VIP: False</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">Fast support</p>
+                </li>
+              </ul>
+              <button 
+              data-sellsn-pid="e018c862-8d08-4584-b460-7a74fc187323" 
+              data-sellsn-sid="43a46143-4174-4c55-9f11-efeaebdd2916" 
+              class="mt-8 block w-full bg-primary-600 hover:bg-primary-700 border border-transparent rounded-md py-3 px-8 text-center font-medium text-white transition duration-150 ease-in-out"> <!-- Basic API -->
+            Get Started
+              </button>
+            </div>
+          </div>
+          
+          <!-- Advanced Plan -->
+          <div class="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
+            <div class="bg-dark-900 rounded-2xl p-8 h-full flex flex-col relative">
+              <div class="absolute top-0 right-0 -mr-1 -mt-4 w-36 h-36 overflow-hidden">
+                <div class="absolute transform rotate-45 bg-primary-600 text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px] text-center">
+                  Popular
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold text-white">Advanced API</h3>
+              <p class="mt-8">
+                <span class="text-4xl font-extrabold text-white pricing-amount">$30</span>
+                <span class="text-base font-medium text-gray-400 pricing-period">/month</span>
+              </p>
+              <ul class="mt-8 space-y-4 flex-1">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">2 Concurrent</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">180 Second Max Duration</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">20 Second Cooldown</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">VIP: True</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">Fast support</p>
+                </li>
+              </ul>
+              <button 
+              data-sellsn-pid="104e87ea-b23c-4f59-a0fa-c4dc45c4572d"
+              data-sellsn-sid="43a46143-4174-4c55-9f11-efeaebdd2916"
+              class="mt-8 block w-full bg-primary-600 hover:bg-primary-700 border border-transparent rounded-md py-3 px-8 text-center font-medium text-white transition duration-150 ease-in-out"> <!-- Advanced API -->
+            Get Started
+              </button>
+            </div>
+          </div>
+          
+          <!-- Pro Plan -->
+          <div class="relative p-0.5 rounded-2xl bg-gradient-to-r from-primary-500 to-secondary-500">
+            <div class="bg-dark-900 rounded-2xl p-8 h-full flex flex-col">
+              <h3 class="text-xl font-semibold text-white">Pro</h3>
+              <p class="mt-8">
+                <span class="text-4xl font-extrabold text-white pricing-amount">$40</span>
+                <span class="text-base font-medium text-gray-400 pricing-period">/month</span>
+              </p>
+              <ul class="mt-8 space-y-4 flex-1">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">3 Concurrent</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">240 Second Max Duration</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">10 Second Cooldown</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">VIP: True</p>
+                </li>
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-gray-300">Fast support</p>
+                </li>
+              </ul>
+              <button 
+              data-sellsn-pid="c84808de-d07c-4ecd-ac49-ea5a3032d18b" 
+              data-sellsn-sid="43a46143-4174-4c55-9f11-efeaebdd2916" 
+              class="mt-8 block w-full bg-primary-600 hover:bg-primary-700 border border-transparent rounded-md py-3 px-8 text-center font-medium text-white transition duration-150 ease-in-out"> <!-- Pro API-->
+            Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<!-- Footer -->
+<footer class="bg-dark-900 border-t border-gray-800">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="col-span-1 md:col-span-2">
+        <a href="#" class="flex items-center">
+          <span class="text-2xl font-bold text-gradient">CYPHER</span>
+          <span class="ml-1 text-lg font-light text-white">SERVICES</span>
+        </a>
+        <div class="mt-6">
+          <p class="text-gray-400">&copy; 2025 Cypher Services. All rights reserved.</p>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Contact</h3>
+        <div class="mt-4 space-y-4">
+          <!-- Telegram link styled like a button without background -->
+          <a href="https://t.me/brocypher" class="flex items-center text-base text-gray-400 hover:text-white border-b-2 border-transparent hover:border-blue-500 transition duration-300">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.269c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.538-.196 1.006.128.832.953z"/>
+            </svg>
+            Telegram: @brocypher
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+  <!-- Back to top button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 p-2 rounded-full bg-primary-600 text-white shadow-lg z-50 opacity-0 transition-opacity duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+  
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Initialize Particles.js
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: '#0ea5e9'
+        },
+        shape: {
+          type: 'circle',
+          stroke: {
+            width: 0,
+            color: '#000000'
+          }
+        },
+        opacity: {
+          value: 0.3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#0ea5e9',
+          opacity: 0.2,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: 'none',
+          random: true,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'grab'
+          },
+          onclick: {
+            enable: true,
+            mode: 'push'
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 0.5
+            }
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
+    });
+    
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Terminal output animation
+    const terminalOutput = document.getElementById('terminal-output');
+    const outputLines = [
+      '<span class="text-green-400">Initializing attack...</span>',
+      '<span class="text-gray-400">Connecting to target: 93.184.216.34...</span>',
+      '<span class="text-gray-400">Starting SYNFLOOD attack...</span>',
+      '<span class="text-green-400">Attack running: [===>                 ] 15%</span>'
+    ];
+    
+    let lineIndex = 0;
+    
+    function typeTerminalLine() {
+      if (lineIndex < outputLines.length) {
+        const line = document.createElement('div');
+        line.innerHTML = outputLines[lineIndex];
+        line.classList.add('mt-2');
+        terminalOutput.appendChild(line);
+        lineIndex++;
+        setTimeout(typeTerminalLine, 1000);
+      }
+    }
+    
+    setTimeout(typeTerminalLine, 3000);
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0');
+        backToTopButton.classList.add('opacity-100');
+      } else {
+        backToTopButton.classList.remove('opacity-100');
+        backToTopButton.classList.add('opacity-0');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Methods data
+    const methods = [
+      { id: 1, name: 'HOMEHOLD', isAddon: true, maxTime: '172.800', vip: false, active: true },
+      { id: 2, name: 'SYNFLOOD', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 3, name: 'DISCORD', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 4, name: 'TELEGRAM', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 5, name: 'OPENVPN', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 6, name: 'TCPKILL', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 7, name: 'TCPMIX', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 8, name: 'UDPSTORM', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 8, name: 'WSD', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 9, name: 'OVH', isAddon: false, maxTime: '600', vip: true, active: true },
+      { id: 10, name: 'SSH', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 11, name: 'TCPBOOM', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 12, name: 'UDPBYPASS', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 13, name: 'RAKNET', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 14, name: 'STUN', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 15, name: 'MIXAMP', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 16, name: 'HOMEKILL', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 17, name: 'DNS', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 18, name: 'GAME', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 19, name: 'FIVEM', isAddon: false, maxTime: '600', vip: false, active: true },
+      { id: 20, name: 'TLS', isAddon: false, maxTime: '2000', vip: false, active: true },
+      { id: 21, name: 'HTTPS-CN', isAddon: false, maxTime: '2000', vip: false, active: true },
+      { id: 22, name: 'BROWSER', isAddon: false, maxTime: '2000', vip: true, active: true },
+      { id: 23, name: 'CFBYPASS', isAddon: false, maxTime: '600', vip: true, active: true },
+    ];
+    
+// Generate method cards
+const methodsGrid = document.getElementById('methods-grid');
+
+if (methodsGrid) {
+  methods.forEach(method => {
+    const methodCard = document.createElement('div');
+    methodCard.className = 'bg-[#0B1623] rounded-lg p-6 border border-[#1a2b3d] hover:border-[#2a3b4d] transition-all duration-300';
+    
+    let badges = '';
+    if (method.vip) {
+      badges += '<span class="px-2 py-1 text-xs rounded bg-[#0ea5e9]/20 text-[#0ea5e9] ml-2">VIP</span>';
+    }
+    if (method.isAddon) {
+      badges += '<span class="px-2 py-1 text-xs rounded bg-[#8b5cf6]/20 text-[#8b5cf6] ml-2">ADDON</span>';
+    }
+    
+    // Set the maxTime based on the method
+    const maxTime = method.name === 'HOMEHOLD' ? '172,800' : '600';
+    
+    methodCard.innerHTML = `
+      <div class="flex justify-between items-center">
+        <h3 class="text-lg font-medium text-white">${method.name}</h3>
+        ${badges}
+      </div>
+      <div class="mt-4 space-y-1">
+        <p class="text-sm text-gray-400">Max Time: <span class="text-gray-300">${maxTime}</span></p>
+        <p class="text-sm text-gray-400">Status: <span class="text-green-400">Active</span></p>
+      </div>
+    `;
+    
+    methodsGrid.appendChild(methodCard);
+  });
+}
+
+    
+    // Pricing toggle functionality
+    const pricingAmounts = document.querySelectorAll('.pricing-amount');
+    const pricingPeriods = document.querySelectorAll('.pricing-period');
+    const pricingLabels = document.querySelectorAll('.pricing-toggle-label');
+  </script>
+</body>
+</html>
