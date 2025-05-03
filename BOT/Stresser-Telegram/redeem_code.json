@@ -1,0 +1,56 @@
+{
+    "60": {
+        "time": 60,
+        "concurrent": 2,
+        "vip": true,
+        "bypass_blacklist": true,
+        "cooldown": 120,
+        "expire_days": 120,
+        "uses_left": 10
+    },
+    "YUJW09PO2E": {
+        "time": 60,
+        "concurrent": 2,
+        "vip": true,
+        "bypass_blacklist": true,
+        "cooldown": 120,
+        "expire_days": 120,
+        "uses_left": 10
+    },
+    "2": {
+        "time": 6000000,
+        "concurrent": 19999,
+        "vip": true,
+        "bypass_blacklist": true,
+        "cooldown": 0,
+        "expire_days": 60,
+        "uses_left": 1
+    },
+    "1": {
+        "time": 6000000,
+        "concurrent": 19999,
+        "vip": true,
+        "bypass_blacklist": true,
+        "cooldown": 0,
+        "expire_days": 60,
+        "uses_left": 1
+    },
+    "Stresserfr": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "expire_days": 5,
+        "uses_left": 5
+    },
+    "BOTFR12": {
+        "time": 10,
+        "concurrent": 1,
+        "vip": false,
+        "bypass_blacklist": false,
+        "cooldown": 100,
+        "expire_days": 1,
+        "uses_left": 1
+    }
+}

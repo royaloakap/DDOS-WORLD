@@ -1,0 +1,42 @@
+{
+    "cc8146e9-4175-42f9-8be2-276e4644ad13": {
+        "user_id": 5145402317,
+        "url": "https://google.com",
+        "time": 60,
+        "port": 443,
+        "method_name": "HTTP-RDM",
+        "end_time": "2024-05-28T08:03:02.468771"
+    },
+    "5c00d456-be7e-4cc7-ad21-31d9d6d2b43d": {
+        "user_id": 5145402317,
+        "url": "https://google.com",
+        "time": 60,
+        "port": 443,
+        "method_name": "HTTP-RDM",
+        "end_time": "2024-05-28T08:03:49.589902"
+    },
+    "ad928572-836c-4b71-99b0-855a2a3fdd02": {
+        "user_id": 2056597002,
+        "url": "https://www.glisseurbaine.com",
+        "time": 45,
+        "port": 443,
+        "method_name": "CFBYPASS",
+        "end_time": "2024-06-05T04:55:44.141971"
+    },
+    "dcbdaabf-58d3-4b12-9ff4-6cd77308471e": {
+        "user_id": 2056597002,
+        "url": "https://www.glisseurbaine.com",
+        "time": 45,
+        "port": 443,
+        "method_name": "HTTP-RDM",
+        "end_time": "2024-06-05T04:58:30.077401"
+    },
+    "60d8ee99-c1e4-4cda-9758-24524638e4ee": {
+        "user_id": 2056597002,
+        "url": "https://o-tacos.com",
+        "time": 60,
+        "port": 443,
+        "method_name": "CFBYPASS",
+        "end_time": "2024-06-08T03:49:38.863548"
+    }
+}

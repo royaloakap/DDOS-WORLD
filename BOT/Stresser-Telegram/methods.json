@@ -1,0 +1,50 @@
+[
+    {
+        "name": "UDP",
+        "description": " Flood UDP Attack",
+        "vip": false,
+        "layer": 4
+    },
+    {
+        "name": "TCP",
+        "description": " Flood TCP Attack",
+        "vip": false,
+        "layer": 4
+    },
+    {
+        "name": "OVHUDP",
+        "description": " Flood Attack",
+        "vip": false,
+        "layer": 4
+    },
+    {
+        "name": "ACK",
+        "description": " Flood Attack",
+        "vip": true,
+        "layer": 4
+    },
+    {
+        "name": "FIVEM",
+        "description": " Flood Attack",
+        "vip": true,
+        "layer": 4
+    },
+    {
+        "name": "HTTP",
+        "description": "HTTP Request",
+        "vip": false,
+        "layer": 7
+    },
+    {
+        "name": "HTTP-RDM",
+        "description": "HTTP Request",
+        "vip": false,
+        "layer": 7
+    },
+    {
+        "name": "CFBYPASS",
+        "description": "HTTP Request",
+        "vip": true,
+        "layer": 7
+    }
+]

@@ -1,0 +1,142 @@
+{
+    "1": {
+        "time": 300,
+        "concurrent": 20,
+        "vip": true,
+        "expire": "2025-05-27T08:37:30.900650",
+        "banned": false,
+        "bypass_blacklist": true,
+        "cooldown": 0,
+        "last_attack": null
+    },
+    "2": {
+        "time": 300,
+        "concurrent": 5,
+        "vip": true,
+        "expire": "2024-08-04T03:19:09.974038",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 29,
+        "last_attack": null
+    },
+    "2056597002": {
+        "time": 300,
+        "concurrent": 10,
+        "vip": true,
+        "expire": "2027-03-01T08:55:36.353603",
+        "banned": false,
+        "bypass_blacklist": true,
+        "cooldown": 1,
+        "last_attack": "2024-06-08T03:48:38.862886"
+    },
+    "5753173969": {
+        "time": 120,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-07-05T04:47:59.911766",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": null
+    },
+    "6601365146": {
+        "time": 120,
+        "concurrent": 1,
+        "vip": true,
+        "expire": "2024-07-06T06:18:59.205848",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 1,
+        "last_attack": "2024-06-05T06:32:25.758809"
+    },
+    "6722377861": {
+        "time": 90,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-07-05T06:32:06.025367",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": "2024-06-07T21:43:19.569944"
+    },
+    "5854269665": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-06-10T08:37:09.513720",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": "2024-06-07T18:24:45.055792"
+    },
+    "1828181834": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-06-10T08:37:29.902689",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": "2024-06-07T11:01:43.611756"
+    },
+    "1415889393": {
+        "time": 120,
+        "concurrent": 1,
+        "vip": true,
+        "expire": "2024-07-06T08:56:34.534757",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 20,
+        "last_attack": "2024-06-05T10:19:19.351035"
+    },
+    "6348181836": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-06-10T09:55:04.447803",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": "2024-06-05T16:10:08.679465"
+    },
+    "5390166414": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-06-10T14:55:55.819000",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": "2024-06-07T17:50:44.513290"
+    },
+    "1917688093": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-06-10T17:20:31.714013",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": "2024-06-06T17:52:52.812694"
+    },
+    "6311828647": {
+        "time": 120,
+        "concurrent": 1,
+        "vip": false,
+        "expire": "2024-06-21T23:28:06.565294",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 10,
+        "last_attack": "2024-06-07T23:33:28.838171"
+    },
+    "6406773554": {
+        "time": 60,
+        "concurrent": 1,
+        "vip": true,
+        "expire": "2024-06-10T01:03:12.047101",
+        "banned": false,
+        "bypass_blacklist": false,
+        "cooldown": 30,
+        "last_attack": null
+    }
+}
