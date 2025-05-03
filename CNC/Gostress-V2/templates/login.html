@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>Login - Security Dashboard</title>
+<script src=https://cdn.tailwindcss.com></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
+<style>*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;backface-visibility:hidden;transform-style:preserve-3d}.galaxy-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;background:radial-gradient(ellipse at bottom,#0f172a 0,#090a0f 100%);overflow:hidden;will-change:transform}.stars{position:absolute;top:0;left:0;width:100%;height:100%;background:transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.8"/></svg>') repeat;animation:twinkle 200s linear infinite;will-change:transform}.stars:nth-child(2){transform:scale(1.5);animation:twinkle 150s linear infinite;opacity:.6}.stars:nth-child(3){transform:scale(2);animation:twinkle 100s linear infinite;opacity:.4}@keyframes twinkle{0%{transform:rotate(0deg) translateZ(0)}100%{transform:rotate(360deg) translateZ(0)}}.cyber-grid{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(99,102,241,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(99,102,241,0.05) 1px,transparent 1px);background-size:40px 40px;opacity:.5;will-change:opacity}.cyber-glow{position:absolute;width:100%;height:100%;background:radial-gradient(circle at 20% 30%,rgba(99,102,241,0.15) 0,transparent 40%),radial-gradient(circle at 80% 70%,rgba(236,72,153,0.15) 0,transparent 40%);animation:pulse 15s ease infinite alternate;will-change:opacity}@keyframes pulse{0%,100%{opacity:.7}50%{opacity:1}}.circuit-lines{position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(to right,rgba(99,102,241,0.1) 1px,transparent 1px),linear-gradient(to bottom,rgba(99,102,241,0.1) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%);will-change:transform}.particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden;will-change:transform}.particle{position:absolute;background:rgba(99,102,241,0.5);border-radius:50%;animation:float 15s infinite linear;filter:blur(1px);will-change:transform,opacity;transform:translateZ(0)}@keyframes float{0%{transform:translateY(0) translateX(0) translateZ(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-100vh) translateX(100px) translateZ(0);opacity:0}}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#1e293b}::-webkit-scrollbar-thumb{background:#4f46e5;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#6366f1}.input-focus-effect:focus-within{box-shadow:0 0 0 2px rgba(99,102,241,0.5);transition:box-shadow .2s ease}.password-toggle{right:.75rem;top:50%;transform:translateY(-50%) translateZ(0);cursor:pointer;color:#64748b;transition:color .2s ease;will-change:transform}.password-toggle:hover{color:#94a3b8}.modal{transition:opacity .3s ease,transform .3s ease;will-change:opacity,transform}@keyframes fadeIn{0%{opacity:0;transform:translateY(20px) translateZ(0)}100%{opacity:1;transform:translateY(0) translateZ(0)}}.animate-fade-in{animation:fadeIn .5s ease-out forwards;will-change:opacity,transform}.login-card{transform:translateZ(0);will-change:transform,opacity}.btn-effect{transform:translateZ(0);will-change:transform,background}.optimized-blur{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}</style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 text-gray-100 overflow-hidden">
+<div class=galaxy-bg></div>
+<div class=stars></div>
+<div class=stars></div>
+<div class=stars></div>
+<div class=cyber-grid></div>
+<div class=cyber-glow></div>
+<div class=circuit-lines></div>
+<div class=particles id=particles></div>
+<div class="w-full max-w-md bg-gray-800/90 optimized-blur rounded-xl shadow-2xl overflow-hidden border border-gray-700/50 animate-fade-in login-card">
+<div class="bg-gradient-to-r from-indigo-900 to-indigo-800 p-6 text-center relative overflow-hidden">
+<div class="absolute inset-0 overflow-hidden">
+<div class="absolute -top-20 -left-20 w-40 h-40 rounded-full bg-indigo-500/10 filter blur-3xl transform translateZ(0)"></div>
+<div class="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-purple-500/10 filter blur-3xl transform translateZ(0)"></div>
+<div class="absolute top-1/2 left-1/2 w-64 h-64 rounded-full bg-blue-500/5 filter blur-3xl transform -translate-x-1/2 -translate-y-1/2 translateZ(0)"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center gap-2">
+<div class="w-16 h-16 rounded-full bg-indigo-700/30 flex items-center justify-center mb-4 optimized-blur border border-indigo-500/30 transform translateZ(0)">
+<i class="fas fa-shield-alt text-2xl text-indigo-300 animate-pulse"></i>
+</div>
+<h1 class="text-2xl font-bold text-white transform translateZ(0)">Security Dashboard</h1>
+<p class="text-sm text-indigo-200 mt-1 transform translateZ(0)">Secure Access Portal</p>
+</div>
+</div>
+<div class=p-8>
+<form action=/login method=POST autocomplete=off class=space-y-6>
+{{if .Error}}
+<div class="bg-red-900/30 border border-red-800/50 px-4 py-3 rounded-lg flex items-start optimized-blur transform translateZ(0)">
+<svg class="h-5 w-5 text-red-300 mr-2 mt-0.5 flex-shrink-0" fill=currentColor viewBox="0 0 20 20">
+<path fill-rule=evenodd d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule=evenodd />
+</svg>
+<div>
+<span class="text-sm font-medium text-red-200">{{.Error}}</span>
+<p class="text-xs text-red-300/80 mt-1">Please check your credentials and try again</p>
+</div>
+</div>
+{{end}}
+
+<div class=space-y-4>
+<div class="input-focus-effect bg-gray-700/50 border border-gray-600/50 rounded-lg transition-all duration-200 hover:border-gray-500 optimized-blur transform translateZ(0)">
+<label for=username class=sr-only>Username</label>
+<div class=relative>
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 transform translateZ(0)">
+<i class="fas fa-user"></i>
+</div>
+<input type=text id=username name=username required placeholder=Username autocapitalize=off autocorrect=off class="block w-full pl-10 pr-3 py-3 bg-transparent border-none text-white placeholder-gray-400 focus:outline-none focus:ring-0 transform translateZ(0)">
+</div>
+</div>
+<div class="input-focus-effect bg-gray-700/50 border border-gray-600/50 rounded-lg transition-all duration-200 hover:border-gray-500 optimized-blur transform translateZ(0)">
+<label for=password class=sr-only>Password</label>
+<div class=relative>
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 transform translateZ(0)">
+<i class="fas fa-lock"></i>
+</div>
+<input type=password id=password name=password required placeholder=Password autocomplete=current-password class="block w-full pl-10 pr-10 py-3 bg-transparent border-none text-white placeholder-gray-400 focus:outline-none focus:ring-0 transform translateZ(0)">
+<div class="password-toggle absolute" onclick=togglePasswordVisibility()>
+<i class="far fa-eye" id=toggleIcon></i>
+</div>
+</div>
+</div>
+</div>
+<div class=pt-2>
+<button type=submit class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200 group relative overflow-hidden btn-effect">
+<span class="absolute inset-0 bg-gradient-to-r from-indigo-500/30 to-indigo-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translateZ(0)"></span>
+<span class="relative flex items-center transform translateZ(0)">
+<i class="fas fa-sign-in-alt mr-2"></i>
+Sign In
+</span>
+</button>
+</div>
+<div class="flex justify-end pt-2">
+<button type=button onclick=showForgotPassword() class="text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors duration-150 transform translateZ(0)">
+Forgot password?
+</button>
+</div>
+</form>
+<div class="mt-8 pt-6 border-t border-gray-700/50">
+<div class="flex items-start">
+<i class="fas fa-shield-alt text-indigo-500 mr-2 mt-0.5 flex-shrink-0 transform translateZ(0)"></i>
+<div>
+<p class="text-xs font-medium text-gray-300 transform translateZ(0)">Security Tip</p>
+<p class="text-xs text-gray-400 mt-1 transform translateZ(0)">
+Ensure you're on a trusted network before logging in. Verify the URL matches <span class="font-mono text-indigo-400">https://dashboard.example.com</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=forgotPasswordModal class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-70 opacity-0 pointer-events-none transition-opacity duration-300 optimized-blur">
+<div class="bg-gray-800 rounded-xl shadow-2xl max-w-md w-full border border-gray-700/50 transform translate-y-4 transition-transform duration-300 translateZ(0)">
+<div class="p-6 border-b border-gray-700/50">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-white flex items-center gap-2 transform translateZ(0)">
+<i class="fas fa-key text-indigo-500"></i>
+Password Assistance
+</h3>
+<button onclick=closeModal() class="text-gray-400 hover:text-white transition-colors transform translateZ(0)">
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+<div class=p-6>
+<div class="flex items-start mb-4">
+<i class="fas fa-info-circle text-indigo-500 text-xl mr-3 mt-0.5 flex-shrink-0 transform translateZ(0)"></i>
+<div>
+<p class="text-sm text-gray-300 transform translateZ(0)">
+For security reasons, password recovery must be handled manually. Please contact the system administrator directly for assistance.
+</p>
+<div class="mt-4 bg-gray-700/50 p-3 rounded-lg optimized-blur transform translateZ(0)">
+<p class="text-xs text-gray-400 mb-1">Contact the Admin/Owner:</p>
+<p class="text-sm font-mono text-indigo-400">admin@yourdomain.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-gray-700/50 flex justify-end">
+<button onclick=closeModal() class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white text-sm font-medium transition-colors transform translateZ(0)">
+Close
+</button>
+</div>
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){requestAnimationFrame(function(){const particlesContainer=document.getElementById('particles');const particleCount=20;for(let i=0;i<particleCount;i++){const particle=document.createElement('div');particle.classList.add('particle');const size=Math.random()*2+1;particle.style.width=`${size}px`;particle.style.height=`${size}px`;particle.style.left=`${Math.random()*100}%`;particle.style.top=`${Math.random()*120}%`;const duration=Math.random()*15+10;const delay=Math.random()*10;particle.style.animationDuration=`${duration}s`;particle.style.animationDelay=`${delay}s`;particle.style.opacity=Math.random()*0.7+0.3;particlesContainer.appendChild(particle);}});requestAnimationFrame(function(){document.getElementById('username').focus();});});function togglePasswordVisibility(){requestAnimationFrame(function(){const passwordInput=document.getElementById('password');const toggleIcon=document.getElementById('toggleIcon');if(passwordInput.type==='password'){passwordInput.type='text';toggleIcon.classList.remove('fa-eye');toggleIcon.classList.add('fa-eye-slash');}else{passwordInput.type='password';toggleIcon.classList.remove('fa-eye-slash');toggleIcon.classList.add('fa-eye');}});}
+function showForgotPassword(){requestAnimationFrame(function(){const modal=document.getElementById('forgotPasswordModal');modal.classList.remove('opacity-0','pointer-events-none');modal.classList.add('opacity-100');modal.querySelector('div').classList.remove('translate-y-4');});}
+function closeModal(){requestAnimationFrame(function(){const modal=document.getElementById('forgotPasswordModal');modal.classList.add('opacity-0','pointer-events-none');modal.classList.remove('opacity-100');modal.querySelector('div').classList.add('translate-y-4');});}
+document.getElementById('forgotPasswordModal').addEventListener('click',function(e){if(e.target===this){closeModal();}});requestAnimationFrame(function(){const inputs=document.querySelectorAll('input');inputs.forEach((input,index)=>{input.style.animation=`fadeIn 0.5s ease-out ${index*0.1}s forwards`;input.style.opacity='0';});});</script>
+</body>
+</html>

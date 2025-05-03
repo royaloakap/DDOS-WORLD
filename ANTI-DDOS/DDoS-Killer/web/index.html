@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDoS Detector Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4 text-center">DDoS Detector Dashboard</h1>
+        
+        <!-- Metrics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold">RPS</h2>
+                <p id="rps" class="text-2xl">0</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold">Traffic Rate (KB/s)</h2>
+                <p id="traffic-rate" class="text-2xl">0</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold">CPU Usage (%)</h2>
+                <p id="cpu-usage" class="text-2xl">0</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold">Memory Usage (%)</h2>
+                <p id="memory-usage" class="text-2xl">0</p>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">RPS Over Time</h2>
+                <canvas id="rpsChart"></canvas>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Traffic Rate Over Time</h2>
+                <canvas id="trafficChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Anomalies Table -->
+        <div class="bg-white p-4 rounded-lg shadow">
+            <h2 class="text-lg font-semibold mb-2">Detected Anomalies</h2>
+            <table class="w-full table-auto">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="px-4 py-2">Source IP</th>
+                        <th class="px-4 py-2">Score</th>
+                        <th class="px-4 py-2">Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="anomalies-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/web/scripts.js"></script>
+</body>
+</html>
