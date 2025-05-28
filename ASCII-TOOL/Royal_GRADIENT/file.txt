@@ -1,0 +1,2 @@
+<<clear()>>
+Your File Ascii Here
