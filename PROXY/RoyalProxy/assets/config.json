@@ -1,0 +1,14 @@
+{
+    "settings": {
+        "note_license": "If You have buy Royal Proxy DLC Replace this license by your Royal Proxy DLC License Key",
+        "license_key": "5a9afe553e77311d73cf075c7e21fab90290814f1f4f25e782",
+        "note": "If you have purchased the DLC from Royal Projets (https://RoyalProjets.com): --- 1. Put your license key in line 3. --- 2. Put your secondary IP (NOT your Royal Proxy IP) in line 6. --- 3. Close this file and open 'assets/dlc/premium.json'",
+        "message": "Royal Proxy should be running on a different server than your Royal SRC. Put this secondary IP (NOT your Royal SRC IP) in line 6.",
+        "frontend_ip": "OTHER VPS IP HERE"
+    },
+    "proxied_host": {
+        "backend_ip": "Royal SRC IP HERE",
+        "backend_port": 2024,
+        "optional_note": "Free version proxy port is: 2025 (DO NOT EDIT THIS MESSAGE)"
+    }
+}
