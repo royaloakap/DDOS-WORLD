@@ -4,6 +4,9 @@
     },
     "global_firewall": {
         "enabled": true,
+        "max_connections_per_ip_per_minute": 3,
+        "inactivity_timeout": 3500,
+        "rate_limit": 10,
         "options": {
             "blacklisting": {
                 "blacklist_ip": {

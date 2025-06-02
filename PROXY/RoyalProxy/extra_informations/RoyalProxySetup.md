@@ -5,7 +5,7 @@ Ram: `8 Gb`
 CPU: `4 core` @ `1 Ghz`
 Storage: `3 Gb`
 
-# How To Setup Royal Proxy
+# How To Setup Royal Proxy v1.1.1.2
 
 # Before we begin, you will want to disable your IPV6 address on your server by running the following 3 commands:
 
@@ -28,8 +28,6 @@ sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
 5. Not Error ? CTRL + c
 
-sudo apt-get update -y && sudo apt-get upgrade -y
-
 # Install NVM and Node.js:
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
@@ -38,12 +36,16 @@ nvm install 22.9.0
 nvm use 22.9.0
 ```
 
+## What it should look like: Node.js version 22.9.0 installs
+
+*Step #14*
 # Install PM2:
 ```bash
 npm install n -g
 n latest
 npm i pm2 -g
 ```
+
 6. `pm2 start "./RoyalProxy" --name RoyalProxy`
 
 7. `pm2 log RoyalProxy`
