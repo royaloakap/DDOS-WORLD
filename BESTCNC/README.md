@@ -1,15 +1,15 @@
 ✔️Want Purchasing @RoyalSRC ?:
 
 🌐 For Purchase RoyalSRC:
-➡️ 1: On my Server Discord: https://discord.gg/3PDtqCpMEe
+➡️ 1: On my Server Discord: https://discord.gg/xGD4uG7pQD
 ➡️ 2: On my Web site: https://Royalprojets.com
 
 ( Click here To view your License Key https://royalprojets.com/profile/YOUR_DISCORD_ID )
 
 =============================================
-➡️Customer's Group (FAQ) : https://discord.gg/3PDtqCpMEe
-➡️For Support Contact : https://discord.gg/Gq6SVG4mp8
-➡️View All Previews :  (https://discord.gg/DXBSTdwKET)
+➡️Customer's Group (FAQ) : 
+➡️For Support Contact : https://discord.gg/xGD4uG7pQD
+➡️View All Previews :  https://discord.gg/xGD4uG7pQD
 =============================================
 
 You are allowed One IPV4 per license if your backend gets banned or you need to reset the IP associated with your license 
