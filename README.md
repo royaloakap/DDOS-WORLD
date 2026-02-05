@@ -70,6 +70,21 @@ Network vulnerability scanning tools designed to identify potential security wea
 ### 16. SITEWEB
 Web interfaces for real-time monitoring, visualization, and management of network security systems.
 
+### 17. HONEYPOT
+Honeypot solutions for DDoS and botnet detection. References production-ready projects (Cowrie, T-Pot, DDoSPot, RouterTrap) that emulate vulnerable services to capture and analyze malicious traffic, providing threat intelligence on attack patterns and scanning activities.
+
+### 18. MÉTRIQUES
+Network metrics and DDoS monitoring tools. Covers PPS (packets/sec), BPS (bits/sec), and connection rates. References sFlow-RT, Prometheus, Grafana, and OVH mitigation exporter for detection, impact assessment, and mitigation validation.
+
+### 19. OSI-MODEL
+Educational mapping of DDoS attacks to the OSI network model. References guides (DDoS-Attack-Guide, DoS-Bible, OWASP Cheat Sheet) that correlate attack vectors with layers L3, L4, L7 and appropriate defense strategies.
+
+### 20. PLAYBOOKS
+Incident response playbooks and runbooks for DDoS attacks. References AWS Incident Response Playbooks, NIST-based procedures, and community resources for preparation, detection, containment, and post-incident handling.
+
+### 21. SANDBOX
+Safe lab environments for DDoS experimentation. References SODA Lab, DDoS-SandBox (Containernet), and Vagrant-based sandboxes for isolated, reproducible testing of attack and defense mechanisms without impacting real infrastructure.
+
 ## Educational Objectives
 
 This project is structured to facilitate:
